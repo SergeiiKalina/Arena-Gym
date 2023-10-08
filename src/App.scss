@@ -1,0 +1,1315 @@
+.App {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #fefefe;
+}
+.headerBackGround {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    .header_wrapper {
+        display: flex;
+        width: 100%;
+        padding: 8px 0 8px 0;
+        border-bottom: 1px solid grey;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .header_block {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 73%;
+    }
+    .header_wrapper {
+        width: 100%;
+    }
+}
+.logo_block {
+    width: 6%;
+}
+
+.menuList {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    padding: 0;
+    margin-left: 2%;
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        color: white;
+        flex-wrap: wrap;
+        li {
+            margin: 0 8px 0 8px;
+        }
+    }
+
+    a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: yellow;
+    }
+}
+
+.social_block {
+    width: 8%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 0 0;
+    div {
+        width: 22px;
+        padding-left: 8px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            color: yellow;
+        }
+    }
+    div:hover {
+        color: yellow;
+        cursor: pointer;
+    }
+}
+.search_block {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0 0 0 8px;
+    .search_icon {
+        border-right: 1px solid white;
+        padding: 2px 5px 0 0;
+        cursor: pointer;
+    }
+    .search_icon:hover {
+        color: yellow;
+    }
+}
+.mobile_left_panel {
+    display: none;
+    width: 10%;
+    margin: 0 10px 0 0;
+}
+.burger_button {
+    position: relative;
+    top: 90px;
+    width: 10%;
+
+    span {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        transition: all 500ms;
+        border-radius: 5px;
+    }
+    span::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        transition: all 500ms;
+        border-radius: 5px;
+    }
+    span::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        transition: all 500ms;
+        border-radius: 5px;
+    }
+}
+.burger_button.active {
+    span {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: white;
+        transition: all 500ms;
+    }
+    span::before {
+        top: 0;
+        rotate: -45deg;
+        transition: all 500ms;
+    }
+    span::after {
+        top: 0;
+        rotate: 45deg;
+        transition: all 500ms;
+    }
+}
+.mobile_navigation {
+    display: none;
+    .clear_icon {
+        display: flex;
+        justify-content: end;
+        margin: 12px 35px 40px 0;
+        font-weight: 700;
+    }
+}
+.SearchPopUp {
+    display: none;
+    .clear_icon {
+        display: flex;
+        justify-content: end;
+        margin: 24px 50px 0 0;
+        font-weight: 700;
+        color: white;
+    }
+}
+.PopUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 45%;
+        height: 50%;
+        background-color: #fefefe;
+        border-radius: 10px;
+        padding: 50px 0;
+        .PopUpForm_header {
+            color: black;
+            font-size: 30px;
+        }
+        .PopUpForm_item {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+.wrapperSlider {
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 89%;
+    .sliderBlock {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 50px;
+        .slideBlock {
+            height: 800px;
+        }
+    }
+}
+
+.coaches_card_block {
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: #191919;
+
+    .coachesCardBlock {
+        position: relative;
+        width: 73%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .newCard {
+            position: relative;
+            width: 373px;
+            height: 544px;
+            color: white;
+            transform-style: preserve-3d;
+            margin-top: 36px;
+
+            cursor: pointer;
+            .front,
+            .back {
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                backface-visibility: hidden;
+                transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
+                    opacity 0.5s ease;
+                overflow: hidden;
+            }
+            .front {
+                transform: perspective(600px) rotateY(0deg);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .back {
+                background-color: #33393e;
+                transform: perspective(600px) rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+
+                .span {
+                    display: block;
+                    width: 27px;
+                    height: 5px;
+                    background-color: #fefefe;
+                    margin: 0 0 20px 10px;
+                }
+                .coachesCardItem_info_name {
+                    padding: 0px 0px 0px 10px;
+                    margin: 2rem 0;
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                }
+
+                .coachesCardItem_info_class {
+                    color: #ffffff;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    padding: 0px 0px 0px 10px;
+                    align-self: flex-start;
+                    text-align: left;
+                    margin: 1rem auto;
+                }
+
+                .coachesCardItem_info_text {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #666;
+                }
+
+                .coachesCardItem_info_social {
+                    display: flex;
+                    .coachesCardItem_info_social_icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #51575b;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 0px 0px 0px 0px;
+                        margin: 2rem 0px 2rem 11px;
+                        .icon_coach_social {
+                            color: #fbe23c;
+                            transform: scale(0.9);
+                        }
+                    }
+                    .coachesCardItem_info_social_icon:hover {
+                        background-color: #fbe23c;
+                        .icon_coach_social {
+                            color: #51575b;
+                        }
+                    }
+                }
+            }
+        }
+        .newCard:hover .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .newCard:hover .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    .coaches_card_header {
+        display: flex;
+        width: 100%;
+        font-family: "Righteous", cursive;
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        justify-content: center;
+        padding: 80px 0 0 0;
+    }
+    .coaches_card_header_border {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        span {
+            width: 27px;
+            height: 4px;
+            background-color: yellow;
+        }
+    }
+}
+
+.club_card_block {
+    width: 100%;
+    padding-bottom: 80px;
+
+    .clubCardBlock {
+        position: relative;
+        width: 73%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .newCard {
+            position: relative;
+            width: 373px;
+            height: 544px;
+            color: white;
+            transform-style: preserve-3d;
+            margin-top: 36px;
+
+            cursor: pointer;
+            .front,
+            .back {
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                backface-visibility: hidden;
+                transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
+                    opacity 0.5s ease;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .front {
+                transform: perspective(600px) rotateY(0deg);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .club_card_name {
+                    position: absolute;
+                    top: 58%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                }
+            }
+            .back {
+                background-color: #33393e;
+                transform: perspective(600px) rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+
+                .club_card_header_border_span {
+                    display: block;
+                    width: 27px;
+                    height: 5px;
+                    background-color: #fefefe;
+                    margin: 0 0 20px 10px;
+                }
+                .clubCardItem_info_name {
+                    padding: 0px 0px 0px 10px;
+                    margin: 2rem 0;
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                }
+
+                .clubCardItem_info_class {
+                    color: #ffffff;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    padding: 0px 0px 0px 10px;
+                    align-self: flex-start;
+                    text-align: left;
+                    margin: 1rem auto;
+                }
+
+                .clubCardItem_info_text {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #666;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .newCard:hover .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .newCard:hover .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    .club_card_header {
+        display: flex;
+        width: 100%;
+        font-family: "Righteous", cursive;
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;
+        color: black;
+        justify-content: center;
+        padding: 80px 0 0 0;
+    }
+    .club_card_header_border {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        span {
+            width: 27px;
+            height: 4px;
+            background-color: white;
+        }
+    }
+}
+.fitnessBar_card_block {
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: #191919;
+    .fitnessBarCardBlock {
+        position: relative;
+        width: 73%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .newCard {
+            position: relative;
+            width: 373px;
+            height: 544px;
+            color: white;
+            transform-style: preserve-3d;
+            margin-top: 36px;
+
+            cursor: pointer;
+            .front,
+            .back {
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                backface-visibility: hidden;
+                transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
+                    opacity 0.5s ease;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .front {
+                transform: perspective(600px) rotateY(0deg);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .club_card_name {
+                    position: absolute;
+                    top: 58%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                }
+            }
+            .back {
+                background-color: #33393e;
+                transform: perspective(600px) rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+
+                .fitnessBar_card_header_border_span {
+                    display: block;
+                    width: 27px;
+                    height: 5px;
+                    background-color: #fefefe;
+                    margin: 0 0 20px 10px;
+                }
+
+                .fitnessBarCardItem_info_class {
+                    color: #ffffff;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    padding: 0px 0px 0px 10px;
+                    align-self: flex-start;
+                    text-align: left;
+                    margin: 1rem auto;
+                }
+
+                .fitnessBarCardItem_info_text {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #666;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .newCard:hover .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .newCard:hover .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    .fitnessBar_card_header {
+        display: flex;
+        width: 100%;
+        font-family: "Righteous", cursive;
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        justify-content: center;
+        padding: 80px 0 0 0;
+    }
+    .fitnessBar_card_header_border {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        span {
+            width: 27px;
+            height: 4px;
+            background-color: #fbe23c;
+        }
+    }
+}
+.massageOffice_card_block {
+    width: 100%;
+    padding-bottom: 80px;
+
+    .massageOfficeCardBlock {
+        position: relative;
+        width: 73%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .newCard {
+            position: relative;
+            width: 373px;
+            height: 544px;
+            color: white;
+            transform-style: preserve-3d;
+            margin-top: 36px;
+
+            cursor: pointer;
+            .front,
+            .back {
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                backface-visibility: hidden;
+                transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
+                    opacity 0.5s ease;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .front {
+                transform: perspective(600px) rotateY(0deg);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .club_card_name {
+                    position: absolute;
+                    top: 58%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 600;
+                    line-height: 1.1em;
+                }
+            }
+            .back {
+                background-color: #33393e;
+                transform: perspective(600px) rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+
+                .massageOffice_card_header_border_span {
+                    display: block;
+                    width: 27px;
+                    height: 5px;
+                    background-color: #fefefe;
+                    margin: 0 0 20px 10px;
+                }
+
+                .massageOfficeCardItem_info_class {
+                    color: #ffffff;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.2em;
+                    padding: 0px 0px 0px 10px;
+                    align-self: flex-start;
+                    text-align: left;
+                    margin: 1rem auto;
+                }
+
+                .massageOfficeCardItem_info_text {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #666;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .newCard:hover .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .newCard:hover .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    .massageOffice_card_header {
+        display: flex;
+        width: 100%;
+        font-family: "Righteous", cursive;
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;
+        color: black;
+        justify-content: center;
+        padding: 80px 0 0 0;
+    }
+    .massageOffice_card_header_border {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        span {
+            width: 27px;
+            height: 4px;
+            background-color: white;
+        }
+    }
+}
+.wrapperMainBlock {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    .wrapperMainBlock_content {
+        width: 73%;
+        padding-bottom: 80px;
+        .ourPrograms {
+            display: flex;
+            width: 100%;
+            font-family: "Righteous", cursive;
+            line-height: 1;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            justify-content: center;
+            margin: 80px 0 0 0;
+        }
+        .ourPrograms_border {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin: 20px 0 0 0;
+            span {
+                width: 27px;
+                height: 4px;
+                background-color: #fefefe;
+            }
+        }
+        .blockCards {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 0 0;
+        }
+        .card {
+            position: relative;
+            width: 373px;
+            height: 544px;
+            color: white;
+            transform-style: preserve-3d;
+            margin: 0 14px;
+        }
+        .card:first-child {
+            margin: 0 14px 0 0;
+        }
+        .card:last-child {
+            margin: 0 0 0 14px;
+        }
+        .card__front,
+        .card__back {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            backface-visibility: hidden;
+            transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
+                opacity 0.5s ease;
+            overflow: hidden;
+        }
+
+        .card__front {
+            position: relative;
+            background-color: black;
+
+            h3 {
+                letter-spacing: 2px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: "Righteous", Sans-serif;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 1.2em;
+            }
+        }
+
+        .card__back {
+            background-color: white;
+            transform: rotateY(-180deg);
+            opacity: 0;
+            .backCardContent {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                h3 {
+                    align-self: center;
+                    text-align: center;
+                    color: #fbe23c;
+                    font-family: "Righteous", Sans-serif;
+                    font-size: 34px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 1.2em;
+                }
+                p {
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: "Raleway", Sans-serif;
+                    font-size: 14px;
+                    padding: 0px 27px 0px 27px;
+                    margin: 40px 0;
+                }
+            }
+        }
+
+        .card:hover .card__back {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+
+        .card:hover .card__front {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+    }
+}
+.buttonVisit_block {
+    display: flex;
+    justify-content: center;
+    .buttonVisit_block_button {
+        background-color: #e4b800;
+        margin: 50px auto 150px auto;
+    }
+    .buttonVisit_block_button:hover {
+        background-color: #000000;
+        color: white;
+    }
+}
+
+@media (max-width: 1500px) {
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 78%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .club_card_block {
+        .clubCardBlock {
+            width: 78%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .fitnessBar_card_block {
+        .fitnessBarCardBlock {
+            width: 78%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .massageOffice_card_block {
+        .massageOfficeCardBlock {
+            width: 78%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            width: 78%;
+        }
+    }
+    .headerBackGround {
+        .header_block {
+            width: 78%;
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .club_card_block {
+        .clubCardBlock {
+            width: 85%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .fitnessBar_card_block {
+        .fitnessBarCardBlock {
+            width: 85%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .massageOffice_card_block {
+        .massageOfficeCardBlock {
+            width: 85%;
+            .newCard {
+                width: 48%;
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 85%;
+        }
+    }
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            width: 85%;
+        }
+    }
+    .headerBackGround {
+        .header_block {
+            width: 85%;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .club_card_block {
+        .clubCardBlock {
+            width: 90%;
+        }
+    }
+    .fitnessBar_card_block {
+        .fitnessBarCardBlock {
+            width: 90%;
+        }
+    }
+    .massageOffice_card_block {
+        .massageOfficeCardBlock {
+            width: 90%;
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 90%;
+        }
+    }
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            width: 90%;
+        }
+    }
+    .headerBackGround {
+        .header_block {
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .club_card_block {
+        .clubCardBlock {
+            .clubCardItem {
+                width: 100%;
+            }
+        }
+    }
+    .fitnessBar_card_block {
+        .fitnessBarCardBlock {
+            .fitnessBarCardItem {
+                width: 100%;
+            }
+        }
+    }
+    .massageOffice_card_block {
+        .massageOfficeCardBlock {
+            .massageOfficeCardItem {
+                width: 100%;
+            }
+        }
+    }
+
+    .coaches_card_block {
+        .coachesCardBlock {
+            .coachesCardItem {
+                width: 100%;
+            }
+        }
+    }
+    .PopUpForm {
+        form {
+            width: 65%;
+        }
+    }
+    .wrapperMainBlock {
+        height: 1400px;
+        .wrapperMainBlock_content {
+            width: 95%;
+            .blockCards {
+                flex-wrap: wrap;
+                .half-width {
+                    flex: 1 0 40%;
+                }
+                .card.half-width.one {
+                    margin: 0 14px 0 0;
+                }
+                .card.half-width.two {
+                    margin: 0;
+                }
+                .full-width {
+                    margin: 28px 0 0 0;
+                    flex: 1 0 95%;
+                    .card__front {
+                        img {
+                            transform: scale(1.6) translate(150px, -50px);
+                        }
+                    }
+                    .card__back {
+                        img {
+                            transform: scale(1.6) translate(150px, -50px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header_block {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px) {
+    .club_card_block {
+        .clubCardBlock {
+            flex-direction: column;
+            .newCard {
+                width: 100%;
+            }
+        }
+    }
+    .fitnessBar_card_block {
+        .fitnessBarCardBlock {
+            flex-direction: column;
+            .newCard {
+                width: 100%;
+            }
+        }
+    }
+    .massageOffice_card_block {
+        .massageOfficeCardBlock {
+            flex-direction: column;
+            .newCard {
+                width: 100%;
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            flex-direction: column;
+            .newCard {
+                width: 100%;
+            }
+            .coachesCardItem {
+                width: 100%;
+                flex-direction: column;
+                .coachesCardItem_img {
+                    width: 100%;
+                    height: 40%;
+                }
+            }
+        }
+    }
+    .PopUpForm {
+        form {
+            justify-content: center;
+            width: 85%;
+
+            .PopUpForm_item {
+                width: 70%;
+                margin: 20px auto 0 auto;
+            }
+            .PopUpForm_item.area {
+                height: 120px;
+                margin: 40px auto 0 auto;
+            }
+            .PopUpForm_item.button {
+                width: 50%;
+                margin: 120px auto 0 auto;
+            }
+        }
+    }
+    .wrapperMainBlock {
+        height: 1900px;
+        .wrapperMainBlock_content {
+            width: 95%;
+            .blockCards {
+                flex-wrap: wrap;
+                .half-width {
+                    flex: 1 0 100%;
+                    .card__front {
+                        img {
+                            transform: scale(1) translate(0, 0);
+                        }
+                    }
+                }
+                .card.half-width.one {
+                    margin: 0 14px 0 0;
+                }
+                .card.half-width.two {
+                    margin: 14px 0 0 0;
+                }
+                .full-width {
+                    margin: 28px 0 0 0;
+                    flex: 1 0 100%;
+                    .card__front {
+                        img {
+                            transform: scale(1.2) translate(40px, -45px);
+                        }
+                    }
+                    .card__back {
+                        img {
+                            transform: scale(1.2) translate(40px, -45px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapperSlider {
+        .sliderBlock {
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 120px;
+        }
+    }
+    .mobile_left_panel {
+        display: block;
+    }
+    .menuList {
+        display: none;
+    }
+    .headerBackGround {
+        .header_block {
+            display: block;
+            justify-content: center;
+            margin-left: 10px;
+            width: 95%;
+        }
+    }
+    .search_block {
+        display: none;
+        color: white;
+        justify-content: flex-end;
+
+        .search_icon {
+            border-right: none;
+        }
+    }
+
+    .social_block {
+        width: 8%;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 10px;
+        div {
+            width: 22px;
+            padding: 0 16px 0 0;
+        }
+    }
+
+    .mobile_navigation {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        color: white;
+        width: 50%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 500ms;
+        z-index: 2;
+        ul {
+            width: 100%;
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+
+            li {
+                font-weight: 600;
+                margin: 10px 70px 10px auto;
+            }
+        }
+    }
+    .mobile_navigation.active {
+        right: 0;
+        transition: all 500ms;
+    }
+    .SearchPopUp {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 500ms;
+        z-index: 2;
+    }
+    .SearchPopUp.active {
+        opacity: 1;
+        visibility: visible;
+        transition: all 500ms;
+    }
+    .mobile_search_block {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .mobile_navigation {
+        width: 70%;
+    }
+    .PopUpForm {
+        form {
+            height: 40%;
+            .PopUpForm_header {
+                margin-bottom: 30px;
+            }
+            .PopUpForm_item.button {
+                width: 50%;
+                margin: 80px auto 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 460px) {
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            .blockCards {
+                .full-width {
+                    .card__front {
+                        img {
+                            transform: scale(1.2) translate(25px, -45px);
+                        }
+                    }
+                    .card__back {
+                        img {
+                            transform: scale(1.2) translate(25px, -45px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile_search_block {
+        left: 25%;
+    }
+    .mobile_left_panel {
+        margin: 0 20px 0 0;
+    }
+    .mobile_navigation {
+        width: 100%;
+    }
+}
