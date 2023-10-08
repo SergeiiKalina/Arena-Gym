@@ -31,7 +31,7 @@ export default function SwiperBlock() {
                         <SwiperSlide key={item.id}>
                             <div className="slideBlock">
                                 <img
-                                    // alt="photo"
+                                    // eslint-disable-next-line
                                     src={item.img}
                                     width="100%"
                                     height="100%"
