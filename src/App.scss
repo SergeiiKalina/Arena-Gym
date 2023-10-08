@@ -167,7 +167,7 @@ h2 {
     display: none;
     .clear_icon {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin: 12px 35px 40px 0;
         font-weight: 700;
     }
@@ -176,7 +176,7 @@ h2 {
     display: none;
     .clear_icon {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin: 24px 50px 0 0;
         font-weight: 700;
         color: white;

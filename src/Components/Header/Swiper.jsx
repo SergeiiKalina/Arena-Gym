@@ -32,7 +32,6 @@ export default function SwiperBlock() {
                             <div className="slideBlock">
                                 <img
                                     src={item.img}
-                                    alt="photo-gym"
                                     width="100%"
                                     height="100%"
                                 />

@@ -1,5 +1,3 @@
-import { Button } from "@mui/material"
-
 const fitnessBarArray = [
     {
         id: 0,
