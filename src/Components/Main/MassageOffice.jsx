@@ -1,3 +1,5 @@
+import { Button } from "@mui/material"
+
 const fitnessBarArray = [
     {
         id: 0,
@@ -66,6 +68,19 @@ export default function MassageOffice() {
                                 <p className="massageOfficeCardItem_info_text">
                                     {description}
                                 </p>
+                                <Button
+                                    variant="contained"
+                                    sx={{
+                                        backgroundColor: "#e4b800",
+                                        width: "186px",
+                                        margin: "0 auto",
+                                        "&:hover": {
+                                            backgroundColor: "#000000",
+                                        },
+                                    }}
+                                >
+                                    Запис
+                                </Button>
                             </div>
                         </div>
                     )
