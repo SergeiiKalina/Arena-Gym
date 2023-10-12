@@ -45,7 +45,7 @@ export default function ModalImages({
                     </Button>
                 </div>
                 <div className="modal_img">
-                    <img src={itemData[currentPhoto].img} alt="photo gym" />
+                    <img src={itemData[currentPhoto].img} alt="gym" />
                 </div>
                 <div
                     id="right"
