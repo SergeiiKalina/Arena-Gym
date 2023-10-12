@@ -14,9 +14,7 @@ export default function Footer() {
                     </article>
                     <article className="footer_social">
                         <div>
-                            <a href="">
-                                <BiLogoTelegram />
-                            </a>
+                            <BiLogoTelegram />
                         </div>
 
                         <div>
