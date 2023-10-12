@@ -40,7 +40,7 @@ const fitnessBarArray = [
 
 export default function FitnessBar() {
     return (
-        <section className="fitnessBar_card_block">
+        <section className="fitnessBar_card_block" id="FitnessBar">
             <h3 className="fitnessBar_card_header">FITNESS BAR</h3>
             <article className="fitnessBar_card_header_border">
                 <span className="fitnessBar_card_header_border_span"></span>

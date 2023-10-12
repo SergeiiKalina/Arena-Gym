@@ -1,1 +1,56 @@
-
+export const itemData = [
+    { id: 0, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 1, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 2, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 3, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 4, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 5, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 6, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 7, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 8, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 9, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 10, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 11, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 12, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 13, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 14, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 15, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 16, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 17, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 18, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 19, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 20, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 21, img: "./images/IMG_6893.jpg", title: "massage office" },
+    { id: 22, img: "./images/IMG_6708.jpg", title: "massage office" },
+    { id: 23, img: "./images/IMG_6988-HDR.jpg", title: "massage office" },
+]
+export const itemMenu = [
+    {
+        id: 101,
+        title: "Наші программи",
+        src: "#CardServices",
+    },
+    {
+        id: 102,
+        title: "Тренери",
+        src: "#CardCoach",
+    },
+    {
+        id: 103,
+        title: "Карти",
+        src: "#Card",
+    },
+    {
+        id: 104,
+        title: "Фітнес Бар",
+        src: "#FitnessBar",
+    },
+    {
+        id: 105,
+        title: "Влог",
+    },
+    {
+        id: 106,
+        title: "Галерея",
+    },
+]

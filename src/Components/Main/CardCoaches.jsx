@@ -80,7 +80,7 @@ people to do CrossFit.`,
 
 export default function CardCoaches() {
     return (
-        <section className="coaches_card_block">
+        <section className="coaches_card_block" id="CardCoach">
             <h3 className="coaches_card_header">COACHES</h3>
             <article className="coaches_card_header_border">
                 <span className="span"></span>

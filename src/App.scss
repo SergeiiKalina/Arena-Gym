@@ -183,11 +183,49 @@ h2 {
         color: white;
     }
 }
+.map_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+    width: 100%;
+    .map_block_block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        iframe {
+            width: 73%;
+        }
+    }
+    .map_block_header {
+        display: flex;
+        width: 100%;
+        font-family: "Righteous", cursive;
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        justify-content: center;
+        margin: 80px 0 0 0;
+    }
+    .map_block_border {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        span {
+            width: 27px;
+            height: 4px;
+            background-color: #fefefe;
+        }
+    }
+}
 .PopUpForm {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
@@ -227,6 +265,61 @@ h2 {
     }
 }
 
+.footer_wrapper {
+    width: 100%;
+    background-color: #191919;
+
+    .footer {
+        display: flex;
+        width: 73%;
+        margin: 0 auto;
+        padding-top: 10px;
+        flex-direction: column;
+        .footer_block {
+            display: flex;
+            border-top: 1px solid white;
+            margin-top: 10px;
+        }
+    }
+    .footer_social {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 0 0 0 20px;
+        }
+        a:hover {
+            color: yellow;
+        }
+    }
+    .footer_contacts {
+        width: 50%;
+
+        font-size: 16px;
+        ul {
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            li {
+                margin: 0;
+                padding: 8px 0 0 8px;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: yellow;
+            }
+        }
+    }
+}
 .coaches_card_block {
     width: 100%;
     padding-bottom: 80px;
@@ -885,6 +978,150 @@ h2 {
     }
 }
 
+.gallery_block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+
+    background-color: #191919;
+    .gallery_images_container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .gallery_images_container_item {
+        position: relative;
+        cursor: pointer;
+        .modal_img_hoverButton {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            .modal_img_hoverButton_background {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                width: 50px;
+                height: 50px;
+                border: 15px solid #fbe23c80;
+                border-radius: 50%;
+            }
+            .modal_img_hoverButton_button {
+                width: 20%;
+                height: 20%;
+                color: #fbe23c;
+            }
+        }
+    }
+    .gallery_images_container_item:hover {
+        .modal_img_hoverButton {
+            display: flex;
+        }
+    }
+}
+.modal_img_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    .modal_img {
+        width: 80%;
+        height: 80%;
+    }
+    .modal_img_item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .modal_img_header {
+        display: flex;
+        margin-left: 20px;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: white;
+        .modal_img_header_rightPanel {
+            margin-right: 20px;
+            color: white;
+        }
+    }
+    .arrow_container.left {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        button {
+            height: 40px;
+        }
+    }
+    .arrow_container.right {
+        cursor: pointer;
+        display: flex;
+        width: 20%;
+        height: 100%;
+        align-items: center;
+
+        justify-content: flex-end;
+        button {
+            height: 40px;
+        }
+    }
+}
+
+.button_order_card_block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+    background-color: #191919;
+    .button_order_card_item {
+        background-color: #e4b800;
+        width: 30%;
+        margin: 20px auto 0 auto;
+        padding: 10px 0;
+        color: white;
+        &:hover {
+            background-color: "#000000";
+        }
+    }
+}
+
+.footer_modal_block {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
 @media (max-width: 1500px) {
     .coaches_card_block {
         .coachesCardBlock {
@@ -985,6 +1222,28 @@ h2 {
 }
 
 @media (max-width: 1300px) {
+    .modal_img_container {
+        .modal_img {
+            width: 95%;
+            height: 95%;
+        }
+        .modal_img_item {
+        }
+        .modal_img_header {
+            width: 100%;
+            height: 70px;
+        }
+        .arrow_container.left {
+            width: 5%;
+            height: 100%;
+            button {
+                height: 40px;
+            }
+        }
+        .arrow_container.right {
+            width: 5%;
+        }
+    }
     .club_card_block {
         .clubCardBlock {
             width: 90%;
@@ -1017,6 +1276,30 @@ h2 {
     }
 }
 @media (max-width: 1024px) {
+    .modal_img_container {
+        .modal_img {
+            width: 100%;
+            height: 100%;
+        }
+        .modal_img_item {
+            position: relative;
+            width: 100%;
+        }
+        .modal_img_header {
+            width: 100%;
+            height: 70px;
+        }
+        .arrow_container.left {
+            position: absolute;
+            top: 0;
+        }
+        .arrow_container.right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
     .club_card_block {
         .clubCardBlock {
             .clubCardItem {
@@ -1089,6 +1372,11 @@ h2 {
 }
 
 @media (max-width: 767px) {
+    .button_order_card_block {
+        .button_order_card_item {
+            width: 50%;
+        }
+    }
     .club_card_block {
         .clubCardBlock {
             grid-template-columns: 1fr;
@@ -1302,6 +1590,11 @@ h2 {
     }
 }
 @media (max-width: 460px) {
+    .button_order_card_block {
+        .button_order_card_item {
+            width: 70%;
+        }
+    }
     .wrapperMainBlock {
         .wrapperMainBlock_content {
             .blockCards {

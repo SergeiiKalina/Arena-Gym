@@ -16,7 +16,8 @@ movements with emphasis on technique,
 progression, and efficiency. Inexhaustible
 ways to adapt a workout to individual
 athletes’ abilities.`,
-        className: "half-width one",
+        selector: "half-width one",
+        nameButton: "Записатись на заняття",
     },
     {
         id: 1,
@@ -33,7 +34,8 @@ athletes’ abilities.`,
     progression, and efficiency. Inexhaustible
     ways to adapt a workout to individual
     athletes’ abilities.`,
-        className: "half-width two",
+        selector: "half-width two",
+        nameButton: "Дивитись Розклад",
     },
     {
         id: 2,
@@ -50,7 +52,8 @@ athletes’ abilities.`,
     progression, and efficiency. Inexhaustible
     ways to adapt a workout to individual
     athletes’ abilities.`,
-        className: "full-width",
+        selector: "full-width",
+        nameButton: "Записатись на заняття",
     },
 ]
 
@@ -62,57 +65,70 @@ export default function CardServices() {
                 <span></span>
             </div>
             <div className="blockCards">
-                {cardServicesArr.map((item) => (
-                    <div className={`card ${item.className}`} key={item.id}>
-                        <div className="card__front">
-                            <img
-                                src={item.img}
-                                alt="crossfit studio"
-                                width="100%"
-                                height="100%"
-                            />
-                            <h3>
-                                {item.header1}
-                                <br />
-                                {item.header2}
-                            </h3>
-                        </div>
-                        <div className="card__back">
-                            <img
-                                src={item.img}
-                                alt="crossfit studio"
-                                width="100%"
-                                height="100%"
-                            />
-                            <div className="backCardContent">
+                {cardServicesArr.map((item) => {
+                    const {
+                        selector,
+                        id,
+                        img,
+                        header1,
+                        header2,
+                        paragraph1,
+                        paragraph2,
+                        nameButton,
+                    } = item
+
+                    return (
+                        <div className={`card ${selector}`} key={id}>
+                            <div className="card__front">
+                                <img
+                                    src={img}
+                                    alt="crossfit studio"
+                                    width="100%"
+                                    height="100%"
+                                />
                                 <h3>
-                                    {item.header1}
+                                    {header1}
                                     <br />
-                                    {item.header2}
+                                    {header2}
                                 </h3>
-                                <p>
-                                    {item.paragraph1}
-                                    <br />
-                                    <br />
-                                    {item.paragraph2}
-                                </p>
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: "#e4b800",
-                                        width: "186px",
-                                        margin: "0 auto",
-                                        "&:hover": {
-                                            backgroundColor: "#000000",
-                                        },
-                                    }}
-                                >
-                                    Read More
-                                </Button>
+                            </div>
+                            <div className="card__back">
+                                <img
+                                    src={img}
+                                    alt="crossfit studio"
+                                    width="100%"
+                                    height="100%"
+                                />
+                                <div className="backCardContent">
+                                    <h3>
+                                        {header1}
+                                        <br />
+                                        {header2}
+                                    </h3>
+                                    <p>
+                                        {paragraph1}
+                                        <br />
+                                        <br />
+                                        {paragraph2}
+                                    </p>
+                                    <Button
+                                        variant="contained"
+                                        sx={{
+                                            backgroundColor: "#e4b800",
+                                            width: "186px",
+                                            margin: "0 auto",
+                                            "&:hover": {
+                                                backgroundColor: "#000000",
+                                            },
+                                        }}
+                                    >
+                                        {nameButton}
+                                    </Button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    )
+                })}
             </div>
         </article>
     )

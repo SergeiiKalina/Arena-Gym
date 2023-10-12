@@ -1,9 +1,12 @@
+import ButtonOrderCard from "./ButtonOrderCard"
 import CardCoaches from "./CardCoaches"
 import CardServices from "./CardServices"
 import ClubCard from "./ClubCard"
 import FitnessBar from "./FitnessBar"
+import Gallery from "./Gallery"
 import MassageOffice from "./MassageOffice"
 import WrapperMain from "./WrapperMain"
+import Map from "./Map"
 
 export default function Main() {
     return (
@@ -18,6 +21,11 @@ export default function Main() {
             <FitnessBar />
             <WrapperMain>
                 <MassageOffice />
+            </WrapperMain>
+            <Gallery />
+            <ButtonOrderCard />
+            <WrapperMain>
+                <Map />
             </WrapperMain>
         </>
     )

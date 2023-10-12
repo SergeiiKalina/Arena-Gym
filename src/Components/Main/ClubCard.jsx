@@ -41,7 +41,7 @@ const coachArray = [
 
 export default function ClubCard() {
     return (
-        <section className="club_card_block">
+        <section className="club_card_block" id="Card">
             <h3 className="club_card_header">CLUB CARD</h3>
             <article className="club_card_header_border">
                 <span className="club_card_header_border_span"></span>

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import emailjs from "@emailjs/browser"
 import Logo from "./Logo"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
@@ -32,7 +33,7 @@ export default function Header() {
         }
     }
     function toggleFromPopup(e) {
-        e.preventDefault()
+        e.stopPropagation()
         window.scrollTo({
             top: 150,
             behavior: "smooth",
@@ -49,6 +50,17 @@ export default function Header() {
             return
         }
     }
+
+    function formSend(e) {
+        e.preventDefault()
+        emailjs.sendForm(
+            "service_ticrokl",
+            "template_ih1dzqr",
+            e.target,
+            "P_Kl4vBTtPRSGekOp"
+        )
+    }
+
     return (
         <section
             style={{
@@ -85,7 +97,10 @@ export default function Header() {
             <SwiperBlock toggleFromPopup={toggleFromPopup} />
             <OrderVisitButton toggleFromPopup={toggleFromPopup} />
             {toggleFormPopUp ? (
-                <PopUpFormOrder toggleFromPopup={toggleFromPopup} />
+                <PopUpFormOrder
+                    toggleFromPopup={toggleFromPopup}
+                    formSend={formSend}
+                />
             ) : null}
         </section>
     )

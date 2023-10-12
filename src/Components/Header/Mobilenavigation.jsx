@@ -1,4 +1,4 @@
-import { itemMenu } from "./Menu"
+import { itemMenu } from "../../data/date"
 import ClearIcon from "@mui/icons-material/Clear"
 
 export default function MobileNavigation({ toggleBurger, toggleMenuBurger }) {
