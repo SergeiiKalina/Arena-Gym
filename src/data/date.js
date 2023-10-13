@@ -52,5 +52,265 @@ export const itemMenu = [
     {
         id: 106,
         title: "Галерея",
+        src: "#Gallery",
+    },
+]
+
+export const slideArr = [
+    { id: 0, title: "", img: "./images/IMG_6708.jpg", alt: "photo" },
+    { id: 1, title: "", img: "./images/IMG_6822-HDR.jpg", alt: "photo" },
+    { id: 2, title: "", img: "./images/IMG_6884.jpg", alt: "photo" },
+    { id: 3, title: "", img: "./images/IMG_6893.jpg", alt: "photo" },
+    { id: 4, title: "", img: "./images/IMG_7003-HDR.jpg", alt: "photo" },
+    { id: 5, title: "", img: "./images/IMG_6988-HDR.jpg", alt: "photo" },
+]
+
+export const coachArray = [
+    {
+        id: 0,
+        name: "STEVEN AYOKEE",
+
+        jobTitle: "OWNER/HEAD COACH",
+        description: `12 Years ago I lost 80lbs with the help of a
+personal coach and it completely changed my way of
+life. Since then, it’s been my mission to sway other
+people to do CrossFit.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-4.jpg",
+    },
+    {
+        id: 1,
+        name: "VIRGIL COOK",
+        jobTitle: "COACH",
+        description: `Virgil has been training amateur and professional combat athletes since 1995.
+         His skill-set expands to the following combat styles: MMA fighting and Brazilian Jiu-Jitsu.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-5.jpg",
+    },
+    {
+        id: 2,
+        name: "JULIE COLLINS",
+        jobTitle: "COACH",
+        description: `I initially took on CrossFit trainings after a spending a lifetime in professional athletics.
+         The fact that I loved sports so much contributed a lot to my decision of being coach.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-6.jpg",
+    },
+    {
+        id: 3,
+        name: "DOMINICA SNYDER",
+
+        jobTitle: "COACH",
+        description: `Growing up, I’ve always been involved in sports, 
+        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-7.jpg",
+    },
+    {
+        id: 4,
+        name: "DOMINICA SNYDER",
+
+        jobTitle: "COACH",
+        description: `Growing up, I’ve always been involved in sports, 
+        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-4.jpg",
+    },
+    {
+        id: 5,
+        name: "DOMINICA SNYDER",
+
+        jobTitle: "COACH",
+        description: `Growing up, I’ve always been involved in sports, 
+        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
+        instagram: "",
+        telegram: "",
+        facebook: "",
+        img: "./images/home-11-img-5.jpg",
+    },
+]
+
+export const cardServicesArr = [
+    {
+        id: 0,
+        header1: "CROSSFIT  ",
+        header2: "STUDIO",
+        img: "./images/home-11-img-1.jpg",
+        paragraph1: `At Hardrod, we teach functional movements
+        with emphasis on technique, progression, and
+efficiency. Our belief is that while
+CrossFit isn’t for everyone, anyone can do
+CrossFit.`,
+        paragraph2: `At Hardrod, we teach functional
+movements with emphasis on technique,
+progression, and efficiency. Inexhaustible
+ways to adapt a workout to individual
+athletes’ abilities.`,
+        selector: "half-width one",
+        nameButton: "Записатись на заняття",
+    },
+    {
+        id: 1,
+        header1: "FITNESS",
+        header2: "STUDIO",
+        img: "./images/home-11-img-2.jpg",
+        paragraph1: `At Hardrod, we teach functional movements
+    with emphasis on technique, progression, and
+    efficiency. Our belief is that while
+    CrossFit isn’t for everyone, anyone can do
+    CrossFit. `,
+        paragraph2: `At Hardrod, we teach functional
+    movements with emphasis on technique,
+    progression, and efficiency. Inexhaustible
+    ways to adapt a workout to individual
+    athletes’ abilities.`,
+        selector: "half-width two",
+        nameButton: "Дивитись Розклад",
+    },
+    {
+        id: 2,
+        header1: " PERSONAL",
+        header2: "TRAINING",
+        img: "./images/home-11-img-3.jpg",
+        paragraph1: `At Hardrod, we teach functional movements
+    with emphasis on technique, progression, and
+    efficiency. Our belief is that while
+    CrossFit isn’t for everyone, anyone can do
+    CrossFit.`,
+        paragraph2: `At Hardrod, we teach functional
+    movements with emphasis on technique,
+    progression, and efficiency. Inexhaustible
+    ways to adapt a workout to individual
+    athletes’ abilities.`,
+        selector: "full-width",
+        nameButton: "Записатись на заняття",
+    },
+]
+
+export const cardArray = [
+    {
+        id: 0,
+        name: "MORNING",
+        coast: "2000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/719.jpg",
+    },
+    {
+        id: 1,
+        name: "FULL DAY",
+        coast: "3000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/719.jpg",
+    },
+    {
+        id: 2,
+        name: "DAY",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/719.jpg",
+    },
+    {
+        id: 3,
+        name: "FITNESS",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/719.jpg",
+    },
+]
+
+export const fitnessBarArray = [
+    {
+        id: 0,
+        name: "MORNING",
+        coast: "2000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6756-HDR.jpg",
+    },
+    {
+        id: 1,
+        name: "FULL DAY",
+        coast: "3000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6755.jpg",
+    },
+    {
+        id: 2,
+        name: "DAY",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6985-HDR.jpg",
+    },
+
+    {
+        id: 3,
+        name: "DAY",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6985-HDR(2).jpg",
+    },
+]
+
+export const massageArray = [
+    {
+        id: 0,
+        name: "MORNING",
+        coast: "2000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6725.jpg",
+    },
+    {
+        id: 1,
+        name: "FULL DAY",
+        coast: "3000uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6714.jpg",
+    },
+    {
+        id: 2,
+        name: "DAY",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6770(1).jpg",
+    },
+    {
+        id: 3,
+        name: "DAY",
+        coast: "1500uan",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
+        Veritatis neque nam totam modi non libero quas id placeat.`,
+        img: "./images/IMG_6770.jpg",
     },
 ]

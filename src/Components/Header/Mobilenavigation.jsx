@@ -2,7 +2,6 @@ import { itemMenu } from "../../data/date"
 import ClearIcon from "@mui/icons-material/Clear"
 
 export default function MobileNavigation({ toggleBurger, toggleMenuBurger }) {
-    console.log(toggleBurger)
     return (
         <nav
             className={`${
@@ -10,11 +9,13 @@ export default function MobileNavigation({ toggleBurger, toggleMenuBurger }) {
             }`}
         >
             <div className="clear_icon">
-                <ClearIcon onClick={toggleMenuBurger} />
+                <ClearIcon onClick={() => toggleMenuBurger()} />
             </div>
             <ul>
                 {itemMenu.map((item) => (
-                    <li key={item.id}>{item.title}</li>
+                    <li key={item.id} onClick={() => toggleMenuBurger()}>
+                        <a href={item.src}>{item.title}</a>
+                    </li>
                 ))}
             </ul>
         </nav>

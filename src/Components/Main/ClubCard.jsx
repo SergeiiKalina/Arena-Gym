@@ -1,43 +1,5 @@
 import { Button } from "@mui/material"
-
-const coachArray = [
-    {
-        id: 0,
-        name: "MORNING",
-        coast: "2000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/719.jpg",
-    },
-    {
-        id: 1,
-        name: "FULL DAY",
-        coast: "3000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/719.jpg",
-    },
-    {
-        id: 2,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/719.jpg",
-    },
-    {
-        id: 3,
-        name: "FITNESS",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/719.jpg",
-    },
-]
+import { cardArray } from "../../data/date"
 
 export default function ClubCard() {
     return (
@@ -47,7 +9,7 @@ export default function ClubCard() {
                 <span className="club_card_header_border_span"></span>
             </article>
             <article className="clubCardBlock">
-                {coachArray.map((item) => {
+                {cardArray.map((item) => {
                     const {
                         name,
                         id,

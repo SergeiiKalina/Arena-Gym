@@ -172,6 +172,10 @@ h2 {
         margin: 12px 35px 40px 0;
         font-weight: 700;
     }
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
 .SearchPopUp {
     display: none;
@@ -260,7 +264,6 @@ h2 {
         margin: 0 auto;
         padding-top: 50px;
         .slideBlock {
-            height: 800px;
         }
     }
 }
@@ -1482,7 +1485,6 @@ h2 {
         .sliderBlock {
             width: 100%;
             margin: 0 auto;
-            padding-top: 120px;
         }
     }
     .mobile_left_panel {

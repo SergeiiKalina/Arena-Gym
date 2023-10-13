@@ -1,42 +1,4 @@
-const fitnessBarArray = [
-    {
-        id: 0,
-        name: "MORNING",
-        coast: "2000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6756-HDR.jpg",
-    },
-    {
-        id: 1,
-        name: "FULL DAY",
-        coast: "3000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6755.jpg",
-    },
-    {
-        id: 2,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6985-HDR.jpg",
-    },
-
-    {
-        id: 3,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6985-HDR(2).jpg",
-    },
-]
+import { fitnessBarArray } from "../../data/date"
 
 export default function FitnessBar() {
     return (

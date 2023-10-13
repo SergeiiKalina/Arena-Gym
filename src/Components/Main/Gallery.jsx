@@ -38,7 +38,7 @@ export default function Gallery() {
     }, [numberPages])
     return (
         <>
-            <section className="gallery_block">
+            <section className="gallery_block" id="Gallery">
                 <article className="gallery_images_container">
                     {currentPhotos.map((item, i) => (
                         <div
