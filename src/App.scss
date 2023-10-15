@@ -1160,7 +1160,7 @@ h2 {
         height: 75px;
         margin: 10px 5px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .schedule_row.body {
@@ -1187,8 +1187,8 @@ h2 {
             opacity: 0;
             visibility: hidden;
             position: absolute;
-            top: 50px;
-            width: 100%;
+            top: 55px;
+            width: 95%;
 
             font-size: 14px;
             border-radius: 10px;
@@ -1523,7 +1523,9 @@ h2 {
         flex-wrap: wrap;
         .allTraining {
             .allTraining_tooltip {
-                width: 94%;
+                left: 10px;
+
+                width: 50%;
             }
         }
     }
@@ -1755,6 +1757,15 @@ h2 {
     }
 }
 @media (max-width: 460px) {
+    .schedule_block {
+        .allTraining {
+            .allTraining_tooltip {
+                left: 10px;
+
+                width: 70%;
+            }
+        }
+    }
     .button_order_card_block {
         .button_order_card_item {
             width: 70%;
