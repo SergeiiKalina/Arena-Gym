@@ -1128,7 +1128,106 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
 }
+
+.schedule_block {
+    width: 73%;
+
+    padding: 20px 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .schedule {
+        width: 100%;
+        height: auto;
+        border-collapse: collapse;
+
+        background-color: #33393e;
+    }
+
+    th,
+    td {
+        text-align: left;
+        color: #5b7bb2;
+    }
+    th {
+        color: #fbe23c;
+    }
+    td {
+        height: 50px;
+    }
+    .schedule_row {
+        position: relative;
+        height: 75px;
+        margin: 10px 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .schedule_row.body {
+        background-color: #e4b800;
+    }
+    .schedule_row.day {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .allTraining {
+        span {
+            color: yellow;
+            font-size: 14px;
+            font-weight: 600;
+            padding-left: 10px;
+        }
+        .allTraining_name {
+            width: 140px;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        .allTraining_tooltip {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 50px;
+            width: 100%;
+
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: all 500ms;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 8px;
+            z-index: 2;
+            .buttonVisit_block_button {
+                font-size: 14px;
+                background-color: #e4b800;
+                margin: 8px 0;
+                padding: 4px 8px;
+                border: none;
+                border-radius: 6px;
+            }
+            .buttonVisit_block_button:hover {
+                background-color: #000000;
+                color: white;
+            }
+        }
+    }
+    .allTraining:hover {
+        .allTraining_tooltip {
+            opacity: 1;
+            visibility: visible;
+            transition: all 500ms;
+        }
+    }
+}
+
 @media (max-width: 1500px) {
+    .schedule_block {
+        width: 78%;
+    }
     .coaches_card_block {
         .coachesCardBlock {
             width: 78%;
@@ -1180,6 +1279,9 @@ h2 {
     }
 }
 @media (max-width: 1400px) {
+    .schedule_block {
+        width: 85%;
+    }
     .club_card_block {
         .clubCardBlock {
             width: 85%;
@@ -1228,6 +1330,9 @@ h2 {
 }
 
 @media (max-width: 1300px) {
+    .schedule_block {
+        width: 95%;
+    }
     .modal_img_container {
         .modal_img {
             width: 95%;
@@ -1279,6 +1384,40 @@ h2 {
         .header_block {
             width: 90%;
         }
+    }
+}
+@media (max-width: 1200px) {
+    .schedule_block {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .allTraining {
+            .allTraining_tooltip {
+                width: 94%;
+            }
+        }
+    }
+
+    .schedule:nth-child(1) {
+        width: 25%;
+    }
+    .schedule:nth-child(2) {
+        width: 25%;
+    }
+    .schedule:nth-child(3) {
+        width: 25%;
+    }
+    .schedule:nth-child(4) {
+        width: 25%;
+    }
+
+    .schedule:nth-child(n + 5) {
+        width: 33.33%;
+    }
+}
+@media (max-width: 1100px) {
+    .schedule_block {
+        width: 100%;
     }
 }
 @media (max-width: 1024px) {
@@ -1378,6 +1517,20 @@ h2 {
 }
 
 @media (max-width: 767px) {
+    .schedule_block {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .allTraining {
+            .allTraining_tooltip {
+                width: 94%;
+            }
+        }
+    }
+
+    .schedule:nth-child(n + 1) {
+        width: 100%;
+    }
     .button_order_card_block {
         .button_order_card_item {
             width: 50%;

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material"
 import { cardServicesArr } from "../../data/date"
+import { Link } from "react-router-dom"
 
 export default function CardServices() {
     return (
@@ -19,6 +20,7 @@ export default function CardServices() {
                         paragraph1,
                         paragraph2,
                         nameButton,
+                        src,
                     } = item
 
                     return (
@@ -55,19 +57,21 @@ export default function CardServices() {
                                         <br />
                                         {paragraph2}
                                     </p>
-                                    <Button
-                                        variant="contained"
-                                        sx={{
-                                            backgroundColor: "#e4b800",
-                                            width: "186px",
-                                            margin: "0 auto",
-                                            "&:hover": {
-                                                backgroundColor: "#000000",
-                                            },
-                                        }}
-                                    >
-                                        {nameButton}
-                                    </Button>
+                                    <Link to={src ? src : "/"}>
+                                        <Button
+                                            variant="contained"
+                                            sx={{
+                                                backgroundColor: "#e4b800",
+                                                width: "186px",
+                                                margin: "0 auto",
+                                                "&:hover": {
+                                                    backgroundColor: "#000000",
+                                                },
+                                            }}
+                                        >
+                                            {nameButton}
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

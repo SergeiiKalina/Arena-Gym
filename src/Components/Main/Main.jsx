@@ -7,10 +7,13 @@ import Gallery from "./Gallery"
 import MassageOffice from "./MassageOffice"
 import WrapperMain from "./WrapperMain"
 import Map from "./Map"
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 export default function Main() {
     return (
         <>
+            <Header />
             <WrapperMain>
                 <CardServices />
             </WrapperMain>
@@ -27,6 +30,7 @@ export default function Main() {
             <WrapperMain>
                 <Map />
             </WrapperMain>
+            <Footer />
         </>
     )
 }

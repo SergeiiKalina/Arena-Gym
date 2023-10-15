@@ -1,16 +1,20 @@
 import React from "react"
-import Header from "./Components/Header/Header"
-import "./App.scss"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import MyLayouts from "./Components/layouts/MyLayouts"
 import Main from "./Components/Main/Main"
-import Footer from "./Components/Footer/Footer"
+import "./App.scss"
+import ScheduleTraining from "./Components/TrainingSchedule/ScheduleTraining"
 
 function App() {
     return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MyLayouts />}>
+                    <Route index element={<Main />} />
+                    <Route path="/schedule" element={<ScheduleTraining />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     )
 }
 

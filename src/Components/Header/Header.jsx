@@ -1,15 +1,11 @@
 import { useState } from "react"
 import emailjs from "@emailjs/browser"
-import Logo from "./Logo"
-import Menu from "./Menu"
-import MobileMenu from "./MobileMenu"
-import Search from "./Search"
-import Social from "./Social"
-import MobileNavigation from "./Mobilenavigation"
+import MainMenu from "./MainMenu"
 import MobileSearchPopup from "./MobileSearchPopup"
-import SwiperBlock from "./Swiper"
-import PopUpFormOrder from "./PopUpFormOrder"
+import MobileNavigation from "./Mobilenavigation"
 import OrderVisitButton from "./OrderVisitButton"
+import PopUpFormOrder from "./PopUpFormOrder"
+import SwiperBlock from "./Swiper"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
@@ -50,7 +46,6 @@ export default function Header() {
             return
         }
     }
-
     function formSend(e) {
         e.preventDefault()
         emailjs.sendForm(
@@ -60,7 +55,6 @@ export default function Header() {
             "P_Kl4vBTtPRSGekOp"
         )
     }
-
     return (
         <section
             style={{
@@ -71,21 +65,11 @@ export default function Header() {
             }}
             className="headerBackGround"
         >
-            <header className="header_wrapper">
-                <div className="header_block">
-                    <Logo />
-                    <Menu />
-                    <Search className="searchPc" />
-                    <Social />
-                </div>
-                <div className="mobile_left_panel">
-                    <MobileMenu
-                        toggleMenuBurger={toggleMenuBurger}
-                        toggleBurger={toggleBurger}
-                        toggleSearchPopup={toggleSearchPopup}
-                    />
-                </div>
-            </header>
+            <MainMenu
+                toggleMenuBurger={toggleMenuBurger}
+                toggleBurger={toggleBurger}
+                toggleSearchPopup={toggleSearchPopup}
+            />
             <MobileNavigation
                 toggleBurger={toggleBurger}
                 toggleMenuBurger={toggleMenuBurger}
@@ -94,7 +78,7 @@ export default function Header() {
                 toggleSearch={toggleSearch}
                 toggleSearchPopup={toggleSearchPopup}
             />
-            <SwiperBlock toggleFromPopup={toggleFromPopup} />
+            <SwiperBlock />
             <OrderVisitButton toggleFromPopup={toggleFromPopup} />
             {toggleFormPopUp ? (
                 <PopUpFormOrder
