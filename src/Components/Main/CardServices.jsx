@@ -1,8 +1,16 @@
+import { useState } from "react"
 import { Button } from "@mui/material"
 import { cardServicesArr } from "../../data/date"
 import { Link } from "react-router-dom"
+import { BsCheckLg } from "react-icons/bs"
 
 export default function CardServices() {
+    const [arr, setArr] = useState(cardServicesArr)
+    function postman() {
+        fetch("http://localhost:1337/api/posts")
+            .then((res) => res.json())
+            .then((res) => setArr([...arr, res.data[0].attributes]))
+    }
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
             <h3 className="ourPrograms">Our programs</h3>
@@ -10,7 +18,7 @@ export default function CardServices() {
                 <span></span>
             </div>
             <div className="blockCards">
-                {cardServicesArr.map((item) => {
+                {arr.map((item) => {
                     const {
                         selector,
                         id,
@@ -21,6 +29,7 @@ export default function CardServices() {
                         paragraph2,
                         nameButton,
                         src,
+                        list,
                     } = item
 
                     return (
@@ -57,21 +66,38 @@ export default function CardServices() {
                                         <br />
                                         {paragraph2}
                                     </p>
-                                    <Link to={src ? src : "/"}>
-                                        <Button
-                                            variant="contained"
-                                            sx={{
-                                                backgroundColor: "#e4b800",
-                                                width: "186px",
-                                                margin: "0 auto",
-                                                "&:hover": {
-                                                    backgroundColor: "#000000",
-                                                },
-                                            }}
-                                        >
-                                            {nameButton}
-                                        </Button>
-                                    </Link>
+                                    {list ? (
+                                        <ul className="blockCards_list">
+                                            {list.map((item) => (
+                                                <li>
+                                                    <BsCheckLg /> {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
+                                    {nameButton ? (
+                                        <Link to={src ? src : "/"}>
+                                            <Button
+                                                variant="contained"
+                                                sx={{
+                                                    backgroundColor: "#e4b800",
+                                                    width: "186px",
+                                                    margin: "0 auto",
+                                                    "&:hover": {
+                                                        backgroundColor:
+                                                            "#000000",
+                                                    },
+                                                }}
+                                                onClick={() => {
+                                                    if (!src) {
+                                                        postman()
+                                                    }
+                                                }}
+                                            >
+                                                {nameButton}
+                                            </Button>
+                                        </Link>
+                                    ) : null}
                                 </div>
                             </div>
                         </div>

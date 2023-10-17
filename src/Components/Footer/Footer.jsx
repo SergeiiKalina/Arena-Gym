@@ -2,12 +2,16 @@ import { BiLogoTelegram } from "react-icons/bi"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FooterNavigate from "./FooterNavigate"
 import Logo from "../Header/Logo"
+import Contacts from "../Header/Contacts"
 
 export default function Footer() {
     return (
         <footer className="footer_wrapper">
             <section className="footer">
-                <Logo />
+                <header>
+                    <Logo />
+                    <Contacts />
+                </header>
                 <div className="footer_block">
                     <article className="footer_contacts">
                         <FooterNavigate />

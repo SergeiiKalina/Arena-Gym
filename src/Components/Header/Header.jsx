@@ -1,15 +1,14 @@
 import { useState } from "react"
 import emailjs from "@emailjs/browser"
 import MainMenu from "./MainMenu"
-import MobileSearchPopup from "./MobileSearchPopup"
 import MobileNavigation from "./Mobilenavigation"
-import OrderVisitButton from "./OrderVisitButton"
+
 import PopUpFormOrder from "./PopUpFormOrder"
 import SwiperBlock from "./Swiper"
+import InfoGym from "./InfoGym"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
-    const [toggleSearch, setToggleSearch] = useState(false)
     const [toggleFormPopUp, setToggleFormPopUp] = useState(false)
 
     function toggleMenuBurger() {
@@ -20,14 +19,7 @@ export default function Header() {
             document.body.style.overflow = "visible"
         }
     }
-    function toggleSearchPopup() {
-        setToggleSearch((prev) => !prev)
-        if (!toggleSearch) {
-            document.body.style.overflow = "hidden"
-        } else {
-            document.body.style.overflow = "visible"
-        }
-    }
+
     function toggleFromPopup(e) {
         e.stopPropagation()
         window.scrollTo({
@@ -68,18 +60,14 @@ export default function Header() {
             <MainMenu
                 toggleMenuBurger={toggleMenuBurger}
                 toggleBurger={toggleBurger}
-                toggleSearchPopup={toggleSearchPopup}
             />
             <MobileNavigation
                 toggleBurger={toggleBurger}
                 toggleMenuBurger={toggleMenuBurger}
             />
-            <MobileSearchPopup
-                toggleSearch={toggleSearch}
-                toggleSearchPopup={toggleSearchPopup}
-            />
-            <SwiperBlock />
-            <OrderVisitButton toggleFromPopup={toggleFromPopup} />
+
+            <SwiperBlock toggleFromPopup={toggleFromPopup} />
+            <InfoGym />
             {toggleFormPopUp ? (
                 <PopUpFormOrder
                     toggleFromPopup={toggleFromPopup}

@@ -1,8 +1,8 @@
+import Contacts from "./Contacts"
 import Logo from "./Logo"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
 import Social from "./Social"
-import Search from "./Search"
 
 export default function MainMenu({
     toggleMenuBurger,
@@ -14,9 +14,9 @@ export default function MainMenu({
             <div className="header_block">
                 <Logo />
                 <Menu />
-                <Search />
                 <Social />
             </div>
+            <Contacts />
             <div className="mobile_left_panel">
                 <MobileMenu
                     toggleMenuBurger={toggleMenuBurger}

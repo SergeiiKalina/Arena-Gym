@@ -143,58 +143,121 @@ people to do CrossFit.`,
 export const cardServicesArr = [
     {
         id: 0,
-        header1: "CROSSFIT  ",
-        header2: "STUDIO",
+        header1: "ТРЕНАЖЕРНИЙ",
+        header2: "ЗАЛ",
         img: "./images/home-11-img-1.jpg",
-        paragraph1: `At Hardrod, we teach functional movements
-        with emphasis on technique, progression, and
-efficiency. Our belief is that while
-CrossFit isn’t for everyone, anyone can do
-CrossFit.`,
-        paragraph2: `At Hardrod, we teach functional
-movements with emphasis on technique,
-progression, and efficiency. Inexhaustible
-ways to adapt a workout to individual
-athletes’ abilities.`,
-        selector: "half-width one",
+        paragraph1: `Панорамний тренажерний зал ArenaGym виконаний у стилі LOFT для Ваших успішних та продуктивних занять.
+        Укомплектований лінійкою професійного спортивного обладнання торгової марки світового рівня - Impulse!`,
+        paragraph2: `Основні акценти: безпека та комфорт! Кожен пристрій зберігає плавність і природність рухів, не завдає дискомфорту під час тренування,
+        безпечно і зручно в експлуатації.
+        Саме за ці якості тренажери користуються величезним попитом як серед професійних спортсменів, так і серед початківців!`,
+        list: [
+            "сучасна надпотужна система вентиляції та кондиціонування",
+            "професійна акустична система",
+            "мінімалізм в інтер'єрі створює ідеальну атмосферу для повного занурення у спорт.",
+        ],
+        selector: "half-width two",
         nameButton: "Записатись на заняття",
     },
     {
         id: 1,
-        header1: "FITNESS",
-        header2: "STUDIO",
+        header1: "ГРУПОВІ",
+        header2: "ЗАНЯТТЯ",
         img: "./images/home-11-img-2.jpg",
-        paragraph1: `At Hardrod, we teach functional movements
-    with emphasis on technique, progression, and
-    efficiency. Our belief is that while
-    CrossFit isn’t for everyone, anyone can do
-    CrossFit. `,
-        paragraph2: `At Hardrod, we teach functional
-    movements with emphasis on technique,
-    progression, and efficiency. Inexhaustible
-    ways to adapt a workout to individual
-    athletes’ abilities.`,
+        paragraph1: `Груповий фітнес - це програми тренувань під керівництвом досвідчених тренерів ArenaGym,
+         спеціально підібрані та розроблені у кількох напрямках`,
+        paragraph2: ``,
         selector: "half-width two",
         nameButton: "Дивитись Розклад",
+        list: [
+            "заняття у групі однодумців",
+            "урізноманітнення своїх тренувань",
+            "підбір заняття залежно від довгострокових та короткострокових цілей.",
+            "командний дух",
+            "постійний ритм",
+            "підвищений контроль з боку інструктора",
+            "Оптимальний варіант - поєднувати протягом тижня різні види тренувань",
+        ],
         src: "/schedule",
     },
     {
         id: 2,
-        header1: " PERSONAL",
-        header2: "TRAINING",
+        header1: "ПЕРСОНАЛЬНІ",
+        header2: "ТРЕНУВАННЯ",
         img: "./images/home-11-img-3.jpg",
-        paragraph1: `At Hardrod, we teach functional movements
-    with emphasis on technique, progression, and
-    efficiency. Our belief is that while
-    CrossFit isn’t for everyone, anyone can do
-    CrossFit.`,
-        paragraph2: `At Hardrod, we teach functional
-    movements with emphasis on technique,
-    progression, and efficiency. Inexhaustible
-    ways to adapt a workout to individual
-    athletes’ abilities.`,
-        selector: "full-width",
+        paragraph1: `Персональне тренування - це ідеальне рішення для тих, 
+        хто цінує свій час і хоче отримати гарантований результат.
+         Це шлях до ідеальної фігури і здорового способу життя.
+           З урахуванням індивідуальних побажань, особливостей і рівня підготовки тренери грамотно спланують
+            програму занять і поставлять техніку ефективного виконання вправ. 
+             Особистий інструктор дасть професійні рекомендації по правильному 
+             харчуванню, яке так само важливо при роботі над тілом мрії, як і регулярні фізичні заняття.`,
+        paragraph2: `З професійним тренером шлях до мети набагато коротший.`,
+        selector: "half-width two",
         nameButton: "Записатись на заняття",
+    },
+    {
+        id: 3,
+        header1: "ФІТНЕС",
+        header2: "БАР",
+        img: "./images/IMG_6985-HDR.jpg",
+        paragraph1: `Фітнес Бар – невід\`ємна частина сучасного фітнес клубу. Правильне, збалансоване харчування грає ключову роль у досягненні результатів.`,
+        paragraph2: `Стильний та затишний Фітнес бар ArenaGym допоможе відновити сили, 
+        поповнити енергетичний запас і просто відпочити, насолоджуючись смаком корисних та поживних страв, 
+        протеїнових та енергетичних коктейлів чи чашкою улюбленого чаю чи кави.`,
+        selector: "half-width two",
+        nameButton: "",
+    },
+    {
+        id: 4,
+        header1: "СТУДІЯ КОРЕКЦІЇ",
+        header2: "ФІГУРИ LADIES CLUB",
+        img: "./images/IMG_6714.jpg",
+        paragraph1: `Студія масажу LADIES CLUB спеціалізується на корекції фігури.
+        Майстри мають 8 річний досвід, мають різноманітні масажі та комплексні догляди за тілом 
+        у своєму арсеналі та створили свою авторську програму корекції фігури, яка дає гарантовані результати.`,
+        paragraph2: `Курс налаштований на:`,
+        list: [
+            "Зменшення обсягів та ваги тіла",
+            "Виточування силуету",
+            "Зменшення жирових пасток",
+            "Антицелюлітний ефект",
+            "Поліпшення тонусу шкіри",
+            "Згладжування стрій",
+            "Корекція проблемних зон",
+            "Стимулювання роботи метаболізму",
+            "Значні результати ви помітите вже після першої процедури",
+            "Масаж це значне доповнення до спорту та фізичних навантажень",
+            "Завдяки комплексному підходу можна покращити фізичне здоров’я, та досягнути єстетичного насолоджування своїм тілом.",
+        ],
+        selector: "half-width two",
+        nameButton: "",
+    },
+    {
+        id: 5,
+        header1: "КРОССФІТ",
+        header2: "",
+        img: "./images/Grandfather.png",
+        paragraph1: `Основа системи CrossFit - це «постійно варіюються,
+         високоінтенсивні функціональні рухи». У цьому полягає наш розпорядження.
+        Функціональні рухи - це універсальні шаблони моторного рекрутування, які виконуються у вигляді хвилі скорочень, що йдуть від
+        кора до кінцівок і є складовими, тобто мультисуглобовими. Ці
+        Рухи природні та ефективно використовуються людиною для зміни положення власного тіла та переміщення будь-яких предметів.`,
+        paragraph2: `Будемо розвивати такі якості на заняттях:`,
+        list: [
+            "Витривалість серцево-судинної та дихальної систем",
+            "Загальна Витривалість",
+            "Сила",
+            "Гнучкість",
+            "Потужність",
+            "Швидкість",
+            "Координація",
+            "Спритність",
+            "Баланс",
+            "Точність",
+        ],
+        selector: "half-width two",
+        nameButton: "Записатись",
     },
 ]
 
@@ -237,85 +300,6 @@ export const cardArray = [
     },
 ]
 
-export const fitnessBarArray = [
-    {
-        id: 0,
-        name: "MORNING",
-        coast: "2000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6756-HDR.jpg",
-    },
-    {
-        id: 1,
-        name: "FULL DAY",
-        coast: "3000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6755.jpg",
-    },
-    {
-        id: 2,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6985-HDR.jpg",
-    },
-
-    {
-        id: 3,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6985-HDR(2).jpg",
-    },
-]
-
-export const massageArray = [
-    {
-        id: 0,
-        name: "MORNING",
-        coast: "2000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6725.jpg",
-    },
-    {
-        id: 1,
-        name: "FULL DAY",
-        coast: "3000uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6714.jpg",
-    },
-    {
-        id: 2,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6770(1).jpg",
-    },
-    {
-        id: 3,
-        name: "DAY",
-        coast: "1500uan",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Labore reprehenderit adipisci doloremque vel ullam tempora temporibus necessitatibus neque quibusdam dolorem? 
-        Veritatis neque nam totam modi non libero quas id placeat.`,
-        img: "./images/IMG_6770.jpg",
-    },
-]
-
 export const tableSchedule = [
     {
         day: "Понеділок",
@@ -348,6 +332,7 @@ magni ea facilis earum qui.`,
 adipisicing elit. Voluptas at distinctio nobis
 magni ea facilis earum qui.`,
             },
+
             {
                 time: "17:00",
                 name: "Pilates",
