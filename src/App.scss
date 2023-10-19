@@ -1281,6 +1281,9 @@ h2 {
     }
 }
 @media (max-width: 1500px) {
+    .main_info {
+        width: 78%;
+    }
     .schedule_block {
         width: 78%;
     }
@@ -1335,6 +1338,9 @@ h2 {
     }
 }
 @media (max-width: 1400px) {
+    .main_info {
+        width: 85%;
+    }
     .schedule_block {
         width: 85%;
     }
@@ -1396,6 +1402,9 @@ h2 {
                 height: 600px;
             }
         }
+    }
+    .main_info {
+        width: 95%;
     }
     .schedule_block {
         width: 95%;
