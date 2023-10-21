@@ -8,7 +8,7 @@ export default function Gallery() {
     const [currentPhotos, setCurrentPhotos] = useState(itemData.slice(0, 8))
     const [numberPages, setNumberPages] = useState(1)
     const [currentPhoto, setCurrentPhoto] = useState(null)
-    console.log(currentPhoto)
+
     function changesImagesOnPages() {
         if (Math.ceil(itemData.length / 8) > numberPages) {
             setNumberPages((prev) => prev + 1)

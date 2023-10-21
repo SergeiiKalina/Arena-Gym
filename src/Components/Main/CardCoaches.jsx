@@ -3,8 +3,11 @@ import { Button } from "@mui/material"
 import { BiLogoTelegram } from "react-icons/bi"
 import { FaFacebookF } from "react-icons/fa"
 import { coachArray } from "../../data/date"
+import { useContext } from "react"
+import { DataContext } from "../Context/Context"
 
 export default function CardCoaches() {
+    const { changesModalState } = useContext(DataContext)
     return (
         <section className="coaches_card_block" id="CardCoach">
             <h3 className="coaches_card_header">COACHES</h3>
@@ -66,6 +69,7 @@ export default function CardCoaches() {
                                             backgroundColor: "#000000",
                                         },
                                     }}
+                                    onClick={(e) => changesModalState(e)}
                                 >
                                     Замовити Тренування
                                 </Button>

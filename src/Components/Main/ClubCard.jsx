@@ -1,7 +1,10 @@
 import { Button } from "@mui/material"
 import { cardArray } from "../../data/date"
+import { useContext } from "react"
+import { DataContext } from "../Context/Context"
 
 export default function ClubCard() {
+    const { changesModalState } = useContext(DataContext)
     return (
         <section className="club_card_block" id="Card">
             <h3 className="club_card_header">CLUB CARD</h3>
@@ -45,6 +48,7 @@ export default function ClubCard() {
                                             backgroundColor: "#000000",
                                         },
                                     }}
+                                    onClick={(e) => changesModalState(e)}
                                 >
                                     Замовити
                                 </Button>

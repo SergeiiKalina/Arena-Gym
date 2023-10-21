@@ -1,15 +1,20 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import emailjs from "@emailjs/browser"
 import MainMenu from "./MainMenu"
 import MobileNavigation from "./Mobilenavigation"
-
 import PopUpFormOrder from "./PopUpFormOrder"
 import SwiperBlock from "./Swiper"
 import InfoGym from "./InfoGym"
+import { DataContext } from "../Context/Context"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
-    const [toggleFormPopUp, setToggleFormPopUp] = useState(false)
+
+    const { toggleModal } = useContext(DataContext)
+
+    // fetch("https://reassuring-fitness-fb7824de49.strapiapp.com/api/coaches")
+    //     .then((res) => res.json())
+    //     .then((res) => console.log(res))
 
     function toggleMenuBurger() {
         setToggleBurger((prev) => !prev)
@@ -20,24 +25,6 @@ export default function Header() {
         }
     }
 
-    function toggleFromPopup(e) {
-        e.stopPropagation()
-        window.scrollTo({
-            top: 150,
-            behavior: "smooth",
-        })
-
-        if (e.target.id === "sendForm" || e.target.type === "button") {
-            if (!toggleFormPopUp) {
-                document.body.style.overflow = "hidden"
-            } else {
-                document.body.style.overflow = "visible"
-            }
-            setToggleFormPopUp((prev) => !prev)
-        } else {
-            return
-        }
-    }
     function formSend(e) {
         e.preventDefault()
         emailjs.sendForm(
@@ -66,14 +53,9 @@ export default function Header() {
                 toggleMenuBurger={toggleMenuBurger}
             />
 
-            <SwiperBlock toggleFromPopup={toggleFromPopup} />
+            <SwiperBlock />
             <InfoGym />
-            {toggleFormPopUp ? (
-                <PopUpFormOrder
-                    toggleFromPopup={toggleFromPopup}
-                    formSend={formSend}
-                />
-            ) : null}
+            {toggleModal ? <PopUpFormOrder formSend={formSend} /> : null}
         </section>
     )
 }

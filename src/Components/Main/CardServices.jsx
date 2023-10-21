@@ -1,16 +1,17 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Button } from "@mui/material"
 import { cardServicesArr } from "../../data/date"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { BsCheckLg } from "react-icons/bs"
+import { DataContext } from "../Context/Context"
 
 export default function CardServices() {
     const [arr, setArr] = useState(cardServicesArr)
-    function postman() {
-        fetch("http://localhost:1337/api/posts")
-            .then((res) => res.json())
-            .then((res) => setArr([...arr, res.data[0].attributes]))
-    }
+    const { changesModalState, src } = useContext(DataContext)
+    const navigate = useNavigate()
+    useEffect(() => {
+        navigate(src)
+    }, [src])
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
             <h3 className="ourPrograms">Our pro grams</h3>
@@ -68,35 +69,34 @@ export default function CardServices() {
                                     </p>
                                     {list ? (
                                         <ul className="blockCards_list">
-                                            {list.map((item) => (
-                                                <li>
+                                            {list.map((item, i) => (
+                                                <li key={i}>
                                                     <BsCheckLg /> {item}
                                                 </li>
                                             ))}
                                         </ul>
                                     ) : null}
                                     {nameButton ? (
-                                        <Link to={src ? src : "/"}>
-                                            <Button
-                                                variant="contained"
-                                                sx={{
-                                                    backgroundColor: "#e4b800",
-                                                    width: "186px",
-                                                    margin: "0 auto",
-                                                    "&:hover": {
-                                                        backgroundColor:
-                                                            "#000000",
-                                                    },
-                                                }}
-                                                onClick={() => {
-                                                    if (!src) {
-                                                        postman()
-                                                    }
-                                                }}
-                                            >
-                                                {nameButton}
-                                            </Button>
-                                        </Link>
+                                        <Button
+                                            variant="contained"
+                                            sx={{
+                                                backgroundColor: "#e4b800",
+                                                width: "186px",
+                                                margin: "0 auto",
+                                                "&:hover": {
+                                                    backgroundColor: "#000000",
+                                                },
+                                            }}
+                                            onClick={(e) => {
+                                                if (!src) {
+                                                    changesModalState(e)
+                                                } else {
+                                                    changesModalState(e, src)
+                                                }
+                                            }}
+                                        >
+                                            {nameButton}
+                                        </Button>
                                     ) : null}
                                 </div>
                             </div>

@@ -1,11 +1,14 @@
 import { Button } from "@mui/joy"
+import { useContext } from "react"
+import { DataContext } from "../Context/Context"
 
-export default function OrderVisitButton({ toggleFromPopup }) {
+export default function OrderVisitButton() {
+    const { changesModalState } = useContext(DataContext)
     return (
         <article className="buttonVisit_block">
             <Button
                 variant="contained"
-                onClick={toggleFromPopup}
+                onClick={changesModalState}
                 className="buttonVisit_block_button"
             >
                 Замовити гостьовий візит

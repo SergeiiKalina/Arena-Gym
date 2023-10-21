@@ -1,23 +1,11 @@
 import { Button } from "@mui/material"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import FooterModal from "./FooterModal"
 import emailjs from "@emailjs/browser"
+import { DataContext } from "../Context/Context"
 
 export default function ButtonOrderCard() {
-    const [showModalForm, setShowModalForm] = useState(false)
-    function toggleModalForm(e) {
-        e.stopPropagation()
-        if (e.target.id === "sendForm" || e.target.type === "button") {
-            if (!showModalForm) {
-                document.body.style.overflow = "hidden"
-            } else {
-                document.body.style.overflow = "visible"
-            }
-            setShowModalForm((prev) => !prev)
-        } else {
-            return
-        }
-    }
+    const { changesModalState, toggleModal } = useContext(DataContext)
 
     function formSend(e) {
         e.preventDefault()
@@ -32,16 +20,11 @@ export default function ButtonOrderCard() {
         <section className="button_order_card_block">
             <Button
                 className="button_order_card_item"
-                onClick={(e) => toggleModalForm(e)}
+                onClick={(e) => changesModalState(e)}
             >
                 Замовити гостьовий візит
             </Button>
-            {showModalForm && (
-                <FooterModal
-                    toggleModalForm={toggleModalForm}
-                    formSend={formSend}
-                />
-            )}
+            {toggleModal && <FooterModal formSend={formSend} />}
         </section>
     )
 }

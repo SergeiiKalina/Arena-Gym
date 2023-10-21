@@ -1,13 +1,16 @@
 import { Textarea } from "@mui/joy"
 import { Button, TextField } from "@mui/material"
+import { useContext } from "react"
+import { DataContext } from "../Context/Context"
 
-export default function FooterModal({ toggleModalForm, formSend }) {
+export default function FooterModal({ formSend }) {
+    const { changesModalState } = useContext(DataContext)
     return (
         <section className="footer_modal_block">
             <div
                 className="PopUpForm"
                 onClick={(e) => {
-                    toggleModalForm(e)
+                    changesModalState(e)
                 }}
                 id="sendForm"
             >

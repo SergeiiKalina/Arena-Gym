@@ -7,7 +7,7 @@ import { slideArr } from "../../data/date"
 import OrderVisitButton from "./OrderVisitButton"
 
 SwiperCore.use([Autoplay, Pagination])
-export default function SwiperBlock({ toggleFromPopup }) {
+export default function SwiperBlock() {
     return (
         <section className="wrapperSlider">
             <article className="sliderBlock">
@@ -29,9 +29,7 @@ export default function SwiperBlock({ toggleFromPopup }) {
                                     width="100%"
                                     height="100%"
                                 />
-                                <OrderVisitButton
-                                    toggleFromPopup={toggleFromPopup}
-                                />
+                                <OrderVisitButton />
                             </div>
                         </SwiperSlide>
                     ))}
