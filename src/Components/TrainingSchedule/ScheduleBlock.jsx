@@ -16,9 +16,9 @@ export default function ScheduleBlock() {
                                 <tr className="schedule_row body">
                                     <td className="allTraining">
                                         <span>{item.time}</span>
-                                        <div className="allTraining_name">
+                                        <p className="allTraining_name">
                                             {item.name}
-                                        </div>
+                                        </p>
                                         <div className="allTraining_tooltip">
                                             {item.description}
                                             <button className="buttonVisit_block_button">

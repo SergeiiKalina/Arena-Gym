@@ -2,12 +2,30 @@ import InstagramIcon from "@mui/icons-material/Instagram"
 import { Button } from "@mui/material"
 import { BiLogoTelegram } from "react-icons/bi"
 import { FaFacebookF } from "react-icons/fa"
-import { coachArray } from "../../data/date"
-import { useContext } from "react"
+
+import { useContext, useEffect, useState } from "react"
 import { DataContext } from "../Context/Context"
 
 export default function CardCoaches() {
+    const [arrCoaches, setArrCoaches] = useState([])
     const { changesModalState } = useContext(DataContext)
+    useEffect(() => {
+        fetch("https://reassuring-fitness-fb7824de49.strapiapp.com/api/coaches")
+            .then((res) => res.json())
+            .then((res) => setArrCoaches(expandObject(res.data)))
+    }, [])
+    function expandObject(obj) {
+        let newArr = []
+        function recursion(obj) {
+            for (let i = 0; i < obj.length; i++) {
+                newArr.push({ id: obj[i].id, ...obj[i].attributes })
+            }
+        }
+
+        recursion(obj)
+        return newArr
+    }
+    console.log(arrCoaches)
     return (
         <section className="coaches_card_block" id="CardCoach">
             <h3 className="coaches_card_header">COACHES</h3>
@@ -15,7 +33,7 @@ export default function CardCoaches() {
                 <span className="span"></span>
             </article>
             <article className="coachesCardBlock">
-                {coachArray.map((item) => {
+                {arrCoaches.map((item) => {
                     const {
                         name,
                         id,

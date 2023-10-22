@@ -1193,22 +1193,28 @@ h2 {
     }
     .allTraining {
         span {
+            width: 95%;
+            display: flex;
+            justify-content: center;
             color: yellow;
             font-size: 14px;
             font-weight: 600;
-            padding-left: 10px;
+            padding: 10px 0;
         }
         .allTraining_name {
-            width: 140px;
-            padding-left: 10px;
-            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            width: 95%;
+
+            font-size: 20px;
         }
         .allTraining_tooltip {
+            box-sizing: border-box;
             opacity: 0;
             visibility: hidden;
             position: absolute;
             top: 55px;
-            width: 95%;
+            width: 100%;
 
             font-size: 14px;
             border-radius: 10px;
@@ -1224,8 +1230,8 @@ h2 {
             .buttonVisit_block_button {
                 font-size: 14px;
                 background-color: #e4b800;
-                margin: 8px 0;
-                padding: 4px 8px;
+                margin: 16px 0;
+                padding: 6px 16px;
                 border: none;
                 border-radius: 6px;
             }
@@ -1281,6 +1287,11 @@ h2 {
     }
 }
 @media (max-width: 1500px) {
+    .footer_wrapper {
+        .footer {
+            width: 78%;
+        }
+    }
     .main_info {
         width: 78%;
     }
@@ -1338,6 +1349,11 @@ h2 {
     }
 }
 @media (max-width: 1400px) {
+    .footer_wrapper {
+        .footer {
+            width: 85%;
+        }
+    }
     .main_info {
         width: 85%;
     }
@@ -1392,6 +1408,11 @@ h2 {
 }
 
 @media (max-width: 1300px) {
+    .footer_wrapper {
+        .footer {
+            width: 95%;
+        }
+    }
     .wrapperMainBlock {
         .wrapperMainBlock_content {
             .blockCards {
@@ -1467,11 +1488,6 @@ h2 {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        .allTraining {
-            .allTraining_tooltip {
-                width: 94%;
-            }
-        }
     }
 
     .schedule:nth-child(1) {
@@ -1532,6 +1548,11 @@ h2 {
             .clubCardItem {
                 width: 100%;
             }
+        }
+    }
+    .footer_wrapper {
+        .footer {
+            width: 100%;
         }
     }
     .fitnessBar_card_block {
@@ -1634,9 +1655,9 @@ h2 {
         flex-wrap: wrap;
         .allTraining {
             .allTraining_tooltip {
-                left: 10px;
-
-                width: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 70%;
             }
         }
     }
@@ -1918,15 +1939,7 @@ h2 {
     .buttonVisit_block {
         top: 80%;
     }
-    .schedule_block {
-        .allTraining {
-            .allTraining_tooltip {
-                left: 10px;
 
-                width: 70%;
-            }
-        }
-    }
     .button_order_card_block {
         .button_order_card_item {
             width: 70%;

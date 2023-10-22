@@ -1,5 +1,5 @@
 import { Button } from "@mui/material"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import FooterModal from "./FooterModal"
 import emailjs from "@emailjs/browser"
 import { DataContext } from "../Context/Context"

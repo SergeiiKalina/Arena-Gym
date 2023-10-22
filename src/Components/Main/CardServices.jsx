@@ -6,12 +6,12 @@ import { BsCheckLg } from "react-icons/bs"
 import { DataContext } from "../Context/Context"
 
 export default function CardServices() {
-    const [arr, setArr] = useState(cardServicesArr)
+    const [arr] = useState(cardServicesArr)
     const { changesModalState, src } = useContext(DataContext)
     const navigate = useNavigate()
     useEffect(() => {
         navigate(src)
-    }, [src])
+    }, [src, navigate])
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
             <h3 className="ourPrograms">Our pro grams</h3>

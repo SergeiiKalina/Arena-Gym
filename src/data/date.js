@@ -332,6 +332,41 @@ magni ea facilis earum qui.`,
 adipisicing elit. Voluptas at distinctio nobis
 magni ea facilis earum qui.`,
             },
+            {
+                time: "12:00",
+                name: "Аренда",
+                description: `Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Voluptas at distinctio nobis
+magni ea facilis earum qui.`,
+            },
+            {
+                time: "13:00",
+                name: "Аренда",
+                description: `Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Voluptas at distinctio nobis
+magni ea facilis earum qui.`,
+            },
+            {
+                time: "14:00",
+                name: "Аренда",
+                description: `Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Voluptas at distinctio nobis
+magni ea facilis earum qui.`,
+            },
+            {
+                time: "15:00",
+                name: "Аренда",
+                description: `Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Voluptas at distinctio nobis
+magni ea facilis earum qui.`,
+            },
+            {
+                time: "16:00",
+                name: "Аренда",
+                description: `Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Voluptas at distinctio nobis
+magni ea facilis earum qui.`,
+            },
 
             {
                 time: "17:00",
