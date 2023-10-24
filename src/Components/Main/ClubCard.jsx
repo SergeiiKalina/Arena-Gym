@@ -37,8 +37,8 @@ export default function ClubCard() {
                                     {jobTitle}
                                 </h4>
                                 <ul className="clubCardItem_info_text">
-                                    {description.map((el) => (
-                                        <li>
+                                    {description.map((el, i) => (
+                                        <li key={i}>
                                             <BsCheckLg
                                                 style={{ marginRight: "6px" }}
                                             />

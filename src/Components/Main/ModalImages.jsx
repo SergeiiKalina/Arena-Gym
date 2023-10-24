@@ -3,6 +3,7 @@ import { itemData } from "../../data/date"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ClearIcon from "@mui/icons-material/Clear"
+import { useEffect } from "react"
 
 export default function ModalImages({
     currentPhoto,
@@ -11,6 +12,28 @@ export default function ModalImages({
     decrementIndex,
     setCurrentPhoto,
 }) {
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            switch (event.key) {
+                case "ArrowLeft":
+                    decrementIndex()
+                    break
+                case "ArrowRight":
+                    incrementIndex()
+                    break
+                case "Escape":
+                    setCurrentPhoto(null)
+                    break
+                default:
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown)
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+    }, [decrementIndex, incrementIndex, setCurrentPhoto])
     return (
         <section
             id="modal"
@@ -38,7 +61,7 @@ export default function ModalImages({
                 <div
                     id="left"
                     className="arrow_container left"
-                    onClick={() => decrementIndex()}
+                    onClick={(e) => decrementIndex(e)}
                 >
                     <Button color="primary" size="medium" variant="outlined">
                         <ArrowBackIosIcon />
@@ -50,7 +73,7 @@ export default function ModalImages({
                 <div
                     id="right"
                     className="arrow_container right"
-                    onClick={() => incrementIndex()}
+                    onClick={(e) => incrementIndex(e)}
                 >
                     <Button color="primary" size="medium" variant="outlined">
                         <ArrowForwardIosIcon />

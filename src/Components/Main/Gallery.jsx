@@ -18,17 +18,17 @@ export default function Gallery() {
     }
 
     function toggleImage(index) {
-        console.log(index)
         if (index === "left" || index === "right" || index === "modal") return
         if (typeof index === "number") {
             setCurrentPhoto(index.toString())
         }
     }
-    function incrementIndex() {
+
+    function incrementIndex(e) {
         if (Number(currentPhoto) === itemData.length - 1) return
         setCurrentPhoto((Number(currentPhoto) + 1).toString())
     }
-    function decrementIndex() {
+    function decrementIndex(e) {
         if (Number(currentPhoto) === 0) return
         setCurrentPhoto((Number(currentPhoto) - 1).toString())
     }
