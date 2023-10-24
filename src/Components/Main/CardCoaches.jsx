@@ -1,31 +1,27 @@
-import InstagramIcon from "@mui/icons-material/Instagram"
-import { Button } from "@mui/material"
-import { BiLogoTelegram } from "react-icons/bi"
-import { FaFacebookF } from "react-icons/fa"
-
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { DataContext } from "../Context/Context"
+import { Button } from "@mui/material"
+import { coachArray } from "../../data/date"
 
 export default function CardCoaches() {
-    const [arrCoaches, setArrCoaches] = useState([])
     const { changesModalState } = useContext(DataContext)
-    useEffect(() => {
-        fetch("https://reassuring-fitness-fb7824de49.strapiapp.com/api/coaches")
-            .then((res) => res.json())
-            .then((res) => setArrCoaches(expandObject(res.data)))
-    }, [])
-    function expandObject(obj) {
-        let newArr = []
-        function recursion(obj) {
-            for (let i = 0; i < obj.length; i++) {
-                newArr.push({ id: obj[i].id, ...obj[i].attributes })
-            }
-        }
+    // useEffect(() => {
+    //     fetch("https://reassuring-fitness-fb7824de49.strapiapp.com/api/coaches")
+    //         .then((res) => res.json())
+    //         .then((res) => setArrCoaches(expandObject(res.data)))
+    // }, [])
+    // function expandObject(obj) {
+    //     let newArr = []
+    //     function recursion(obj) {
+    //         for (let i = 0; i < obj.length; i++) {
+    //             newArr.push({ id: obj[i].id, ...obj[i].attributes })
+    //         }
+    //     }
 
-        recursion(obj)
-        return newArr
-    }
-    console.log(arrCoaches)
+    //     recursion(obj)
+    //     return newArr
+    // }
+    // console.log(arrCoaches)
     return (
         <section className="coaches_card_block" id="CardCoach">
             <h3 className="coaches_card_header">COACHES</h3>
@@ -33,15 +29,13 @@ export default function CardCoaches() {
                 <span className="span"></span>
             </article>
             <article className="coachesCardBlock">
-                {arrCoaches.map((item) => {
+                {coachArray.map((item) => {
                     const {
                         name,
                         id,
                         jobTitle,
                         description,
-                        instagram,
-                        telegram,
-                        facebook,
+
                         img,
                     } = item
                     return (
@@ -60,23 +54,7 @@ export default function CardCoaches() {
                                 <p className="coachesCardItem_info_text">
                                     {description}
                                 </p>
-                                <div className="coachesCardItem_info_social">
-                                    <a href={instagram}>
-                                        <div className="coachesCardItem_info_social_icon">
-                                            <InstagramIcon className="icon_coach_social" />
-                                        </div>
-                                    </a>
-                                    <a href={telegram}>
-                                        <div className="coachesCardItem_info_social_icon">
-                                            <BiLogoTelegram className="icon_coach_social" />
-                                        </div>
-                                    </a>
-                                    <a href={facebook}>
-                                        <div className="coachesCardItem_info_social_icon">
-                                            <FaFacebookF className="icon_coach_social" />
-                                        </div>
-                                    </a>
-                                </div>
+
                                 <Button
                                     variant="contained"
                                     sx={{

@@ -2,6 +2,7 @@ import { Button } from "@mui/material"
 import { cardArray } from "../../data/date"
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
+import { BsCheckLg } from "react-icons/bs"
 
 export default function ClubCard() {
     const { changesModalState } = useContext(DataContext)
@@ -35,9 +36,16 @@ export default function ClubCard() {
                                 <h4 className="clubCardItem_info_class">
                                     {jobTitle}
                                 </h4>
-                                <p className="clubCardItem_info_text">
-                                    {description}
-                                </p>
+                                <ul className="clubCardItem_info_text">
+                                    {description.map((el) => (
+                                        <li>
+                                            <BsCheckLg
+                                                style={{ marginRight: "6px" }}
+                                            />
+                                            {el}
+                                        </li>
+                                    ))}
+                                </ul>
                                 <Button
                                     variant="contained"
                                     sx={{

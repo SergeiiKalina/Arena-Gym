@@ -4,7 +4,6 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import { slideArr } from "../../data/date"
-import OrderVisitButton from "./OrderVisitButton"
 
 SwiperCore.use([Autoplay, Pagination])
 export default function SwiperBlock() {
@@ -15,7 +14,7 @@ export default function SwiperBlock() {
                     pagination={{
                         clickable: true,
                     }}
-                    // autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
                     loop={true}
                     spaceBetween={5}
                     slidesPerView={1}
@@ -29,7 +28,6 @@ export default function SwiperBlock() {
                                     width="100%"
                                     height="100%"
                                 />
-                                <OrderVisitButton />
                             </div>
                         </SwiperSlide>
                     ))}

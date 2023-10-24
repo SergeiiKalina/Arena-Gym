@@ -6,6 +6,7 @@ import PopUpFormOrder from "./PopUpFormOrder"
 import SwiperBlock from "./Swiper"
 import InfoGym from "./InfoGym"
 import { DataContext } from "../Context/Context"
+import OrderVisitButton from "./OrderVisitButton"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
@@ -54,6 +55,7 @@ export default function Header() {
             />
 
             <SwiperBlock />
+            <OrderVisitButton />
             <InfoGym />
             {toggleModal ? <PopUpFormOrder formSend={formSend} /> : null}
         </section>
