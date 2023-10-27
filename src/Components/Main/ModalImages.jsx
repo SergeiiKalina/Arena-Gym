@@ -3,7 +3,7 @@ import { itemData } from "../../data/date"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ClearIcon from "@mui/icons-material/Clear"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function ModalImages({
     currentPhoto,
@@ -12,6 +12,7 @@ export default function ModalImages({
     decrementIndex,
     setCurrentPhoto,
 }) {
+    const [start, setStart] = useState(null)
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
@@ -34,6 +35,25 @@ export default function ModalImages({
             window.removeEventListener("keydown", handleKeyDown)
         }
     }, [decrementIndex, incrementIndex, setCurrentPhoto])
+
+    function handlerTouchStart(e) {
+        setStart(e.targetTouches[0].clientX)
+    }
+    function handlerTouchMove(e) {}
+    function handlerTouchEnd(e) {
+        let end = e.changedTouches[0].clientX
+        let difference = start - end
+        console.log(difference)
+        if (Math.abs(difference) > 40) {
+            if (difference < 0) {
+                incrementIndex()
+            } else {
+                decrementIndex()
+            }
+        } else {
+            return
+        }
+    }
     return (
         <section
             id="modal"
@@ -57,7 +77,12 @@ export default function ModalImages({
                     </Button>
                 </article>
             </header>
-            <article className="modal_img_item">
+            <article
+                className="modal_img_item"
+                onTouchStart={(e) => handlerTouchStart(e)}
+                onTouchMove={(e) => handlerTouchMove(e)}
+                onTouchEnd={(e) => handlerTouchEnd(e)}
+            >
                 <div
                     id="left"
                     className="arrow_container left"

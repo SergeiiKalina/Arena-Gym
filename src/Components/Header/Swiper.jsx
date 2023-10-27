@@ -14,7 +14,7 @@ export default function SwiperBlock() {
                     pagination={{
                         clickable: true,
                     }}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
                     loop={true}
                     spaceBetween={5}
                     slidesPerView={1}

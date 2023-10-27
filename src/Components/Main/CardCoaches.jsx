@@ -30,45 +30,33 @@ export default function CardCoaches() {
             </article>
             <article className="coachesCardBlock">
                 {coachArray.map((item) => {
-                    const {
-                        name,
-                        id,
-                        jobTitle,
-                        description,
-
-                        img,
-                    } = item
+                    const { name, id, jobTitle, img } = item
                     return (
                         <div className="newCard" key={id}>
                             <div className="front">
                                 <img src={img} alt="coach" />
-                            </div>
-                            <div className="back">
-                                <span></span>
-                                <h4 className="coachesCardItem_info_name">
-                                    {name}
-                                </h4>
-                                <h4 className="coachesCardItem_info_class">
-                                    {jobTitle}
-                                </h4>
-                                <p className="coachesCardItem_info_text">
-                                    {description}
-                                </p>
+                                <footer className="newCard_footer">
+                                    <h4 className="coachesCardItem_info_name">
+                                        {name}
+                                    </h4>
+                                    <h4 className="coachesCardItem_info_class">
+                                        {jobTitle}
+                                    </h4>
+                                    <Button
+                                        variant="contained"
+                                        sx={{
+                                            backgroundColor: "#e4b800",
 
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: "#e4b800",
-                                        width: "186px",
-                                        margin: "0 auto",
-                                        "&:hover": {
-                                            backgroundColor: "#000000",
-                                        },
-                                    }}
-                                    onClick={(e) => changesModalState(e)}
-                                >
-                                    Замовити Тренування
-                                </Button>
+                                            margin: "0 auto",
+                                            "&:hover": {
+                                                backgroundColor: "#000000",
+                                            },
+                                        }}
+                                        onClick={(e) => changesModalState(e)}
+                                    >
+                                        Замовити Тренування
+                                    </Button>
+                                </footer>
                             </div>
                         </div>
                     )

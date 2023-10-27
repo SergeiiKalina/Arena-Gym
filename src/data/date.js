@@ -42,11 +42,6 @@ export const itemMenu = [
         title: "Карти",
         src: "#Card",
     },
-    {
-        id: 104,
-        title: "Фітнес Бар",
-        src: "#CardServices",
-    },
 
     {
         id: 106,
@@ -67,18 +62,14 @@ export const coachArray = [
         name: "ЯКУЩЕНКО ОЛЕКСІЙ",
         jobTitle:
             "Силовий та функціональний тренінг. Дієтологія. Бодібілдинг. Підготовка до змагань.",
-        description: `12 Years ago I lost 80lbs with the help of a
-personal coach and it completely changed my way of
-life. Since then, it’s been my mission to sway other
-people to do CrossFit.`,
+
         img: "./images/home-11-img-4.jpg",
     },
     {
         id: 1,
         name: "КАЛИНА СЕРГІЙ",
         jobTitle: "Силовий та функціональний тренінг. Crossfit. Реабілітація.",
-        description: `Virgil has been training amateur and professional combat athletes since 1995.
-         His skill-set expands to the following combat styles: MMA fighting and Brazilian Jiu-Jitsu.`,
+
         img: "./images/home-11-img-5.jpg",
     },
     {
@@ -86,16 +77,13 @@ people to do CrossFit.`,
         name: "ТАРАН АНАСТАСІЯ",
         jobTitle:
             "Силовий та функціональний тренінг. Реабілітація. Дієтологія.",
-        description: `I initially took on CrossFit trainings after a spending a lifetime in professional athletics.
-         The fact that I loved sports so much contributed a lot to my decision of being coach.`,
+
         img: "./images/home-11-img-6.jpg",
     },
     {
         id: 3,
         name: "ГУРЗА КАРОЛІНА",
         jobTitle: "Силовий та функціональний тренінг. Дієтологія.",
-        description: `Growing up, I’ve always been involved in sports, 
-        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
 
         img: "./images/home-11-img-7.jpg",
     },
@@ -103,8 +91,7 @@ people to do CrossFit.`,
         id: 4,
         name: "БАСНЕВ ВІТАЛІЙ",
         jobTitle: "Силовий та функціональний тренінг. Реабілітація. Mind Body.",
-        description: `Growing up, I’ve always been involved in sports, 
-        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
+
         img: "./images/home-11-img-4.jpg",
     },
     {
@@ -112,8 +99,7 @@ people to do CrossFit.`,
         name: "ШУЛЯК ТИМОФІЙ",
         jobTitle:
             "Силовий тренінг. Бодібілдинг. Практикуючий лікар – анестезист.",
-        description: `Growing up, I’ve always been involved in sports, 
-        fitness and athleticism in general. It got a whole new meaning for me as in 2007 I had an injury.`,
+
         img: "./images/home-11-img-5.jpg",
     },
 ]
@@ -176,8 +162,8 @@ export const cardServicesArr = [
     },
     {
         id: 3,
-        header1: "ФІТНЕС",
-        header2: "БАР",
+        header1: "",
+        header2: "ФІТНЕС БАР",
         img: "./images/IMG_6985-HDR.jpg",
         paragraph1: `Фітнес Бар – невід\`ємна частина сучасного фітнес клубу. Правильне, збалансоване харчування грає ключову роль у досягненні результатів.`,
         paragraph2: `Стильний та затишний Фітнес бар ArenaGym допоможе відновити сили, 

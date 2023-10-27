@@ -25,17 +25,8 @@ export default function ClubCard() {
                     return (
                         <div className="newCard" key={id}>
                             <div className="front">
-                                <img src={img} alt="club card" />
                                 <h3 className="club_card_name">{name}</h3>
-                            </div>
-                            <div className="back">
-                                <span></span>
-                                <h4 className="clubCardItem_info_name">
-                                    {name}
-                                </h4>
-                                <h4 className="clubCardItem_info_class">
-                                    {jobTitle}
-                                </h4>
+
                                 <ul className="clubCardItem_info_text">
                                     {description.map((el, i) => (
                                         <li key={i}>
