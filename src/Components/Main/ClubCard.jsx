@@ -14,14 +14,7 @@ export default function ClubCard() {
             </article>
             <article className="clubCardBlock">
                 {cardArray.map((item) => {
-                    const {
-                        name,
-                        id,
-                        jobTitle,
-                        description,
-
-                        img,
-                    } = item
+                    const { name, id, description } = item
                     return (
                         <div className="newCard" key={id}>
                             <div className="front">
