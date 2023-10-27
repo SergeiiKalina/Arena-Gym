@@ -441,8 +441,15 @@ h2 {
                 justify-content: center;
                 border-radius: 15px;
                 .clubCardItem_info_text {
-                    margin-bottom: 20px;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 20px 0 30px 0;
                     padding: 0;
+                    li {
+                        margin: 0;
+                    }
                 }
             }
         }
