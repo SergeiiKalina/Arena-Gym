@@ -3,12 +3,15 @@ import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 
 export default function OrderVisitButton() {
-    const { changesModalState } = useContext(DataContext)
+    const { changesModalState, setPathMessages } = useContext(DataContext)
     return (
         <article className="buttonVisit_block">
             <Button
                 variant="contained"
-                onClick={changesModalState}
+                onClick={(e) => {
+                    setPathMessages("Під слайдером")
+                    changesModalState(e)
+                }}
                 className="buttonVisit_block_button"
             >
                 Замовити гостьовий візит

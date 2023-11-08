@@ -1,10 +1,25 @@
 import { createContext, useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export const DataContext = createContext()
 
 export default function Context({ children }) {
     const [toggleModal, setToggleModal] = useState(false)
+    const [pathMessages, setPathMessages] = useState("")
     const [src, setSrc] = useState("")
+
+    function formSend(e) {
+        e.preventDefault()
+        emailjs.sendForm(
+            "service_ticrokl",
+            "template_ih1dzqr",
+            e.target,
+            "P_Kl4vBTtPRSGekOp"
+        )
+        setToggleModal(false)
+        document.body.style.overflow = "visible"
+    }
+
     function changesModalState(e, link) {
         e.stopPropagation()
 
@@ -32,6 +47,9 @@ export default function Context({ children }) {
         toggleModal,
         changesModalState,
         src,
+        pathMessages,
+        setPathMessages,
+        formSend,
     }
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>

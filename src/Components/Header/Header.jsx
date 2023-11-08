@@ -1,21 +1,12 @@
-import { useContext, useState } from "react"
-import emailjs from "@emailjs/browser"
+import { useState } from "react"
 import MainMenu from "./MainMenu"
 import MobileNavigation from "./Mobilenavigation"
-import PopUpFormOrder from "./PopUpFormOrder"
 import SwiperBlock from "./Swiper"
 import InfoGym from "./InfoGym"
-import { DataContext } from "../Context/Context"
 import OrderVisitButton from "./OrderVisitButton"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
-
-    const { toggleModal } = useContext(DataContext)
-
-    // fetch("https://reassuring-fitness-fb7824de49.strapiapp.com/api/coaches")
-    //     .then((res) => res.json())
-    //     .then((res) => console.log(res))
 
     function toggleMenuBurger() {
         setToggleBurger((prev) => !prev)
@@ -26,15 +17,6 @@ export default function Header() {
         }
     }
 
-    function formSend(e) {
-        e.preventDefault()
-        emailjs.sendForm(
-            "service_ticrokl",
-            "template_ih1dzqr",
-            e.target,
-            "P_Kl4vBTtPRSGekOp"
-        )
-    }
     return (
         <section
             style={{
@@ -57,7 +39,6 @@ export default function Header() {
             <SwiperBlock />
             <OrderVisitButton />
             <InfoGym />
-            {toggleModal ? <PopUpFormOrder formSend={formSend} /> : null}
         </section>
     )
 }

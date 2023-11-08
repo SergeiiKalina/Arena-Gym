@@ -3,8 +3,9 @@ import { Button, TextField } from "@mui/material"
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 
-export default function FooterModal({ formSend }) {
-    const { changesModalState } = useContext(DataContext)
+export default function FooterModal() {
+    const { changesModalState, pathMessages, formSend } =
+        useContext(DataContext)
     return (
         <section className="footer_modal_block">
             <div
@@ -16,6 +17,15 @@ export default function FooterModal({ formSend }) {
             >
                 <form onSubmit={(e) => formSend(e)}>
                     <h2 className="PopUpForm_header">Записатись</h2>
+                    <TextField
+                        sx={{ display: "none" }}
+                        id="outlined-basic"
+                        label="Фамилия"
+                        variant="outlined"
+                        className="PopUpForm_item"
+                        name="hidden_field"
+                        value={pathMessages}
+                    />
                     <TextField
                         id="outlined-basic"
                         label="Ім'я"

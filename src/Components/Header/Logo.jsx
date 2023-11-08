@@ -8,7 +8,13 @@ export default function Logo() {
             className="logo_block"
             onClick={() => changesModalState(null, "/")}
         >
-            <img style={{ width: "81px" }} src="/images/Logo.png" alt="logo" />
+            <a href="/">
+                <img
+                    style={{ width: "81px" }}
+                    src="/images/Logo.png"
+                    alt="logo"
+                />
+            </a>
         </div>
     )
 }

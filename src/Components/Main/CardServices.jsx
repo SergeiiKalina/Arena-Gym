@@ -7,11 +7,12 @@ import { DataContext } from "../Context/Context"
 
 export default function CardServices() {
     const [arr] = useState(cardServicesArr)
-    const { changesModalState, src } = useContext(DataContext)
+    const { changesModalState, src, setPathMessages } = useContext(DataContext)
     const navigate = useNavigate()
     useEffect(() => {
         navigate(src)
     }, [src, navigate])
+
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
             <h3 className="ourPrograms">Our programs</h3>
@@ -31,6 +32,7 @@ export default function CardServices() {
                         nameButton,
                         src,
                         list,
+                        linkOnForm,
                     } = item
 
                     return (
@@ -90,6 +92,8 @@ export default function CardServices() {
                                             onClick={(e) => {
                                                 if (!src) {
                                                     changesModalState(e)
+
+                                                    setPathMessages(linkOnForm)
                                                 } else {
                                                     changesModalState(e, src)
                                                 }

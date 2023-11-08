@@ -5,7 +5,7 @@ import { DataContext } from "../Context/Context"
 import { BsCheckLg } from "react-icons/bs"
 
 export default function ClubCard() {
-    const { changesModalState } = useContext(DataContext)
+    const { changesModalState, setPathMessages } = useContext(DataContext)
     return (
         <section className="club_card_block" id="Card">
             <h3 className="club_card_header">CLUB CARD</h3>
@@ -14,7 +14,7 @@ export default function ClubCard() {
             </article>
             <article className="clubCardBlock">
                 {cardArray.map((item) => {
-                    const { name, id, description } = item
+                    const { name, id, description, linkOnForm } = item
                     return (
                         <div className="newCard" key={id}>
                             <div className="front">
@@ -40,7 +40,10 @@ export default function ClubCard() {
                                             backgroundColor: "#000000",
                                         },
                                     }}
-                                    onClick={(e) => changesModalState(e)}
+                                    onClick={(e) => {
+                                        setPathMessages(linkOnForm)
+                                        changesModalState(e)
+                                    }}
                                 >
                                     Замовити
                                 </Button>

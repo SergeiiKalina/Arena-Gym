@@ -28,12 +28,13 @@ h2 {
     }
     .header_block {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        margin: 0 16px 0 0;
+
         width: 73%;
     }
 }
+
 .logo_block {
     display: flex;
     align-items: center;
@@ -44,14 +45,14 @@ h2 {
 .menuList {
     display: flex;
     width: 70%;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin-left: 2%;
+
     ul {
         width: 100%;
         display: flex;
         justify-content: space-between;
-
         color: white;
         flex-wrap: wrap;
         li {
@@ -59,23 +60,27 @@ h2 {
         }
     }
 
-    a {
+    button {
         font-size: 18px;
         text-decoration: none;
         color: white;
+        cursor: pointer;
+        background: none;
+        border: none;
     }
-    a:hover {
+    button:hover {
         color: yellow;
     }
 }
 
 .social_block {
-    width: 8%;
+    width: 10%;
     display: flex;
     color: white;
     justify-content: space-between;
     align-items: center;
     padding: 8px 0 0 0;
+
     div {
         width: 22px;
         padding-left: 8px;
@@ -291,9 +296,6 @@ h2 {
         header {
             display: flex;
             justify-content: space-between;
-            .contacts_block {
-                flex-direction: column;
-            }
         }
     }
     .footer_social {
@@ -788,17 +790,38 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
 }
+.schedule_wrapper {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    a {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 80px auto;
+        text-decoration: none;
+    }
+    .buttonVisit_block_button {
+        width: 100%;
+        background-color: #e4b800;
+    }
+    .buttonVisit_block_button:hover {
+        background-color: #000000;
+        color: white;
+    }
+}
 
 .schedule_block {
-    width: 73%;
-
-    padding: 20px 0;
+    width: 100%;
+    padding: 20px 0 50px 0;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     .schedule {
         width: 100%;
-        height: auto;
+
         border-collapse: collapse;
 
         background-color: #33393e;
@@ -893,7 +916,9 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
     margin-right: 12px;
+    margin-left: 12px;
     p {
         font-size: 14px;
         padding: 5px 0;
@@ -934,7 +959,7 @@ h2 {
     .main_info {
         width: 78%;
     }
-    .schedule_block {
+    .schedule_wrapper {
         width: 78%;
     }
     .coaches_card_block {
@@ -977,7 +1002,7 @@ h2 {
     .main_info {
         width: 85%;
     }
-    .schedule_block {
+    .schedule_wrapper {
         width: 85%;
     }
     .club_card_block {
@@ -1024,7 +1049,7 @@ h2 {
     .main_info {
         width: 95%;
     }
-    .schedule_block {
+    .schedule_wrapper {
         width: 95%;
     }
     .modal_img_container {
@@ -1089,7 +1114,6 @@ h2 {
         }
     }
     .schedule_block {
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
@@ -1111,11 +1135,7 @@ h2 {
         width: 33.33%;
     }
 }
-@media (max-width: 1100px) {
-    .schedule_block {
-        width: 100%;
-    }
-}
+
 @media (max-width: 1024px) {
     .buttonVisit_block {
         top: 85%;
@@ -1203,6 +1223,12 @@ h2 {
 }
 
 @media (max-width: 767px) {
+    .schedule_wrapper {
+        a {
+            width: 35%;
+        }
+    }
+
     .gallery_block {
         .gallery_images_container {
             grid-template-columns: 1fr 1fr;
@@ -1234,9 +1260,6 @@ h2 {
         }
     }
     .schedule_block {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
         .allTraining {
             .allTraining_tooltip {
                 left: 50%;
@@ -1373,6 +1396,7 @@ h2 {
         justify-content: space-between;
         align-items: center;
         padding: 0 0 0 10px;
+
         div {
             width: 22px;
             padding: 0 16px 0 0;
@@ -1514,6 +1538,11 @@ h2 {
     }
 }
 @media (max-width: 460px) {
+    .schedule_wrapper {
+        a {
+            width: 45%;
+        }
+    }
     .club_card_block {
         .clubCardBlock {
             .newCard {

@@ -1,5 +1,3 @@
-import Footer from "../Footer/Footer"
-import MainMenu from "../Header/MainMenu"
 import ScheduleBlock from "./ScheduleBlock"
 
 export default function ScheduleTraining() {
@@ -13,9 +11,7 @@ export default function ScheduleTraining() {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <MainMenu />
             <ScheduleBlock />
-            <Footer />
         </section>
     )
 }
