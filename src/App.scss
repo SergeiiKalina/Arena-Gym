@@ -729,6 +729,14 @@ h2 {
 
             color: white;
         }
+        .modal_img_header_leftPanel {
+            position: fixed;
+            top: 25px;
+            font-size: 24px;
+            z-index: 5;
+
+            color: white;
+        }
     }
     .arrow_container.left {
         cursor: pointer;

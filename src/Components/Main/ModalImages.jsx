@@ -43,7 +43,9 @@ export default function ModalImages({
             className={`modal_img_container ${
                 currentPhoto === null ? "" : "active"
             }`}
-            onClick={(e) => toggleImage(e.target.id)}
+            onClick={(e) => {
+                toggleImage(e.target.id)
+            }}
         >
             <header className="modal_img_header">
                 <article className="modal_img_header_leftPanel">{`${
@@ -52,14 +54,17 @@ export default function ModalImages({
                 <article className="modal_img_header_rightPanel">
                     <Button
                         color="inherit"
-                        size="medium"
+                        size="large"
                         variant="text"
                         onClick={() => {
                             setCurrentPhoto(null)
                             document.body.style.overflow = "visible"
                         }}
                     >
-                        <ClearIcon />
+                        <ClearIcon
+                            id="clear"
+                            style={{ width: "48px", height: "48px" }}
+                        />
                     </Button>
                 </article>
             </header>
