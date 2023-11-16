@@ -63,17 +63,17 @@ export default function ModalImages({
             }`}
             onClick={(e) => toggleImage(e.target.id)}
         >
-            <header className="modal_img_header">
+            <header
+                className="modal_img_header"
+                onClick={() => {
+                    setCurrentPhoto(null)
+                    document.body.style.overflow = "visible"
+                }}
+            >
                 <article className="modal_img_header_leftPanel">{`${
                     Number(currentPhoto) + 1
                 }/${itemData.length}`}</article>
-                <article
-                    className="modal_img_header_rightPanel"
-                    onClick={() => {
-                        setCurrentPhoto(null)
-                        document.body.style.overflow = "visible"
-                    }}
-                >
+                <article className="modal_img_header_rightPanel">
                     <Button color="inherit" size="medium" variant="text">
                         <ClearIcon />
                     </Button>

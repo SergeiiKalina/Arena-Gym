@@ -16,7 +16,6 @@ export default function Gallery() {
             return
         }
     }
-    console.log(currentPhoto)
 
     function toggleImage(index) {
         if (index === "left" || index === "right" || index === "modal") return
