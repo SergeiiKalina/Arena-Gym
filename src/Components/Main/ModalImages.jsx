@@ -17,10 +17,11 @@ export default function ModalImages({
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
-                    decrementIndex()
+                    incrementIndex()
                     break
                 case "ArrowRight":
-                    incrementIndex()
+                    decrementIndex()
+
                     break
                 case "Escape":
                     setCurrentPhoto(null)
