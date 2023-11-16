@@ -55,7 +55,7 @@ export default function ModalImages({
                     <Button color="inherit" size="large" variant="text">
                         <ClearIcon
                             id="clear"
-                            style={{ width: "48px", height: "48px" }}
+                            style={{ width: "50px", height: "50px" }}
                             onClick={() => {
                                 setCurrentPhoto(null)
                                 document.body.style.overflow = "visible"
