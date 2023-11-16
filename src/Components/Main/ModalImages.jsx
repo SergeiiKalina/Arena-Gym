@@ -17,11 +17,10 @@ export default function ModalImages({
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
-                    incrementIndex()
+                    decrementIndex()
                     break
                 case "ArrowRight":
-                    decrementIndex()
-
+                    incrementIndex()
                     break
                 case "Escape":
                     setCurrentPhoto(null)
@@ -48,9 +47,9 @@ export default function ModalImages({
         console.log(difference)
         if (Math.abs(difference) > 40) {
             if (difference < 0) {
-                incrementIndex()
-            } else {
                 decrementIndex()
+            } else {
+                incrementIndex()
             }
         } else {
             return
@@ -74,8 +73,8 @@ export default function ModalImages({
                         size="medium"
                         variant="text"
                         onClick={() => {
-                            document.body.style.overflow = "visible"
                             setCurrentPhoto(null)
+                            document.body.style.overflow = "visible"
                         }}
                     >
                         <ClearIcon />
