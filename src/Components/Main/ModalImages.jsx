@@ -3,7 +3,8 @@ import { itemData } from "../../data/date"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ClearIcon from "@mui/icons-material/Clear"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useSwipeable } from "react-swipeable"
 
 export default function ModalImages({
     currentPhoto,
@@ -12,7 +13,6 @@ export default function ModalImages({
     decrementIndex,
     setCurrentPhoto,
 }) {
-    const [start, setStart] = useState(null)
     useEffect(() => {
         const handleKeyDown = (event) => {
             switch (event.key) {
@@ -24,7 +24,7 @@ export default function ModalImages({
                     break
                 case "Escape":
                     setCurrentPhoto(null)
-
+                    document.body.style.overflow = "visible"
                     break
                 default:
             }
@@ -37,24 +37,6 @@ export default function ModalImages({
         }
     }, [decrementIndex, incrementIndex, setCurrentPhoto])
 
-    function handlerTouchStart(e) {
-        setStart(e.targetTouches[0].clientX)
-    }
-    function handlerTouchMove(e) {}
-    function handlerTouchEnd(e) {
-        let end = e.changedTouches[0].clientX
-        let difference = start - end
-        console.log(difference)
-        if (Math.abs(difference) > 40) {
-            if (difference < 0) {
-                decrementIndex()
-            } else {
-                incrementIndex()
-            }
-        } else {
-            return
-        }
-    }
     return (
         <section
             id="modal"
@@ -63,27 +45,30 @@ export default function ModalImages({
             }`}
             onClick={(e) => toggleImage(e.target.id)}
         >
-            <header
-                className="modal_img_header"
-                onClick={() => {
-                    setCurrentPhoto(null)
-                    document.body.style.overflow = "visible"
-                }}
-            >
+            <header className="modal_img_header">
                 <article className="modal_img_header_leftPanel">{`${
                     Number(currentPhoto) + 1
                 }/${itemData.length}`}</article>
                 <article className="modal_img_header_rightPanel">
-                    <Button color="inherit" size="medium" variant="text">
+                    <Button
+                        color="inherit"
+                        size="medium"
+                        variant="text"
+                        onClick={() => {
+                            setCurrentPhoto(null)
+                            document.body.style.overflow = "visible"
+                        }}
+                    >
                         <ClearIcon />
                     </Button>
                 </article>
             </header>
             <article
                 className="modal_img_item"
-                onTouchStart={(e) => handlerTouchStart(e)}
-                onTouchMove={(e) => handlerTouchMove(e)}
-                onTouchEnd={(e) => handlerTouchEnd(e)}
+                {...useSwipeable({
+                    onSwipedLeft: incrementIndex,
+                    onSwipedRight: decrementIndex,
+                })}
             >
                 <div
                     id="left"
