@@ -52,18 +52,14 @@ export default function ModalImages({
                     Number(currentPhoto) + 1
                 }/${itemData.length}`}</article>
                 <article className="modal_img_header_rightPanel">
-                    <Button
-                        color="inherit"
-                        size="large"
-                        variant="text"
-                        onClick={() => {
-                            setCurrentPhoto(null)
-                            document.body.style.overflow = "visible"
-                        }}
-                    >
+                    <Button color="inherit" size="large" variant="text">
                         <ClearIcon
                             id="clear"
                             style={{ width: "48px", height: "48px" }}
+                            onClick={() => {
+                                setCurrentPhoto(null)
+                                document.body.style.overflow = "visible"
+                            }}
                         />
                     </Button>
                 </article>
