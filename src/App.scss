@@ -24,7 +24,7 @@ h2 {
         width: 100%;
         padding: 8px 0 8px 0;
         border-bottom: 1px solid grey;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.6);
     }
     .header_block {
         display: flex;
@@ -213,7 +213,7 @@ h2 {
     .map_block_header {
         display: flex;
         width: 100%;
-        font-family: "Righteous", cursive;
+        font-family: "Roboto";
         line-height: 1;
         font-size: 24px;
         font-weight: 700;
@@ -280,7 +280,7 @@ h2 {
 
 .footer_wrapper {
     width: 100%;
-    background-color: #191919;
+    background-color: rgba(0, 0, 0, 0.6);
     padding-bottom: 30px;
     .footer {
         display: flex;
@@ -288,10 +288,10 @@ h2 {
         margin: 0 auto;
         padding-top: 10px;
         flex-direction: column;
+
         .footer_block {
             display: flex;
             border-top: 1px solid white;
-            margin-top: 10px;
         }
         header {
             display: flex;
@@ -304,9 +304,11 @@ h2 {
         justify-content: flex-end;
         align-items: center;
         div {
+            margin-top: 5px;
             color: white;
         }
         a {
+            display: block;
             text-decoration: none;
             color: white;
             margin: 0 0 0 20px;
@@ -324,7 +326,7 @@ h2 {
             padding: 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+
             flex-wrap: wrap;
             li {
                 margin: 0;
@@ -391,7 +393,7 @@ h2 {
     .coaches_card_header {
         display: flex;
         width: 100%;
-        font-family: "Righteous", cursive;
+        font-family: "Roboto";
         line-height: 1;
         font-size: 24px;
         font-weight: 700;
@@ -461,7 +463,7 @@ h2 {
     .club_card_header {
         display: flex;
         width: 100%;
-        font-family: "Righteous", cursive;
+        font-family: "Roboto";
         line-height: 1;
         font-size: 24px;
         font-weight: 700;
@@ -495,7 +497,7 @@ h2 {
         .ourPrograms {
             display: flex;
             width: 100%;
-            font-family: "Righteous", cursive;
+            font-family: "Roboto";
             line-height: 1;
             font-size: 24px;
             font-weight: 700;
@@ -568,7 +570,7 @@ h2 {
             opacity: 0;
             .blockCards_list {
                 color: rgba(255, 255, 255, 0.6);
-                margin-bottom: 12px;
+                margin: 24px 0 40px 0;
                 li {
                     text-align: left;
                     font-size: 14px;
@@ -602,7 +604,7 @@ h2 {
                     font-family: "Raleway", Sans-serif;
                     font-size: 14px;
                     padding: 0px 27px 0px 27px;
-                    margin: 10px 0 10px 0;
+                    margin: 40px 0;
                 }
             }
         }
@@ -1169,13 +1171,6 @@ h2 {
         }
     }
 
-    .coaches_card_block {
-        .coachesCardBlock {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
     .club_card_block {
         .clubCardBlock {
             .clubCardItem {
@@ -1191,8 +1186,10 @@ h2 {
 
     .coaches_card_block {
         .coachesCardBlock {
-            .coachesCardItem {
-                width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .newCard {
+                width: 344px;
             }
         }
     }
@@ -1298,7 +1295,7 @@ h2 {
             grid-template-columns: 1fr;
             .newCard {
                 width: 75%;
-
+                height: 650px;
                 margin: 0 auto;
             }
             .coachesCardItem {
@@ -1552,6 +1549,7 @@ h2 {
         .coachesCardBlock {
             .newCard {
                 width: 100%;
+                height: 544px;
             }
         }
     }

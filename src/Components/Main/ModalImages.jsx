@@ -24,6 +24,7 @@ export default function ModalImages({
                     break
                 case "Escape":
                     setCurrentPhoto(null)
+
                     break
                 default:
             }
@@ -71,7 +72,10 @@ export default function ModalImages({
                         color="inherit"
                         size="medium"
                         variant="text"
-                        onClick={() => setCurrentPhoto(null)}
+                        onClick={() => {
+                            document.body.style.overflow = "visible"
+                            setCurrentPhoto(null)
+                        }}
                     >
                         <ClearIcon />
                     </Button>

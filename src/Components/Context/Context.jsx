@@ -6,7 +6,6 @@ export const DataContext = createContext()
 export default function Context({ children }) {
     const [toggleModal, setToggleModal] = useState(false)
     const [pathMessages, setPathMessages] = useState("")
-    const [src, setSrc] = useState("")
 
     function formSend(e) {
         e.preventDefault()
@@ -24,7 +23,6 @@ export default function Context({ children }) {
         e.stopPropagation()
 
         if (link) {
-            setSrc(link)
         } else {
             window.scrollTo({
                 top: 150,
@@ -46,7 +44,6 @@ export default function Context({ children }) {
     const value = {
         toggleModal,
         changesModalState,
-        src,
         pathMessages,
         setPathMessages,
         formSend,

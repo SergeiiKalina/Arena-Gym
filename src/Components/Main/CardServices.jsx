@@ -1,17 +1,13 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { Button } from "@mui/material"
 import { cardServicesArr } from "../../data/date"
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { BsCheckLg } from "react-icons/bs"
 import { DataContext } from "../Context/Context"
 
 export default function CardServices() {
     const [arr] = useState(cardServicesArr)
-    const { changesModalState, src, setPathMessages } = useContext(DataContext)
-    const navigate = useNavigate()
-    useEffect(() => {
-        navigate(src)
-    }, [src, navigate])
+    const { changesModalState, setPathMessages } = useContext(DataContext)
 
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
@@ -63,12 +59,17 @@ export default function CardServices() {
                                         <br />
                                         {header2}
                                     </h3>
-                                    <p>
-                                        {paragraph1}
-                                        <br />
-                                        <br />
-                                        {paragraph2}
-                                    </p>
+                                    {paragraph1 ? (
+                                        <p>
+                                            {paragraph1}
+                                            <br />
+                                            <br />
+                                            {paragraph2}
+                                        </p>
+                                    ) : (
+                                        ""
+                                    )}
+
                                     {list ? (
                                         <ul className="blockCards_list">
                                             {list.map((item, i) => (
@@ -79,28 +80,44 @@ export default function CardServices() {
                                         </ul>
                                     ) : null}
                                     {nameButton ? (
-                                        <Button
-                                            variant="contained"
-                                            sx={{
-                                                backgroundColor: "#e4b800",
-                                                width: "186px",
-                                                margin: "0 auto",
-                                                "&:hover": {
-                                                    backgroundColor: "#000000",
-                                                },
-                                            }}
-                                            onClick={(e) => {
-                                                if (!src) {
+                                        src ? (
+                                            <Link to={src}>
+                                                <Button
+                                                    variant="contained"
+                                                    sx={{
+                                                        backgroundColor:
+                                                            "#e4b800",
+                                                        width: "186px",
+                                                        margin: "0 auto",
+                                                        "&:hover": {
+                                                            backgroundColor:
+                                                                "#000000",
+                                                        },
+                                                    }}
+                                                >
+                                                    {nameButton}
+                                                </Button>
+                                            </Link>
+                                        ) : (
+                                            <Button
+                                                variant="contained"
+                                                sx={{
+                                                    backgroundColor: "#e4b800",
+                                                    width: "186px",
+                                                    margin: "0 auto",
+                                                    "&:hover": {
+                                                        backgroundColor:
+                                                            "#000000",
+                                                    },
+                                                }}
+                                                onClick={(e) => {
                                                     changesModalState(e)
-
                                                     setPathMessages(linkOnForm)
-                                                } else {
-                                                    changesModalState(e, src)
-                                                }
-                                            }}
-                                        >
-                                            {nameButton}
-                                        </Button>
+                                                }}
+                                            >
+                                                {nameButton}
+                                            </Button>
+                                        )
                                     ) : null}
                                 </div>
                             </div>

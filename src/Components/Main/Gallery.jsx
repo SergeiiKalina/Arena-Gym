@@ -21,6 +21,9 @@ export default function Gallery() {
         if (index === "left" || index === "right" || index === "modal") return
         if (typeof index === "number") {
             setCurrentPhoto(index.toString())
+            if (!!currentPhotos) {
+                document.body.style.overflow = "hidden"
+            }
         }
     }
 

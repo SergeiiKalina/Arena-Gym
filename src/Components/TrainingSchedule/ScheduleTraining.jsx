@@ -5,7 +5,7 @@ export default function ScheduleTraining() {
         <section
             className="headerBackGround"
             style={{
-                backgroundImage: `url('./images/tekstura_beton_seryj_147070_1920x1080.jpg')`,
+                backgroundImage: `url('./images/HeaderBackground.jpg')`,
                 backgroundPosition: "50% 50%",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
