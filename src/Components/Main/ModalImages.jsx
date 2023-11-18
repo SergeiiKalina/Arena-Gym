@@ -37,18 +37,7 @@ export default function ModalImages({
         }
     }, [decrementIndex, incrementIndex, setCurrentPhoto])
 
-    const closeModal = (e) => {
-        console.log()
-        if (
-            e.target.id === "img" ||
-            e.target.classList.contains("modal_arrow")
-        ) {
-            return
-        } else {
-            setCurrentPhoto(null)
-            document.body.style.overflow = "visible"
-        }
-    }
+    const closeModal = (e) => {}
 
     return (
         <section
@@ -58,7 +47,6 @@ export default function ModalImages({
             }`}
             onClick={(e) => {
                 toggleImage(e.target.id)
-                closeModal(e)
             }}
         >
             <header className="modal_img_header">
@@ -69,7 +57,11 @@ export default function ModalImages({
                     <Button color="inherit" size="large" variant="text">
                         <ClearIcon
                             id="clear"
-                            style={{ width: "30px", height: "30px" }}
+                            style={{ width: "50px", height: "50px" }}
+                            onClick={() => {
+                                setCurrentPhoto(null)
+                                document.body.style.overflow = "visible"
+                            }}
                         />
                     </Button>
                 </article>
@@ -82,36 +74,24 @@ export default function ModalImages({
                 })}
             >
                 <div
+                    id="left"
                     className="arrow_container left"
                     onClick={(e) => decrementIndex(e)}
                 >
-                    <Button
-                        color="primary"
-                        size="medium"
-                        variant="outlined"
-                        className="modal_arrow"
-                        id="left"
-                        sx={{ width: "30%", padding: "0", height: "80px" }}
-                    >
-                        <ArrowBackIosIcon className="modal_arrow" />
+                    <Button color="primary" size="medium" variant="outlined">
+                        <ArrowBackIosIcon />
                     </Button>
                 </div>
                 <div className="modal_img">
-                    <img src={itemData[currentPhoto].img} alt="gym" id="img" />
+                    <img src={itemData[currentPhoto].img} alt="gym" />
                 </div>
                 <div
+                    id="right"
                     className="arrow_container right"
                     onClick={(e) => incrementIndex(e)}
                 >
-                    <Button
-                        color="primary"
-                        size="medium"
-                        variant="outlined"
-                        id="right"
-                        className="modal_arrow"
-                        sx={{ width: "30%", padding: "0" }}
-                    >
-                        <ArrowForwardIosIcon className="modal_arrow" />
+                    <Button color="primary" size="medium" variant="outlined">
+                        <ArrowForwardIosIcon />
                     </Button>
                 </div>
             </article>
