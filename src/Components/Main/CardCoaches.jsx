@@ -1,12 +1,10 @@
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 import { Button } from "@mui/material"
-import { useState } from "react"
 import { coachArray } from "../../data/date"
 
 export default function CardCoaches() {
     const { changesModalState, setPathMessages } = useContext(DataContext)
-    const [arrCoaches, setArrCoaches] = useState(coachArray)
 
     // function expandObject(obj) {
     //     let newArr = []
@@ -27,7 +25,7 @@ export default function CardCoaches() {
                 <span className="span"></span>
             </article>
             <article className="coachesCardBlock">
-                {arrCoaches.map((item) => {
+                {coachArray.map((item) => {
                     const { name, id, jobTitle, img, linkOnForm } = item
                     return (
                         <div className="newCard" key={id}>
