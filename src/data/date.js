@@ -64,7 +64,7 @@ export const coachArray = [
         jobTitle:
             "Силовий та функціональний тренінг. Дієтологія. Бодібілдинг. Підготовка до змагань.",
 
-        img: "https://iili.io/Jq6MFlj.jpg",
+        img: "./images/coach03.jpg",
         linkOnForm: "Запис до Якущенко Олексій",
     },
     {
@@ -72,7 +72,7 @@ export const coachArray = [
         name: "КАЛИНА СЕРГІЙ",
         jobTitle: "Силовий та функціональний тренінг. Crossfit. Реабілітація.",
 
-        img: "https://iili.io/Jq6Mdiu.jpg",
+        img: "./images/coach01.jpg",
         linkOnForm: "Запис до Калина Сергій",
     },
     {
@@ -81,7 +81,7 @@ export const coachArray = [
         jobTitle:
             "Силовий та функціональний тренінг. Реабілітація. Дієтологія.",
 
-        img: "https://iili.io/Jq6M3Kb.jpg",
+        img: "./images/coach05.jpg",
         linkOnForm: "Запис до Таран Анастасія",
     },
     {
@@ -89,7 +89,7 @@ export const coachArray = [
         name: "ГУРЗА КАРОЛІНА",
         jobTitle: "Силовий та функціональний тренінг. Дієтологія.",
 
-        img: "https://iili.io/Jq6MJVe.jpg",
+        img: "./images/coach08.jpg",
         linkOnForm: "Запис до Гурза Кароліна",
     },
     {
@@ -97,7 +97,7 @@ export const coachArray = [
         name: "БАСНЕВ ВІТАЛІЙ",
         jobTitle: "Силовий та функціональний тренінг. Реабілітація. Mind Body.",
 
-        img: "https://iili.io/Jq6MFlj.jpg",
+        img: "./images/coach02.jpg",
         linkOnForm: "Запис до Баснев Віталій",
     },
     {
@@ -106,7 +106,7 @@ export const coachArray = [
         jobTitle:
             "Силовий тренінг. Бодібілдинг. Практикуючий лікар – анестезист.",
 
-        img: "https://iili.io/Jq6Mdiu.jpg",
+        img: "./images/coach04.jpg",
         linkOnForm: "Запис до Шуляк Тимофій",
     },
 ]

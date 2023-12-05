@@ -1,28 +1,24 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 import { Button } from "@mui/material"
 import { useState } from "react"
+import { coachArray } from "../../data/date"
 
 export default function CardCoaches() {
     const { changesModalState, setPathMessages } = useContext(DataContext)
-    const [arrCoaches, setArrCoaches] = useState([])
+    const [arrCoaches, setArrCoaches] = useState(coachArray)
 
-    useEffect(() => {
-        fetch("https://coral-app-5ndv4.ondigitalocean.app/api/coaches")
-            .then((res) => res.json())
-            .then((res) => setArrCoaches(expandObject(res.data)))
-    }, [])
-    function expandObject(obj) {
-        let newArr = []
-        function recursion(obj) {
-            for (let i = 0; i < obj.length; i++) {
-                newArr.push({ id: obj[i].id, ...obj[i].attributes })
-            }
-        }
+    // function expandObject(obj) {
+    //     let newArr = []
+    //     function recursion(obj) {
+    //         for (let i = 0; i < obj.length; i++) {
+    //             newArr.push({ id: obj[i].id, ...obj[i].attributes })
+    //         }
+    //     }
 
-        recursion(obj)
-        return newArr
-    }
+    //     recursion(obj)
+    //     return newArr
+    // }
 
     return (
         <section className="coaches_card_block" id="CardCoach">
