@@ -24,10 +24,6 @@ export default function Context({ children }) {
 
         if (link) {
         } else {
-            window.scrollTo({
-                top: 150,
-                behavior: "smooth",
-            })
             if (e.target.id === "sendForm" || e.target.type === "button") {
                 setToggleModal((prev) => !prev)
                 if (!toggleModal) {

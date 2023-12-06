@@ -62,9 +62,9 @@ export const coachArray = [
         id: 0,
         name: "ЯКУЩЕНКО ОЛЕКСІЙ",
         jobTitle:
-            "Силовий та функціональний тренінг. Дієтологія. Бодібілдинг. Підготовка до змагань.",
+            "Силовий та функціональний тренінг. Дієтологія. Бодібілдинг. ",
 
-        img: "./images/coach03.jpg",
+        img: "./images/coach06.jpg",
         linkOnForm: "Запис до Якущенко Олексій",
     },
     {
@@ -72,7 +72,7 @@ export const coachArray = [
         name: "КАЛИНА СЕРГІЙ",
         jobTitle: "Силовий та функціональний тренінг. Crossfit. Реабілітація.",
 
-        img: "./images/coach01.jpg",
+        img: "./images/coach04.jpg",
         linkOnForm: "Запис до Калина Сергій",
     },
     {
@@ -81,7 +81,7 @@ export const coachArray = [
         jobTitle:
             "Силовий та функціональний тренінг. Реабілітація. Дієтологія.",
 
-        img: "./images/coach05.jpg",
+        img: "./images/coach01.jpg",
         linkOnForm: "Запис до Таран Анастасія",
     },
     {
@@ -97,7 +97,7 @@ export const coachArray = [
         name: "БАСНЕВ ВІТАЛІЙ",
         jobTitle: "Силовий та функціональний тренінг. Реабілітація. Mind Body.",
 
-        img: "./images/coach02.jpg",
+        img: "./images/coach05.jpg",
         linkOnForm: "Запис до Баснев Віталій",
     },
     {
@@ -106,7 +106,25 @@ export const coachArray = [
         jobTitle:
             "Силовий тренінг. Бодібілдинг. Практикуючий лікар – анестезист.",
 
-        img: "./images/coach04.jpg",
+        img: "./images/coach07.jpg",
+        linkOnForm: "Запис до Шуляк Тимофій",
+    },
+    {
+        id: 6,
+        name: "ОЛЬГА СИМОНОВА",
+        jobTitle:
+            "Силовий тренінг. Бодібілдинг. Практикуючий лікар – анестезист.",
+
+        img: "./images/coach02.jpg",
+        linkOnForm: "Запис до Ольга Симована",
+    },
+    {
+        id: 7,
+        name: "ШУЛЯК ТИМОФІЙ",
+        jobTitle:
+            "Силовий тренінг. Бодібілдинг. Практикуючий лікар – анестезист.",
+
+        img: "./images/coach03.jpg",
         linkOnForm: "Запис до Шуляк Тимофій",
     },
 ]

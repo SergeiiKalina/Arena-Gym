@@ -40,14 +40,7 @@ export default function CardCoaches() {
                                     </h4>
                                     <Button
                                         variant="contained"
-                                        sx={{
-                                            backgroundColor: "#e4b800",
-
-                                            margin: "0 auto",
-                                            "&:hover": {
-                                                backgroundColor: "#000000",
-                                            },
-                                        }}
+                                        className="coachesCardItem_info_button"
                                         onClick={(e) => {
                                             changesModalState(e)
                                             setPathMessages(linkOnForm)
