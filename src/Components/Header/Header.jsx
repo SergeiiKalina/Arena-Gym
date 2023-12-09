@@ -20,8 +20,8 @@ export default function Header() {
     return (
         <section
             style={{
-                backgroundImage: `url('./images/HeaderBackground.jpg')`,
-                backgroundPosition: "50% 50%",
+                backgroundImage: `url('./images/HeaderBackground.png')`,
+                backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

@@ -8,7 +8,7 @@ export default function ClubCard() {
     const { changesModalState, setPathMessages } = useContext(DataContext)
     return (
         <section className="club_card_block" id="Card">
-            <h3 className="club_card_header">CLUB CARD</h3>
+            <h3 className="club_card_header">АБОНІМЕНТИ</h3>
             <article className="club_card_header_border">
                 <span className="club_card_header_border_span"></span>
             </article>

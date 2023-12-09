@@ -6,7 +6,7 @@ export default function Social() {
         <section className="social_block">
             <div>
                 <a href="https://t.me/arenagym_kyiv">
-                    <BiLogoTelegram />
+                    <BiLogoTelegram className="social_block_telegram" />
                 </a>
             </div>
 

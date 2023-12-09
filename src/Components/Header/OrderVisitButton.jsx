@@ -14,7 +14,7 @@ export default function OrderVisitButton() {
                 }}
                 className="buttonVisit_block_button"
             >
-                Замовити гостьовий візит
+                Запишись на гостьовий візит
             </Button>
         </article>
     )

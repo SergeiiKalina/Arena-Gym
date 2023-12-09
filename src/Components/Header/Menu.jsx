@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom"
 import { itemMenu } from "../../data/date"
+import { Button } from "@mui/material"
 
 export default function Menu() {
     const { pathname } = useLocation()
@@ -18,9 +19,13 @@ export default function Menu() {
             <ul>
                 {itemMenu.map((item) => (
                     <li key={item.id}>
-                        <button onClick={() => func(item.src, pathname)}>
+                        <Button
+                            onClick={() => func(item.src, pathname)}
+                            variant="contained"
+                            className="main_menu_button"
+                        >
                             {item.title}
-                        </button>
+                        </Button>
                     </li>
                 ))}
             </ul>

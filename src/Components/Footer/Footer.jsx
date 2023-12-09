@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer
             style={{
-                backgroundImage: `url('./images/HeaderBackground.jpg')`,
+                backgroundImage: `url('./images/HeaderBackground.png')`,
                 backgroundPosition: "50% 50%",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

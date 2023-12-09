@@ -1,13 +1,23 @@
+import { Link } from "react-scroll"
 import { itemMenu } from "../../data/date"
 
 export default function FooterNavigate() {
     return (
-        <ul>
-            {itemMenu.map((item) => (
-                <li key={item.id}>
-                    <a href={item.src}>{item.title}</a>
-                </li>
-            ))}
-        </ul>
+        <nav className="menuList">
+            <ul>
+                {itemMenu.map((item) => (
+                    <li key={item.id}>
+                        <Link
+                            to={item.src.replace("#", "")}
+                            smooth="true"
+                            duration={500}
+                            className="main_menu_button"
+                        >
+                            {item.title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     )
 }

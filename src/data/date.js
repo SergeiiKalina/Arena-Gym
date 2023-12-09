@@ -1,30 +1,13 @@
 export const itemData = [
-    { id: 20, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 21, img: "./images/gallery01.jpg", title: "massage office" },
+    { id: 20, img: "./images/gallery01.jpg", title: "massage office" },
+    { id: 21, img: "./images/gallery02.jpg", title: "massage office" },
 
-    { id: 22, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 23, img: "./images/gallery03.jpg", title: "massage office" },
-    { id: 0, img: "./images/gallery01.jpg", title: "massage office" },
-    { id: 1, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 2, img: "./images/gallery03.jpg", title: "massage office" },
-    { id: 5, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 6, img: "./images/gallery03.jpg", title: "massage office" },
-    { id: 7, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 11, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 12, img: "./images/gallery01.jpg", title: "massage office" },
-    { id: 13, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 17, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 18, img: "./images/gallery03.jpg", title: "massage office" },
-    { id: 19, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 14, img: "./images/gallery03.jpg", title: "massage office" },
-    { id: 15, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 16, img: "./images/gallery01.jpg", title: "massage office" },
-    { id: 8, img: "./images/gallery01.jpg", title: "massage office" },
-    { id: 3, img: "./images/gallery04.jpg", title: "massage office" },
-    { id: 4, img: "./images/gallery01.jpg", title: "massage office" },
-
-    { id: 9, img: "./images/gallery02.jpg", title: "massage office" },
-    { id: 10, img: "./images/gallery03.jpg", title: "massage office" },
+    { id: 22, img: "./images/gallery03.jpg", title: "massage office" },
+    { id: 23, img: "./images/gallery04.jpg", title: "massage office" },
+    { id: 0, img: "./images/gallery05.jpg", title: "massage office" },
+    { id: 1, img: "./images/gallery06.jpg", title: "massage office" },
+    { id: 2, img: "./images/gallery07.jpg", title: "massage office" },
+    { id: 5, img: "./images/gallery08.jpg", title: "massage office" },
 ]
 export const itemMenu = [
     {
@@ -39,7 +22,7 @@ export const itemMenu = [
     },
     {
         id: 103,
-        title: "Карти",
+        title: "Абоніменти",
         src: "#Card",
     },
 
@@ -52,7 +35,7 @@ export const itemMenu = [
 
 export const slideArr = [
     { id: 0, title: "", img: "./images/slider01.jpg", alt: "photo" },
-    { id: 1, title: "", img: "./images/slider02.jpg", alt: "photo" },
+    { id: 1, title: "", img: "./images/slider02.png", alt: "photo" },
     { id: 2, title: "", img: "./images/slider03.jpg", alt: "photo" },
     { id: 3, title: "", img: "./images/slider04.jpg", alt: "photo" },
 ]
@@ -186,7 +169,7 @@ export const cardServicesArr = [
         id: 3,
         header1: "",
         header2: "ФІТНЕС БАР",
-        img: "./images/IMG_6985-HDR.jpg",
+        img: "./images/cardService05.jpg",
         paragraph1: `ArenaGym запрошуємо  стильного та затишного фітнес бару.
         Збалансоване харчування - ключовий фактор успіху.
         Смачні та корисні страви, протеїнові коктейлі, улюблені напої`,
@@ -213,7 +196,7 @@ export const cardServicesArr = [
         id: 5,
         header1: "КРОССФІТ",
         header2: "",
-        img: "./images/Grandfather.png",
+        img: "./images/cardservice06.jpg",
         paragraph1: ``,
         paragraph2: ``,
         list: [

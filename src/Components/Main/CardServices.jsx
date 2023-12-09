@@ -11,7 +11,7 @@ export default function CardServices() {
 
     return (
         <article className="wrapperMainBlock_content" id="CardServices">
-            <h3 className="ourPrograms">Our programs</h3>
+            <h3 className="ourPrograms">Наші Программи</h3>
             <div className="ourPrograms_border">
                 <span></span>
             </div>
