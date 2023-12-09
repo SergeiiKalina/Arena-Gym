@@ -94,10 +94,11 @@ h2 {
         padding: 2px 8px;
 
         .social_block_telegram {
-            transform: scale(1.2);
-            padding: 2px 2px;
+            transform: scale(1);
+            padding: 2px 0;
         }
         a {
+            display: flex;
             text-decoration: none;
             color: white;
         }
