@@ -1,9 +1,8 @@
 export default function Map() {
     return (
         <section className="map_block">
-            <h3 className="map_block_header">Як Дістатись</h3>
-            <div className="map_block_border">
-                <span></span>
+            <div className="map_block_img">
+                <img src="./images/howtoget.png" alt="logo" />
             </div>
             <div className="map_block_block">
                 <iframe

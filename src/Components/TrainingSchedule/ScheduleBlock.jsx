@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { tableSchedule } from "../../data/date"
+import { tableSchedule } from "../../data/data"
 import { DataContext } from "../Context/Context"
 import FooterModal from "../Main/FooterModal"
 import ButtonBackHome from "./ButtonBackHome"

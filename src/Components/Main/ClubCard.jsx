@@ -1,14 +1,15 @@
 import { Button } from "@mui/material"
-import { cardArray } from "../../data/date"
+import { cardArray } from "../../data/data"
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 import { BsCheckLg } from "react-icons/bs"
 
 export default function ClubCard() {
     const { changesModalState, setPathMessages } = useContext(DataContext)
+
     return (
         <section className="club_card_block" id="Card">
-            <h3 className="club_card_header">АБОНІМЕНТИ</h3>
+            <h3 className="club_card_header">КАРТИ</h3>
             <article className="club_card_header_border">
                 <span className="club_card_header_border_span"></span>
             </article>
@@ -21,21 +22,44 @@ export default function ClubCard() {
                                 <h3 className="club_card_name">{name}</h3>
 
                                 <ul className="clubCardItem_info_text">
-                                    {description.map((el, i) => (
-                                        <li key={i}>
-                                            <BsCheckLg
-                                                style={{ marginRight: "6px" }}
-                                            />
-                                            {el}
-                                        </li>
-                                    ))}
+                                    {description.map((el, i) => {
+                                        if (i === 0) {
+                                            return (
+                                                <li
+                                                    key={i}
+                                                    className="clubCardItem_info_time_work"
+                                                >
+                                                    <span>{el}</span>
+                                                    <span>
+                                                        {description[1]}
+                                                    </span>
+                                                </li>
+                                            )
+                                        }
+                                        if (i === 1) {
+                                            return
+                                        } else {
+                                            return (
+                                                <li key={i}>
+                                                    <img
+                                                        src="./images/listPoint.png"
+                                                        alt=""
+                                                    />
+                                                    {el}
+                                                </li>
+                                            )
+                                        }
+                                    })}
                                 </ul>
                                 <Button
                                     variant="contained"
                                     sx={{
                                         backgroundColor: "#e4b800",
                                         width: "186px",
-                                        margin: "0 auto",
+                                        margin: "12px auto 0 auto",
+                                        color: "black",
+                                        fontWeight: "800",
+                                        borderRadius: "12px",
                                         "&:hover": {
                                             backgroundColor: "#000000",
                                         },
@@ -45,7 +69,7 @@ export default function ClubCard() {
                                         changesModalState(e)
                                     }}
                                 >
-                                    Замовити
+                                    Придбати
                                 </Button>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-import { itemMenu } from "../../data/date"
+import { itemMenu } from "../../data/data"
 
 export default function FooterNavigate() {
     return (

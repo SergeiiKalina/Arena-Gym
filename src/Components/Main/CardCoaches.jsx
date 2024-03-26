@@ -1,59 +1,56 @@
-import { useContext } from "react"
-import { DataContext } from "../Context/Context"
-import { Button } from "@mui/material"
-import { coachArray } from "../../data/date"
+import React from "react"
+import { useState } from "react"
+import { coachArray } from "../../data/data"
+import PopUpCoach from "./PopUpCoach"
 
 export default function CardCoaches() {
-    const { changesModalState, setPathMessages } = useContext(DataContext)
+    const [togglePopUp, setTogglePopUp] = useState(false)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
-    // function expandObject(obj) {
-    //     let newArr = []
-    //     function recursion(obj) {
-    //         for (let i = 0; i < obj.length; i++) {
-    //             newArr.push({ id: obj[i].id, ...obj[i].attributes })
-    //         }
-    //     }
-
-    //     recursion(obj)
-    //     return newArr
-    // }
+    const showPopUp = (e, index) => {
+        const parent = e.target.closest(".pop_up_coach")
+        if (parent && parent.id === "popUpCoach") return
+        setTogglePopUp((prev) => !prev)
+        setCurrentIndex(index)
+    }
 
     return (
-        <section className="coaches_card_block" id="CardCoach">
-            <h3 className="coaches_card_header">ТРЕНЕРИ</h3>
-            <article className="coaches_card_header_border">
-                <span className="span"></span>
-            </article>
-            <article className="coachesCardBlock">
-                {coachArray.map((item) => {
-                    const { name, id, jobTitle, img, linkOnForm } = item
-                    return (
-                        <div className="newCard" key={id}>
-                            <div className="front">
+        <>
+            <section className="coaches_card_block" id="CardCoach">
+                <h3 className="coaches_card_header">ТРЕНЕРИ</h3>
+                <article className="coaches_card_header_border">
+                    <span className="span"></span>
+                </article>
+                <article className="coachesCardBlock">
+                    {coachArray.map((item, index) => {
+                        const { name, id, img, experience } = item
+
+                        return (
+                            <div
+                                className="newCard"
+                                key={id}
+                                onClick={(e) => showPopUp(e, index)}
+                            >
                                 <img src={img} alt="coach" />
                                 <footer className="newCard_footer">
                                     <h4 className="coachesCardItem_info_name">
                                         {name}
                                     </h4>
-                                    <h4 className="coachesCardItem_info_class">
-                                        {jobTitle}
-                                    </h4>
-                                    <Button
-                                        variant="contained"
-                                        className="coachesCardItem_info_button"
-                                        onClick={(e) => {
-                                            changesModalState(e)
-                                            setPathMessages(linkOnForm)
-                                        }}
-                                    >
-                                        Замовити Тренування
-                                    </Button>
+                                    <span className="coach_experience">
+                                        Досвід Роботи
+                                    </span>
+                                    <span className="coach_experience_data">
+                                        {experience}
+                                    </span>
                                 </footer>
                             </div>
-                        </div>
-                    )
-                })}
-            </article>
-        </section>
+                        )
+                    })}
+                </article>
+            </section>
+            {togglePopUp ? (
+                <PopUpCoach showPopUp={showPopUp} currentIndex={currentIndex} />
+            ) : null}
+        </>
     )
 }

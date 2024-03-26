@@ -3,7 +3,7 @@ import SwiperCore, { Autoplay, Pagination } from "swiper"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-import { slideArr } from "../../data/date"
+import { slideArr } from "../../data/data"
 
 SwiperCore.use([Autoplay, Pagination])
 export default function SwiperBlock() {

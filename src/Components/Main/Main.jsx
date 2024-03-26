@@ -7,11 +7,17 @@ import WrapperMain from "./WrapperMain"
 import Map from "./Map"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
+import AboutAs from "./AboutAs"
+import CallBack from "./CallBack"
+import Schedule from "./Schedule"
 
 export default function Main() {
     return (
         <>
             <Header />
+            <WrapperMain>
+                <AboutAs />
+            </WrapperMain>
             <WrapperMain>
                 <CardServices />
             </WrapperMain>
@@ -19,13 +25,14 @@ export default function Main() {
             <WrapperMain>
                 <ClubCard />
             </WrapperMain>
-
+            <Schedule />
             <Gallery />
             <ButtonOrderCard />
             <WrapperMain>
                 <Map />
             </WrapperMain>
             <Footer />
+            <CallBack />
         </>
     )
 }

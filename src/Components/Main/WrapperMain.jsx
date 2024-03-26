@@ -2,7 +2,7 @@ export default function WrapperMain({ children }) {
     return (
         <section
             style={{
-                backgroundColor: "#f8df3b",
+                backgroundColor: "#f2b800",
             }}
             className="wrapperMainBlock"
         >

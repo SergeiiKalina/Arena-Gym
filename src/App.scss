@@ -1,5 +1,5 @@
 @import "./Components/adaptive-fontMixin.scss";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .App {
     width: 100%;
     height: 100%;
@@ -14,22 +14,242 @@ h2 {
     text-align: center;
     color: #fefefe;
 }
+.footer_logo {
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+        height: 60px;
+    }
+}
+.callback_button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 20;
+}
+.pop_up_coach_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pop_up_coach {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 45%;
+        height: 400px;
+        background-color: #f2b800;
+        border-radius: 20px;
+        box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.6);
+        z-index: 5;
+        .pop_up_right_arrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #cccccc;
+            font-size: 34px;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .pop_up_left_arrow {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #cccccc;
+            font-size: 34px;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .pop_up_item {
+            position: relative;
+            display: flex;
+            min-width: calc(100% - 40px);
+            height: 85%;
+            margin: 0 auto;
+            padding-left: 40px;
+            padding-bottom: 0;
+            .dumbbell_block {
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                width: 25%;
+                height: 100px;
+                z-index: 1;
+                .first_dumbbell {
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    width: 50px;
+                    height: 50px;
+                }
+                .second_dumbbell {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100px;
+                    height: 100px;
+                    rotate: -75deg;
+                    z-index: 10;
+                }
+            }
+            img {
+                display: flex;
+                width: 210px;
+                height: 330px;
+                border-radius: 20px;
+                z-index: 2;
+            }
+            .pop_up_item_description {
+                height: 330px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 15px;
+            }
+            .description_name {
+                @include adaptive-font(26, 14);
+                font-weight: 900;
+                font-style: normal;
+            }
+            .description_experience {
+                display: flex;
+                flex-direction: column;
+                color: white;
+                @include adaptive-font(16, 10);
+                font-weight: 800;
+                z-index: 2;
+                .description_experience_data {
+                    @include adaptive-font(22, 12);
+                }
+            }
+            .description_description {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                color: #000000;
+                @include adaptive-font(16, 10);
+                margin-top: 12px;
+            }
+            .pop_up_button {
+                max-width: 280px;
+                min-width: 280px;
+                background-color: #cccccc;
+                font-family: "Montserrat", sans-serif;
+                color: #000000;
+                justify-content: center;
+                border-radius: 20px;
+                font-style: normal;
+                font-weight: 800;
+                padding: 2px 6px;
+                @include adaptive-font(14, 10);
+                z-index: 2;
+            }
+        }
+    }
+    .pop_up_coach_slider_wrapper::-webkit-scrollbar {
+        width: 0;
+    }
+    .pop_up_coach_slider_wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 4px;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+    }
+}
+.about_as_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    padding-top: 50px;
+    span {
+        @include adaptive-font(24, 16);
+
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .about_as_info {
+        margin-top: 50px;
+        @include adaptive-font(16, 12);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        p {
+            margin: 10px 0;
+            span {
+                @include adaptive-font(16, 12);
+            }
+        }
+        p:nth-child(2) {
+            width: 70%;
+        }
+        ul {
+            padding: 0;
+            li {
+                position: relative;
+                margin: 2px 0;
+                z-index: 5;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: -16px;
+                    width: 20px;
+                    height: 15px;
+                }
+            }
+            li:not(:first-child) {
+                padding-left: 5px;
+            }
+        }
+        .last_paragraph {
+            margin: 30px 0 0 0;
+        }
+    }
+}
+
+.menu_wrapper {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 .headerBackGround {
     position: relative;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+
     .header_wrapper {
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 95%;
+        height: 90px;
         padding: 8px 0 8px 0;
-        border-bottom: 1px solid grey;
-        background-color: rgba(255, 255, 255, 0.5);
+        border-bottom: 3px solid black;
     }
     .header_block {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         width: 73%;
@@ -37,10 +257,16 @@ h2 {
 }
 
 .logo_block {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    align-items: flex-end;
 
-    width: 6%;
+    img {
+        display: flex;
+        width: 80px;
+    }
 }
 
 .menuList {
@@ -51,26 +277,27 @@ h2 {
     height: 100%;
     align-items: flex-end;
     padding: 0;
-    margin-bottom: 12px;
     ul {
         width: 100%;
         display: flex;
         justify-content: space-between;
         color: white;
-        flex-wrap: wrap;
+        padding: 0;
         li {
             margin: 4px 8px 0 8px;
         }
     }
 
     .main_menu_button {
-        background-color: #191919;
+        background-color: #f2b800;
         font-family: "Montserrat", sans-serif;
-
+        color: #000000;
         justify-content: center;
         border-radius: 20px;
+        font-weight: 800;
         padding: 2px 20px;
-        @include adaptive-font(16, 12);
+        @include adaptive-font(14, 10);
+        text-wrap: nowrap;
     }
     .main_menu_button:hover {
         background-color: #000000;
@@ -79,16 +306,14 @@ h2 {
 }
 
 .social_block {
-    width: 9%;
+    width: 10%;
     height: 100%;
     display: flex;
     color: white;
     justify-content: space-between;
-    align-items: flex-end;
-
-    margin: 0 12px 12px 0;
+    margin-top: 4px;
     div {
-        background-color: #191919;
+        background-color: #f2b800;
         justify-content: center;
         border-radius: 20px;
         padding: 2px 8px;
@@ -100,7 +325,7 @@ h2 {
         a {
             display: flex;
             text-decoration: none;
-            color: white;
+            color: black;
         }
         a:hover {
             color: yellow;
@@ -212,39 +437,26 @@ h2 {
 }
 .map_block {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     padding: 30px 0;
-    width: 100%;
+    width: 73%;
+    .map_block_img {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
     .map_block_block {
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: center;
         padding-top: 30px;
+        background-color: #000000;
+        padding: 12px;
+        border-radius: 20px;
         iframe {
-            width: 73%;
-        }
-    }
-    .map_block_header {
-        display: flex;
-        width: 100%;
-        font-family: "Roboto";
-        line-height: 1;
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        justify-content: center;
-        margin: 80px 0 0 0;
-    }
-    .map_block_border {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin: 20px 0 0 0;
-        span {
-            width: 27px;
-            height: 4px;
-            background-color: #fefefe;
+            width: 100%;
         }
     }
 }
@@ -259,28 +471,81 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     form {
+        position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 45%;
-        height: 50%;
-        background-color: #fefefe;
+        height: 500px;
+        background-color: #f2b800;
         border-radius: 10px;
-        padding: 50px 0;
+        padding: 20px 0;
+        .PopUpForm_block_fields {
+            display: flex;
+            flex-direction: column;
+        }
         .PopUpForm_header {
             color: black;
             font-size: 30px;
         }
+        .input_block {
+            display: flex;
+            flex-direction: column;
+        }
         .PopUpForm_item {
+            width: 65%;
+            margin: 0 auto 8px auto;
+            border: none;
+            background-color: #fcd34f;
+            padding: 12px 8px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            @include adaptive-font(24, 20);
+        }
+        .PopUpForm_item:focus {
+            border: none;
+            outline: none;
+        }
+        .PopUpForm_item.button {
+            width: 40%;
+            padding: 0;
+            color: #000000;
+            @include adaptive-font(22, 18);
+            font-style: normal;
+            font-weight: 800;
+            background-color: #cccccc;
+        }
+        label {
             width: 50%;
             margin: 0 auto;
+            text-align: center;
+            border-top: 2px solid black;
+            @include adaptive-font(22, 16);
+            font-weight: 800;
         }
+    }
+    .pop_up_logo {
+        position: absolute;
+        top: 50%;
+        width: 300px;
+    }
+    .pop_up_logo.left {
+        left: -70px;
+        transform: translate(10%, -50%);
+
+        rotate: -90deg;
+    }
+    .pop_up_logo.right {
+        right: -70px;
+        transform: translate(-10%, -50%);
+
+        rotate: 90deg;
     }
 }
 .wrapperSlider {
     width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+
     height: 89%;
     .sliderBlock {
         width: 100%;
@@ -295,7 +560,7 @@ h2 {
 
 .footer_wrapper {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #cccccc;
     padding-bottom: 30px;
     .footer {
         display: flex;
@@ -303,7 +568,7 @@ h2 {
         margin: 0 auto;
         padding-top: 10px;
         flex-direction: column;
-
+        justify-content: space-between;
         .footer_block {
             display: flex;
             border-top: 1px solid white;
@@ -311,17 +576,18 @@ h2 {
         header {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 10px;
         }
     }
     .footer_social {
         width: 50%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
         div {
             margin-top: 5px;
-            color: white;
-            background-color: #000000;
+
+            background-color: #f2b800;
             border-radius: 55%;
             padding: 4px;
         }
@@ -333,20 +599,22 @@ h2 {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: white;
+            color: black;
             text-align: center;
         }
         a:hover {
-            color: yellow;
+            color: #f2b800;
         }
     }
     .footer_contacts {
-        width: 50%;
+        width: 85%;
 
         font-size: 16px;
         .menuList {
-            width: 100%;
+            width: 90%;
+            height: 50%;
         }
+
         ul {
             height: 100%;
             padding: 0;
@@ -354,11 +622,12 @@ h2 {
             justify-content: space-between;
 
             flex-wrap: wrap;
+
             .main_menu_button {
-                background-color: #191919;
+                background-color: #f2b800;
                 font-family: "Montserrat", sans-serif;
                 justify-content: center;
-                color: white;
+                color: black;
                 border-radius: 20px;
                 padding: 2px 20px;
                 @include adaptive-font(16, 12);
@@ -381,70 +650,105 @@ h2 {
             }
         }
     }
+    .contacts_block {
+        width: 15%;
+    }
 }
 .coaches_card_block {
     width: 100%;
     padding-bottom: 80px;
-    background-color: #191919;
+    background-color: #cccccc;
 
     .coachesCardBlock {
-        position: relative;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #000000;
         width: 73%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.5em;
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 25px;
         margin: 36px auto 0 auto;
         .newCard {
-            color: white;
-            margin: 0 auto;
-            .front {
-                box-sizing: border-box;
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
+            position: relative;
+            width: 31%;
+            cursor: pointer;
+            .newCard_footer {
+                width: 200px;
+                height: 100px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
                 display: flex;
-                justify-content: center;
-                .newCard_footer {
-                    width: 80%;
-
+                margin: 0 auto;
+                .coachesCardItem_info_name {
                     position: absolute;
-                    bottom: 20px;
+                    top: 0;
+                    left: 10px;
+                    width: 100%;
+                    font-weight: 800;
+                    rotate: -10deg;
+                    color: black;
+                    @include adaptive-font(16, 10);
+                    background-color: #f2b800;
+                    border-radius: 20px;
+                    text-wrap: nowrap;
+                    text-align: center;
+                    padding: 4px 8px;
+                }
+                .coach_experience {
+                    position: absolute;
+                    top: 13px;
+                    right: -50px;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    .coachesCardItem_info_name {
-                        font-family: "Montserrat", sans-serif;
-                        font-weight: 900;
-                        color: black;
-                        @include adaptive-font(24, 18);
-                    }
-                    .coachesCardItem_info_class {
-                        color: white;
-                        font-family: "Montserrat", sans-serif;
-                        font-weight: 500;
-                        @include adaptive-font(16, 12);
-                        margin: 8px 0 16px 0;
-                    }
-                    .coachesCardItem_info_button {
-                        background-color: #191919;
-                        font-family: "Montserrat", sans-serif;
-                        justify-content: center;
-                        border-radius: 20px;
-                        padding: 6px 20px;
-                        @include adaptive-font(16, 12);
-                    }
-                    .coachesCardItem_info_button:hover {
-                        background-color: #000000;
-                    }
+                    padding: 2px 4px;
+                    justify-content: center;
+                    width: 100px;
+                    background-color: #cccccc;
+                    @include adaptive-font(12, 10);
+                    rotate: -10deg;
+                    border-radius: 12px;
+                }
+                .coach_experience_data {
+                    display: flex;
+                    position: absolute;
+                    top: 50px;
+                    right: -70px;
+                    justify-content: flex-end;
+                    @include adaptive-font(20, 14);
+
+                    border-radius: 12px;
+                    color: #f2b800;
+                    margin: 0 auto;
+                }
+                .coachesCardItem_info_class {
+                    color: white;
+                    font-weight: 500;
+                    @include adaptive-font(16, 12);
+                    margin: 8px 0 16px 0;
+                }
+                .coachesCardItem_info_button {
+                    background-color: #191919;
+                    justify-content: center;
+                    border-radius: 20px;
+                    padding: 6px 20px;
+                    @include adaptive-font(16, 12);
+                }
+                .coachesCardItem_info_button:hover {
+                    background-color: #000000;
                 }
             }
             img {
                 width: 100%;
                 height: 100%;
+                border-radius: 20px;
             }
         }
+    }
+    .coachesCardBlock > .newCard:last-child {
+        margin-left: auto;
+        margin-right: auto;
     }
     .coaches_card_header {
         display: flex;
@@ -465,8 +769,12 @@ h2 {
         span {
             width: 27px;
             height: 4px;
-            background-color: yellow;
+            background-color: #f2b800;
+            border-radius: 5px;
         }
+    }
+    .coachesCardBlock > div:last-child {
+        grid-column: 2 / 3;
     }
 }
 
@@ -476,41 +784,64 @@ h2 {
     .clubCardBlock {
         position: relative;
         width: 73%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
         margin: 0 auto;
 
         .newCard {
-            color: white;
+            width: 48%;
+            color: #000000;
             margin-top: 36px;
             cursor: pointer;
             .front {
                 box-sizing: border-box;
                 position: relative;
-                background-color: #000000;
+                background-color: #cccccc;
                 width: 100%;
-                height: 100%;
-                text-align: center;
+                height: 450px;
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 border-radius: 15px;
-                padding: 45px;
-
+                padding: 30px 0;
+                .club_card_name {
+                    margin: 0 auto;
+                }
                 .clubCardItem_info_text {
-                    height: 300px;
+                    width: 70%;
+                    height: 220px;
                     display: flex;
+                    @include adaptive-font(16, 10);
+                    font-weight: 700;
                     flex-direction: column;
                     justify-content: space-between;
-                    margin: 20px 0 30px 0;
+
+                    margin: 20px auto 30px auto;
                     padding: 0;
+
                     li {
+                        display: flex;
                         margin: 0;
+                        align-items: center;
+                        img {
+                            width: 20px;
+                            height: 18px;
+                        }
+                    }
+                    .clubCardItem_info_time_work {
+                        width: 100%;
+                        display: flex;
+                        margin: 0 auto;
+                        justify-content: space-between;
                     }
                 }
             }
         }
+    }
+    .clubCardBlock > div:last-child {
+        margin: 20px auto 0 auto;
     }
     .club_card_header {
         display: flex;
@@ -532,6 +863,7 @@ h2 {
             width: 27px;
             height: 4px;
             background-color: white;
+            border-radius: 5px;
         }
     }
 }
@@ -570,16 +902,23 @@ h2 {
         }
         .blockCards {
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.5em;
+            display: flex;
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+            gap: 25px;
             margin: 20px 0 0 0;
         }
+        .blockCards > div:last-child {
+            margin: 0 auto;
+        }
+
         .card {
+            width: 31%;
             position: relative;
             color: white;
             transform-style: preserve-3d;
-            margin: 36px auto 0 auto;
+            margin: 6px 0 0 0;
         }
 
         .card__front,
@@ -593,6 +932,7 @@ h2 {
             transition: transform 2s cubic-bezier(0.2, 0.85, 0.4, 1.275),
                 opacity 0.5s ease;
             overflow: hidden;
+            border-radius: 30px;
         }
 
         .card__front {
@@ -600,34 +940,56 @@ h2 {
             background-color: black;
 
             h3 {
-                width: 100%;
+                display: flex;
                 letter-spacing: 2px;
                 position: absolute;
-                top: 50%;
+                bottom: 20px;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translateX(-50%);
                 font-family: "Montserrat", sans-serif;
                 font-weight: 900;
-                @include adaptive-font(34, 24);
-                color: #fbe23c;
-
+                @include adaptive-font(16, 12);
+                color: #000000;
+                background-color: #cccccc;
                 line-height: 1.2em;
+                padding: 6px 12px;
+                white-space: nowrap;
+                border-radius: 20px;
+            }
+        }
+        .card__front {
+            .long_header {
+                white-space: wrap;
             }
         }
 
         .card__back {
+            display: flex;
+            flex-direction: column;
             background-color: white;
             transform: rotateY(-180deg);
             opacity: 0;
+
             .blockCards_list {
-                color: rgba(255, 255, 255, 0.6);
-                margin: 24px 0 40px 0;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                justify-content: space-evenly;
+                padding: 0;
+                color: white;
+                font-weight: 600;
+                margin: 100px 0 0 0;
+
                 li {
                     text-align: left;
-                    font-size: 14px;
+                    @include adaptive-font(14, 10);
                     padding: 0;
                     margin: 0;
                 }
+            }
+            .blockCards_list.with_paragraph {
+                margin: 145px 0 0 0;
             }
             .backCardContent {
                 position: absolute;
@@ -635,27 +997,50 @@ h2 {
                 width: 100%;
                 height: 100%;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
                 background-color: rgba(0, 0, 0, 0.5);
-                h3 {
-                    align-self: center;
-                    text-align: center;
-                    color: #fbe23c;
-                    font-family: "Righteous", Sans-serif;
-                    font-size: 34px;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    line-height: 1.2em;
-                }
-                p {
-                    text-align: center;
-                    color: rgba(255, 255, 255, 0.6);
-                    font-family: "Raleway", Sans-serif;
-                    font-size: 14px;
-                    padding: 0px 27px 0px 27px;
-                    margin: 40px 0;
+                .info_block {
+                    position: relative;
+                    font-family: "Montserrat", sans-serif;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-weight: 500;
+                    h3 {
+                        position: absolute;
+                        top: 40px;
+                        display: flex;
+                        letter-spacing: 2px;
+                        font-weight: 900;
+                        @include adaptive-font(16, 12);
+                        color: #000000;
+                        background-color: #cccccc;
+                        line-height: 1.2em;
+                        padding: 6px 12px;
+                        white-space: nowrap;
+                        border-radius: 20px;
+                    }
+                    h3.back_long_header {
+                        @include adaptive-font(12, 10);
+                    }
+                    p {
+                        position: absolute;
+                        top: 90px;
+
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(242, 184, 0, 0.5);
+                        font-family: "Raleway", Sans-serif;
+                        font-size: 14px;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        text-align: center;
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -695,17 +1080,18 @@ h2 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 80px;
+    padding: 40px 0 80px 0;
 
-    background-color: #191919;
+    background-color: #cccccc;
     .gallery_images_container {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
+        gap: 15px;
         img {
             width: 100%;
             height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
     }
     .gallery_images_container_item {
@@ -840,16 +1226,32 @@ h2 {
     justify-content: center;
     flex-direction: column;
     padding-bottom: 80px;
-    background-color: #191919;
+    background-color: #cccccc;
+    .dumbbell {
+        width: 40px;
+        height: 40px;
+    }
+    .dumbbell_left {
+        position: absolute;
+        top: 25%;
+        left: 34%;
+        transform: translate(-50%, -50%);
+        rotate: -65deg;
+    }
+    .dumbbell_right {
+        position: absolute;
+        top: 10%;
+        right: 32%;
+        transform: translate(-50%, -50%);
+    }
     .button_order_card_item {
         background-color: #e4b800;
         width: 30%;
         margin: 20px auto 0 auto;
         padding: 10px 0;
-        color: white;
-        &:hover {
-            background-color: "#000000";
-        }
+        color: #000000;
+        font-weight: 800;
+        border-radius: 20px;
     }
 }
 
@@ -862,123 +1264,80 @@ h2 {
     z-index: 3;
 }
 .schedule_wrapper {
-    width: 73%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    a {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 80px auto;
-        text-decoration: none;
-    }
-    .buttonVisit_block_button {
-        width: 100%;
-        background-color: #e4b800;
-    }
-    .buttonVisit_block_button:hover {
-        background-color: #000000;
-        color: white;
-    }
-}
-
-.schedule_block {
     width: 100%;
-    padding: 20px 0 50px 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    .schedule {
-        width: 100%;
+    padding: 20px 0;
+    .schedule_container {
+        width: 73%;
 
-        border-collapse: collapse;
-
-        background-color: #33393e;
-    }
-
-    th,
-    td {
-        text-align: left;
-        color: #5b7bb2;
-    }
-    th {
-        color: #fbe23c;
-    }
-    td {
-        height: 50px;
-    }
-    .schedule_row {
-        position: relative;
-        height: 75px;
-        margin: 10px 5px;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .schedule_row.body {
-        background-color: #e4b800;
-    }
-    .schedule_row.day {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .allTraining {
-        span {
-            width: 95%;
-            display: flex;
-            justify-content: center;
-            color: yellow;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: auto auto;
+        border-radius: 20px;
+        padding: 20px 0;
+        h2 {
+            width: 40%;
+            background-color: #f2b800;
+            border-radius: 20px;
+            padding: 12px 0;
+            margin: 0 auto;
+            color: #000000;
+            @include adaptive-font(30, 12);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
-        .allTraining_name {
-            display: flex;
-            justify-content: center;
+        .schedule_days {
+            display: grid;
             width: 95%;
-            @include adaptive-font(17, 15);
-        }
-        .allTraining_tooltip {
-            box-sizing: border-box;
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            top: 55px;
-            width: 100%;
+            margin: 24px auto;
+            gap: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            background-color: #f2b800;
+            @include adaptive-font(24, 10);
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: 700;
 
-            font-size: 14px;
-            border-radius: 10px;
-            background-color: #ffffff;
-            transition: all 500ms;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            padding: 8px;
-            z-index: 2;
-            .buttonVisit_block_button {
-                font-size: 14px;
-                background-color: #e4b800;
-                margin: 16px 0;
-                padding: 6px 16px;
-                border: none;
-                border-radius: 6px;
-            }
-            .buttonVisit_block_button:hover {
-                background-color: #000000;
-                color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            .schedule_days_item {
+                text-align: center;
             }
         }
-    }
-    .allTraining:hover {
-        .allTraining_tooltip {
-            opacity: 1;
-            visibility: visible;
-            transition: all 500ms;
+        .schedule_table {
+            width: 95%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin: 0 auto;
+        }
+        .schedule_row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+
+            .schedule_row_item {
+                height: 55px;
+
+                text-align: center;
+                background-color: #a1a1a1;
+                padding: 4px 8px;
+                border-radius: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                .schedule_row_item_time {
+                    margin-top: 2px;
+                    color: #f2b800;
+                    font-weight: 800;
+                    @include adaptive-font(24, 6);
+                    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                }
+                .schedule_row_item_name {
+                    font-weight: 800;
+                    @include adaptive-font(20, 6);
+                    line-height: 15px;
+                }
+            }
+            .schedule_row_item.void {
+                background-color: transparent;
+                box-shadow: none;
+            }
         }
     }
 }
@@ -994,18 +1353,20 @@ h2 {
         font-weight: 900;
         margin: 0;
         color: #191919;
+        font-style: normal;
         @include adaptive-font(14, 12);
-        a {
-            text-decoration: none;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 900;
-            @include adaptive-font(14, 12);
-            color: #191919;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: blue;
-        }
+    }
+    a {
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        @include adaptive-font(14, 12);
+        color: #191919;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: blue;
     }
 }
 
@@ -1025,6 +1386,23 @@ h2 {
     }
 }
 @media (max-width: 1500px) {
+    .map_block {
+        width: 78%;
+    }
+    .about_as_wrapper {
+        width: 78%;
+        .about_as_info {
+            margin-top: 40px;
+            p:nth-child(2) {
+                width: 80%;
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 78%;
+        }
+    }
     .footer_wrapper {
         .footer {
             width: 78%;
@@ -1034,18 +1412,14 @@ h2 {
         width: 78%;
     }
     .schedule_wrapper {
-        width: 78%;
-    }
-    .coaches_card_block {
-        .coachesCardBlock {
+        .schedule_container {
             width: 78%;
         }
     }
+
     .club_card_block {
         .clubCardBlock {
             width: 78%;
-
-            grid-template-columns: 1fr 1fr;
         }
     }
 
@@ -1061,6 +1435,47 @@ h2 {
     }
 }
 @media (max-width: 1400px) {
+    .button_order_card_block {
+        .left {
+            left: 33%;
+        }
+        .dumbbell_right {
+            right: 31%;
+        }
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            .pop_up_item {
+                .dumbbell_block {
+                    bottom: 0;
+                    right: 20px;
+
+                    .first_dumbbell {
+                        top: 10%;
+                        left: -20%;
+                    }
+                    .second_dumbbell {
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .map_block {
+        width: 85%;
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 85%;
+        }
+    }
+    .about_as_wrapper {
+        width: 85%;
+        .about_as_info {
+            margin-top: 30px;
+        }
+    }
     .footer_wrapper {
         .footer {
             width: 85%;
@@ -1070,20 +1485,16 @@ h2 {
         width: 85%;
     }
     .schedule_wrapper {
-        width: 85%;
+        .schedule_container {
+            width: 85%;
+        }
     }
     .club_card_block {
         .clubCardBlock {
             width: 85%;
-            grid-template-columns: 1fr 1fr;
         }
     }
 
-    .coaches_card_block {
-        .coachesCardBlock {
-            width: 85%;
-        }
-    }
     .wrapperMainBlock {
         .wrapperMainBlock_content {
             width: 85%;
@@ -1097,6 +1508,26 @@ h2 {
 }
 
 @media (max-width: 1300px) {
+    .PopUpForm {
+        form {
+            width: 55%;
+        }
+    }
+    .map_block {
+        width: 90%;
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            width: 55%;
+            height: 400px;
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 90%;
+            gap: 20px;
+        }
+    }
     .footer_wrapper {
         .footer {
             width: 95%;
@@ -1107,7 +1538,15 @@ h2 {
         width: 95%;
     }
     .schedule_wrapper {
-        width: 95%;
+        .schedule_container {
+            width: 95%;
+        }
+    }
+    .about_as_wrapper {
+        width: 90%;
+        .about_as_info {
+            margin-top: 5px;
+        }
     }
     .modal_img_container {
         .modal_img {
@@ -1136,11 +1575,6 @@ h2 {
         }
     }
 
-    .coaches_card_block {
-        .coachesCardBlock {
-            width: 90%;
-        }
-    }
     .wrapperMainBlock {
         .wrapperMainBlock_content {
             width: 90%;
@@ -1155,18 +1589,40 @@ h2 {
 @media (max-width: 1254px) {
     .coaches_card_block {
         .coachesCardBlock {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    .wrapperMainBlock {
-        .wrapperMainBlock_content {
-            .blockCards {
-                grid-template-columns: 1fr 1fr;
+            .newCard {
+                .newCard_footer {
+                    width: 180px;
+                }
             }
         }
     }
 }
 @media (max-width: 1200px) {
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            width: 60%;
+            height: 400px;
+        }
+    }
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            .card__front {
+                .long_header {
+                    white-space: nowrap;
+                    @include adaptive-font(14, 10);
+                }
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            .newCard {
+                .newCard_footer {
+                    height: 80px;
+                }
+            }
+        }
+    }
     .schedule_block {
         display: flex;
         flex-wrap: wrap;
@@ -1191,8 +1647,97 @@ h2 {
 }
 
 @media (max-width: 1024px) {
+    .schedule_wrapper {
+        .schedule_container {
+            width: 95%;
+            h2 {
+                width: 60%;
+            }
+            .schedule_row {
+                gap: 6px;
+
+                .schedule_row_item {
+                    height: 47px;
+
+                    padding: 4px 8px;
+                    .schedule_row_item_name {
+                        line-height: 12px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+    .button_order_card_block {
+        .dumbbell_left {
+            left: 33%;
+        }
+        .dumbbell_right {
+            right: 29%;
+        }
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            width: 75%;
+            height: 400px;
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            gap: 20px;
+            .newCard {
+                width: 48%;
+                .newCard_footer {
+                    width: 180px;
+                    height: 80px;
+
+                    bottom: 0;
+                    left: 0;
+
+                    .coachesCardItem_info_name {
+                        top: 0;
+                        left: 12px;
+                        width: 100%;
+                    }
+                    .coach_experience {
+                        top: 13px;
+                        right: -50px;
+
+                        width: 100px;
+                    }
+                    .coach_experience_data {
+                        top: 50px;
+                        right: -70px;
+                    }
+                }
+            }
+        }
+    }
+    .wrapperSlider {
+        .sliderBlock {
+            padding-top: 30px;
+        }
+    }
+    .menuList {
+        width: 80%;
+    }
+    .social_block {
+        width: 15%;
+    }
     .buttonVisit_block {
         top: 85%;
+    }
+    .map_block {
+        width: 98%;
+        .map_block_img {
+            display: flex;
+            width: 50%;
+            justify-content: end;
+            img {
+                width: 90%;
+                height: 80%;
+            }
+        }
     }
     .modal_img_container {
         .modal_img {
@@ -1219,8 +1764,12 @@ h2 {
 
     .club_card_block {
         .clubCardBlock {
-            .clubCardItem {
-                width: 100%;
+            .newCard {
+                .front {
+                    .clubCardItem_info_text {
+                        width: 80%;
+                    }
+                }
             }
         }
     }
@@ -1232,13 +1781,27 @@ h2 {
 
     .PopUpForm {
         form {
-            width: 65%;
+            width: 70%;
         }
     }
 
     .wrapperMainBlock {
         .wrapperMainBlock_content {
-            width: 95%;
+            .blockCards {
+                gap: 15px;
+            }
+            .card {
+                width: 48%;
+            }
+
+            .card__front {
+                h3 {
+                    @include adaptive-font(14, 10);
+                }
+                .long_header {
+                    @include adaptive-font(12, 8);
+                }
+            }
         }
     }
 
@@ -1246,11 +1809,155 @@ h2 {
         width: 95%;
     }
 }
+@media (max-width: 880px) {
+    .PopUpForm {
+        form {
+            width: 75%;
+        }
+    }
+    .menuList {
+        ul {
+            flex-wrap: wrap;
+        }
+    }
+}
 
 @media (max-width: 767px) {
+    .button_order_card_block {
+        .dumbbell_left {
+            left: 22%;
+        }
+        .dumbbell_right {
+            right: 18%;
+        }
+    }
+    .footer_logo {
+        img {
+            height: 50px;
+        }
+    }
+    .map_block {
+        width: 98%;
+        .map_block_img {
+            display: flex;
+            width: 50%;
+            justify-content: end;
+            align-items: center;
+            img {
+                width: 95%;
+                height: 70%;
+            }
+        }
+    }
+    .about_as_wrapper {
+        padding-top: 30px;
+    }
+    .menuList {
+        display: none;
+    }
+    .mobile_navigation {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        color: white;
+        width: 50%;
+        height: 100dvh;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 500ms;
+        z-index: 2;
+        ul {
+            width: 100%;
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+
+            li {
+                font-weight: 600;
+                margin: 10px 70px 10px auto;
+            }
+        }
+    }
+    .mobile_navigation.active {
+        right: 0;
+        transition: all 500ms;
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            width: 95%;
+            height: 400px;
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            width: 95%;
+            gap: 10px;
+            .newCard {
+                width: 48%;
+                .newCard_footer {
+                    width: 170px;
+                    height: 80px;
+
+                    bottom: 0;
+                    left: 0;
+
+                    .coachesCardItem_info_name {
+                        top: 0;
+                        left: 12px;
+                        width: 100%;
+                    }
+                    .coach_experience {
+                        top: 10px;
+                        right: -50px;
+
+                        width: 100px;
+                    }
+                    .coach_experience_data {
+                        top: 40px;
+                        right: -90px;
+                    }
+                }
+            }
+        }
+    }
+    .burger_button {
+        top: 55px;
+        right: 10px;
+    }
+    .logo_block {
+        left: 20px;
+        transform: translateX(0);
+
+        img {
+            display: flex;
+            width: 70px;
+        }
+    }
+
     .schedule_wrapper {
-        a {
-            width: 35%;
+        .schedule_container {
+            width: 100%;
+            h2 {
+                width: 50%;
+            }
+            .schedule_days {
+                gap: 6px;
+                @include adaptive-font(24, 10);
+                padding: 12px 12px;
+            }
+            .schedule_row {
+                gap: 6px;
+
+                .schedule_row_item {
+                    height: 40px;
+
+                    padding: 4px;
+                    .schedule_row_item_name {
+                        line-height: 10px;
+                        margin-top: 1px;
+                    }
+                }
+            }
         }
     }
 
@@ -1292,68 +1999,26 @@ h2 {
         width: 95%;
         .clubCardBlock {
             width: 100%;
-            grid-template-columns: 1fr;
-            grid-gap: 0;
+            justify-content: center;
             .newCard {
-                width: 100%;
-                margin: 36px auto 0 auto;
-            }
-        }
-    }
-
-    .coaches_card_block {
-        .coachesCardBlock {
-            grid-template-columns: 1fr;
-            .newCard {
-                margin: 0 auto;
-            }
-            .coachesCardItem {
-                width: 100%;
-                flex-direction: column;
-                .coachesCardItem_img {
-                    width: 100%;
-                    height: 40%;
+                width: 60%;
+                .front {
+                    .clubCardItem_info_text {
+                        width: 90%;
+                    }
                 }
             }
         }
     }
+
     .wrapperMainBlock {
         .wrapperMainBlock_content {
             width: 95%;
-            .blockCards {
-                grid-template-columns: 1fr;
-
-                .card {
-                    margin: 36px auto 0 auto;
-                }
-            }
         }
     }
     .PopUpForm {
         form {
-            justify-content: center;
-            width: 85%;
-            height: 70%;
-            .PopUpForm_item {
-                width: 70%;
-                margin: 20px auto 0 auto;
-            }
-            .PopUpForm_item.area {
-                height: 120px;
-                margin: 40px auto 0 auto;
-            }
-            .PopUpForm_item.button {
-                width: 50%;
-                margin: 120px auto 0 auto;
-            }
-        }
-    }
-
-    .map_block {
-        .map_block_block {
-            iframe {
-                width: 95%;
-            }
+            width: 90%;
         }
     }
 
@@ -1366,11 +2031,12 @@ h2 {
     .mobile_left_panel {
         display: block;
     }
-    .menuList {
-        display: none;
-    }
+
     .headerBackGround {
         justify-content: space-between;
+        .header_wrapper {
+            height: 80px;
+        }
         .header_block {
             display: block;
             justify-content: center;
@@ -1399,40 +2065,9 @@ h2 {
 
     .social_block {
         display: flex;
-        align-items: flex-start;
-        margin: 6px 0 12px -12px;
-        width: 8%;
-
-        padding: 0 0 0 10px;
+        margin-left: auto;
     }
 
-    .mobile_navigation {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        color: white;
-        width: 50%;
-        height: 100dvh;
-        background: rgba(0, 0, 0, 0.5);
-        transition: all 500ms;
-        z-index: 2;
-        ul {
-            width: 100%;
-            display: flex;
-            padding: 0;
-            flex-direction: column;
-
-            li {
-                font-weight: 600;
-                margin: 10px 70px 10px auto;
-            }
-        }
-    }
-    .mobile_navigation.active {
-        right: 0;
-        transition: all 500ms;
-    }
     .SearchPopUp {
         display: block;
         opacity: 0;
@@ -1457,21 +2092,155 @@ h2 {
         left: 25%;
         width: 70%;
     }
+    .footer_wrapper {
+        .footer {
+            header {
+                display: flex;
+                justify-content: space-between;
+                .contacts_block {
+                    flex-direction: column;
+
+                    p {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        .footer {
+            .footer_contacts {
+                display: none;
+            }
+        }
+        .contacts_block {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+    }
 }
 
 @media (max-width: 600px) {
-    .club_card_block {
-        .clubCardBlock {
-            .newCard {
-                width: 90%;
+    .schedule_wrapper {
+        .schedule_container {
+            width: 100%;
+            h2 {
+                width: 70%;
+            }
+            .schedule_days {
+                gap: 2px;
+                @include adaptive-font(24, 10);
+                padding: 12px 8px;
+            }
+            .schedule_row {
+                gap: 4px;
+
+                .schedule_row_item {
+                    height: 35px;
+                    border-radius: 16px;
+                    padding: 0;
+                    .schedule_row_item_name {
+                        line-height: 10px;
+                        margin-top: 1px;
+                    }
+                }
             }
         }
     }
+    .button_order_card_block {
+        .dumbbell_left {
+            left: 22%;
+        }
+        .dumbbell_right {
+            right: 16%;
+        }
+    }
+    .footer_logo {
+        img {
+            height: 40px;
+        }
+    }
+    .footer_wrapper {
+        .contacts_block {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+    }
+    .map_block {
+        width: 98%;
 
+        .map_block_img {
+            img {
+                width: 95%;
+                height: 70%;
+            }
+        }
+        .map_block_block {
+            width: 50%;
+            height: 300px;
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            width: 100%;
+            height: 400px;
+
+            .pop_up_item {
+                .pop_up_button {
+                    max-width: 140px;
+                    min-width: 140px;
+
+                    @include adaptive-font(14, 10);
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     .coaches_card_block {
         .coachesCardBlock {
             .newCard {
-                width: 90%;
+                .newCard_footer {
+                    width: 110px;
+
+                    .coachesCardItem_info_name {
+                        top: 0;
+                        left: 12px;
+                        width: 120%;
+                    }
+                    .coach_experience {
+                        top: 10px;
+                        right: -80px;
+
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+    .social_block {
+        width: 18%;
+    }
+    .burger_button {
+        top: 55px;
+        right: 0;
+    }
+    .club_card_block {
+        .clubCardBlock {
+            .newCard {
+                width: 75%;
+                .front {
+                    .clubCardItem_info_text {
+                        width: 90%;
+                    }
+                }
             }
         }
     }
@@ -1513,34 +2282,214 @@ h2 {
     }
     .PopUpForm {
         form {
-            .PopUpForm_header {
-                margin-bottom: 30px;
-            }
-            .PopUpForm_item.button {
-                width: 50%;
-                margin: 80px auto 0 auto;
-            }
+            width: 95%;
+        }
+        .pop_up_logo {
+            width: 250px;
+        }
+        .pop_up_logo.left {
+            left: -70px;
+        }
+        .pop_up_logo.right {
+            right: -70px;
         }
     }
 }
 @media (max-width: 460px) {
+    .PopUpForm {
+        form {
+            height: 80dvh;
+            width: 100%;
+            .PopUpForm_item {
+                width: 90%;
+            }
+        }
+        .pop_up_logo {
+            width: 250px;
+        }
+        .pop_up_logo.left {
+            left: 50%;
+            rotate: 0deg;
+            top: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .pop_up_logo.right {
+            display: none;
+        }
+    }
+    .button_order_card_block {
+        .dumbbell_left {
+            left: 10%;
+        }
+        .dumbbell_right {
+            right: 0;
+        }
+    }
+    .footer_wrapper {
+        .footer {
+            header {
+                padding-bottom: 4px;
+            }
+        }
+    }
+    .footer_logo {
+        img {
+            height: 30px;
+        }
+    }
+    .map_block {
+        width: 98%;
+
+        .map_block_img {
+            img {
+                width: 90%;
+                height: 60%;
+            }
+        }
+        .map_block_block {
+            width: 50%;
+            height: 280px;
+            iframe {
+                width: 100%;
+                height: 280px;
+            }
+        }
+    }
+    .about_as_wrapper {
+        padding-top: 20px;
+    }
+    .pop_up_coach_wrapper {
+        .pop_up_coach {
+            height: 400px;
+            .pop_up_right_arrow,
+            .pop_up_left_arrow {
+                display: none;
+            }
+            .pop_up_item {
+                padding-left: 20px;
+
+                .dumbbell_block {
+                    bottom: 0;
+                    right: 20px;
+
+                    .first_dumbbell {
+                        top: -10%;
+                        left: -10%;
+                    }
+                    .second_dumbbell {
+                        top: 0;
+                        right: 0;
+                    }
+                }
+                .pop_up_button {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .wrapperMainBlock {
+        .wrapperMainBlock_content {
+            .blockCards {
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 95%;
+            }
+
+            .card__front {
+                h3 {
+                    @include adaptive-font(16, 12);
+                }
+                .long_header {
+                    @include adaptive-font(16, 12);
+                }
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            gap: 20px;
+            justify-content: center;
+            .newCard {
+                width: 95%;
+
+                .newCard_footer {
+                    width: 100%;
+
+                    .coachesCardItem_info_name {
+                        top: 0;
+                        left: 12px;
+                        width: 60%;
+                    }
+                    .coach_experience {
+                        top: -3px;
+                        right: 80px;
+
+                        width: 90px;
+                    }
+                    .coach_experience_data {
+                        top: 40px;
+                        right: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .social_block {
+        width: 22%;
+    }
+    .burger_button {
+        top: 50px;
+    }
+    .headerBackGround {
+        .header_wrapper {
+            height: 80px;
+        }
+    }
+    .logo_block {
+        img {
+            width: 70px;
+        }
+    }
     .schedule_wrapper {
-        a {
-            width: 45%;
+        .schedule_container {
+            width: 100%;
+            h2 {
+                width: 70%;
+            }
+            .schedule_days {
+                gap: 0;
+
+                padding: 12px 8px;
+            }
+            .schedule_row {
+                gap: 2px;
+
+                .schedule_row_item {
+                    height: 25px;
+                    border-radius: 8px;
+                    padding: 0;
+                    .schedule_row_item_name {
+                        line-height: 8px;
+                        margin-top: 1px;
+                    }
+                }
+            }
         }
     }
     .club_card_block {
         .clubCardBlock {
             .newCard {
-                width: 100%;
-            }
-        }
-    }
-
-    .coaches_card_block {
-        .coachesCardBlock {
-            .newCard {
-                width: 100%;
+                width: 85%;
+                .front {
+                    .clubCardItem_info_text {
+                        width: 90%;
+                    }
+                }
             }
         }
     }
@@ -1564,15 +2513,97 @@ h2 {
     .mobile_navigation {
         width: 100%;
     }
+    .wrapperSlider {
+        .sliderBlock {
+            padding-top: 10px;
+        }
+    }
 }
 
 @media (max-width: 400px) {
+    .map_block {
+        .map_block_img {
+            img {
+                width: 90%;
+                height: 50%;
+            }
+        }
+        .map_block_block {
+            width: 50%;
+            height: 200px;
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            .newCard {
+                .newCard_footer {
+                    .coach_experience {
+                        top: 0;
+                        right: 60px;
+
+                        width: 90px;
+                    }
+                    .coach_experience_data {
+                        top: 40px;
+                        right: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .social_block {
+        width: 24%;
+    }
     .buttonVisit_block {
         top: 75%;
     }
     .headerBackGround {
         .contacts_block {
             display: none;
+        }
+    }
+}
+@media (max-width: 340px) {
+    .map_block {
+        .map_block_img {
+            img {
+                width: 90%;
+                height: 40%;
+            }
+        }
+    }
+    .club_card_block {
+        .clubCardBlock {
+            .newCard {
+                width: 95%;
+                .front {
+                    .clubCardItem_info_text {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .coaches_card_block {
+        .coachesCardBlock {
+            .newCard {
+                .newCard_footer {
+                    .coach_experience {
+                        top: 0;
+                        right: 20px;
+
+                        width: 90px;
+                    }
+                    .coach_experience_data {
+                        top: 40px;
+                        right: 30px;
+                    }
+                }
+            }
         }
     }
 }

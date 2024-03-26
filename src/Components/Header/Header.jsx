@@ -2,8 +2,6 @@ import { useState } from "react"
 import MainMenu from "./MainMenu"
 import MobileNavigation from "./Mobilenavigation"
 import SwiperBlock from "./Swiper"
-import InfoGym from "./InfoGym"
-import OrderVisitButton from "./OrderVisitButton"
 
 export default function Header() {
     const [toggleBurger, setToggleBurger] = useState(false)
@@ -37,8 +35,6 @@ export default function Header() {
             />
 
             <SwiperBlock />
-            <OrderVisitButton />
-            <InfoGym />
         </section>
     )
 }

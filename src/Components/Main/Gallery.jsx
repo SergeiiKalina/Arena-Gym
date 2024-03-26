@@ -1,6 +1,6 @@
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
-import { itemData } from "../../data/date"
+import { itemData } from "../../data/data"
 import ModalImages from "./ModalImages"
 import AddCircleIcon from "@mui/icons-material/AddCircle"
 
@@ -77,8 +77,11 @@ export default function Gallery() {
                         backgroundColor: "#e4b800",
                         width: "186px",
                         margin: "20px auto 0 auto",
+                        borderRadius: "20px",
+                        color: "black",
+                        fontWeight: " 800",
                         "&:hover": {
-                            backgroundColor: "#000000",
+                            backgroundColor: "#e4b800",
                         },
                     }}
                     onClick={() => changesImagesOnPages()}

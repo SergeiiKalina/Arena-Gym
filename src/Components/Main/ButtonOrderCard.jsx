@@ -10,15 +10,30 @@ export default function ButtonOrderCard() {
 
     return (
         <section className="button_order_card_block">
+            <img
+                src="./images/dumbbell.png"
+                alt="dumbbell"
+                className="dumbbell dumbbell_left"
+            />
             <Button
                 className="button_order_card_item"
                 onClick={(e) => {
                     setPathMessages("Замовити Гостьовий візит")
                     changesModalState(e)
                 }}
+                sx={{
+                    "&:hover": {
+                        backgroundColor: "#e4b800",
+                    },
+                }}
             >
                 Замовити гостьовий візит
             </Button>
+            <img
+                src="./images/dumbbell.png"
+                alt="dumbbell"
+                className="dumbbell dumbbell_right"
+            />
             {toggleModal && <FooterModal />}
         </section>
     )

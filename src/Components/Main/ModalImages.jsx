@@ -1,5 +1,5 @@
 import { Button } from "@mui/material"
-import { itemData } from "../../data/date"
+import { itemData } from "../../data/data"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ClearIcon from "@mui/icons-material/Clear"

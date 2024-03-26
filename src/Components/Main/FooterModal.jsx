@@ -1,5 +1,4 @@
-import { Textarea } from "@mui/joy"
-import { Button, TextField } from "@mui/material"
+import { Button } from "@mui/material"
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
 
@@ -16,38 +15,44 @@ export default function FooterModal() {
                 id="sendForm"
             >
                 <form onSubmit={(e) => formSend(e)}>
+                    <img
+                        src="./images/footerLogo.png"
+                        alt="logo"
+                        className="pop_up_logo right"
+                    />
                     <h2 className="PopUpForm_header">Записатись</h2>
-                    <TextField
-                        sx={{ display: "none" }}
-                        id="outlined-basic"
-                        label="Фамилия"
-                        variant="outlined"
-                        className="PopUpForm_item"
-                        name="hidden_field"
-                        value={pathMessages}
-                    />
-                    <TextField
-                        id="outlined-basic"
-                        label="Ім'я"
-                        variant="outlined"
-                        className="PopUpForm_item"
-                        name="to_name"
-                    />
-                    <TextField
-                        id="outlined-basic"
-                        label="Номер телефону"
-                        variant="outlined"
-                        className="PopUpForm_item"
-                        name="phone_number"
-                    />
-                    <Textarea
-                        placeholder="Коментар"
-                        minRows={2}
-                        size="lg"
-                        className="PopUpForm_item area"
-                        name="message"
-                    />
-
+                    <div className="PopUpForm_block_fields">
+                        <input
+                            style={{ display: "none" }}
+                            className="PopUpForm_item"
+                            name="hidden_field"
+                            value={pathMessages}
+                        />
+                        <div className="input_block">
+                            <input
+                                className="PopUpForm_item"
+                                name="to_name"
+                                id="name"
+                            />
+                            <label htmlFor="name">*Ім'я та Прізвище</label>
+                        </div>
+                        <div className="input_block">
+                            <input
+                                className="PopUpForm_item"
+                                name="phone_number"
+                                id="phone"
+                            />
+                            <label htmlFor="phone">*Номер Телефону</label>
+                        </div>
+                        <div className="input_block">
+                            <input
+                                className="PopUpForm_item"
+                                name="message"
+                                id="message"
+                            />
+                            <label htmlFor="message">Коментар</label>
+                        </div>
+                    </div>
                     <Button
                         className="PopUpForm_item button"
                         color="primary"
@@ -56,6 +61,11 @@ export default function FooterModal() {
                     >
                         Відправити
                     </Button>
+                    <img
+                        src="./images/footerLogo.png"
+                        alt="logo"
+                        className="pop_up_logo left"
+                    />
                 </form>
             </div>
         </section>

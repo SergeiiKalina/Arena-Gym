@@ -10,20 +10,24 @@ export default function MainMenu({
     toggleSearchPopup,
 }) {
     return (
-        <header className="header_wrapper">
-            <div className="header_block">
-                <Logo />
+        <>
+            <header className="header_wrapper">
+                <div className="header_block">
+                    <Logo />
+                </div>
+                <Contacts />
+                <div className="mobile_left_panel">
+                    <MobileMenu
+                        toggleMenuBurger={toggleMenuBurger}
+                        toggleBurger={toggleBurger}
+                        toggleSearchPopup={toggleSearchPopup}
+                    />
+                </div>
+            </header>
+            <section className="menu_wrapper">
                 <Menu />
                 <Social />
-            </div>
-            <Contacts />
-            <div className="mobile_left_panel">
-                <MobileMenu
-                    toggleMenuBurger={toggleMenuBurger}
-                    toggleBurger={toggleBurger}
-                    toggleSearchPopup={toggleSearchPopup}
-                />
-            </div>
-        </header>
+            </section>
+        </>
     )
 }

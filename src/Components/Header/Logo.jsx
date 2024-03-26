@@ -9,11 +9,7 @@ export default function Logo() {
             onClick={() => changesModalState(null, "/")}
         >
             <a href="/">
-                <img
-                    style={{ width: "81px" }}
-                    src="/images/Logo.png"
-                    alt="logo"
-                />
+                <img src="/images/Logo.png" alt="logo" />
             </a>
         </div>
     )
