@@ -2,7 +2,7 @@ import React from "react"
 
 export default function AboutAs() {
     return (
-        <article className="about_as_wrapper">
+        <article className="about_as_wrapper" id="AboutUs">
             <span>Про нас:</span>
             <div className="about_as_info">
                 <p>

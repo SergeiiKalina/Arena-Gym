@@ -37,7 +37,7 @@ export default function CardCoaches() {
                                         {name}
                                     </h4>
                                     <span className="coach_experience">
-                                        Досвід Роботи
+                                        Досвід роботи
                                     </span>
                                     <span className="coach_experience_data">
                                         {experience}

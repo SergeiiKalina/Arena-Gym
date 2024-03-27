@@ -5,7 +5,7 @@ import { BiSolidRightArrow } from "react-icons/bi"
 import { BiSolidLeftArrow } from "react-icons/bi"
 import { useContext } from "react"
 import { DataContext } from "../Context/Context"
-import { v4 as uuidv4 } from "uuid"
+
 function PopUpCoach({ showPopUp, currentIndex }) {
     const { changesModalState, setPathMessages } = useContext(DataContext)
     const [startTouch, setStartTouch] = useState(0)
@@ -53,7 +53,6 @@ function PopUpCoach({ showPopUp, currentIndex }) {
     }
 
     const handleTouchEnd = (e) => {
-        console.log("call")
         const end = e.changedTouches[0].clientX
         const diffX = end - startTouch
         const wrapperSliderBlockScroll = wrapperSliderBlock.current
@@ -86,11 +85,11 @@ function PopUpCoach({ showPopUp, currentIndex }) {
                 >
                     {coachArray.map((coach, index) => (
                         <div
+                            key={index}
                             className="pop_up_item"
-                            key={uuidv4()}
-                            ref={coachSlider}
                             onTouchStart={handleTouchStart}
                             onTouchEnd={(e) => handleTouchEnd(e)}
+                            ref={coachSlider}
                         >
                             <img src={coach.img} alt={coach.name} />
                             <div className="pop_up_item_description">

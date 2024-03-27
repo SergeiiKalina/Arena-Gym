@@ -30,41 +30,35 @@ function Schedule() {
                 backgroundRepeat: "no-repeat",
             }}
             className="schedule_wrapper"
+            id="Schedule"
         >
             <article className="schedule_container">
                 <header>
-                    <h2>Розклад Групових Занять</h2>
+                    <h2>Розклад групових занять</h2>
                     <div className="schedule_days">
-                        {viewerNameDay
-                            ? tableSchedule.map((el) => (
-                                  <div
-                                      key={el.day}
-                                      className="schedule_days_item"
-                                  >
-                                      {el.day.slice(0, 5) + "..."}
-                                  </div>
-                              ))
-                            : tableSchedule.map((el) => (
-                                  <div
-                                      key={el.day}
-                                      className="schedule_days_item"
-                                  >
-                                      {el.day}
-                                  </div>
-                              ))}
+                        {tableSchedule.map((el) => (
+                            <div key={el.day} className="schedule_days_item">
+                                {viewerNameDay ? el.day[1] : el.day[0]}
+                            </div>
+                        ))}
                     </div>
                     <div className="schedule_table">
-                        {tableSchedule.map((el) => {
-                            if (el.training) {
-                                let firstTimeOfDay = 8
+                        {tableSchedule.map((el, index) => {
+                            if (el.training && el.training.length !== 0) {
+                                let firstTimeOfDay = 11
                                 const rows = []
-                                for (let i = 0; i < 12; i++) {
+
+                                for (let i = 0; i < 10; i++) {
                                     const currentItem = el.training.find(
-                                        (item) =>
-                                            parseInt(
-                                                item.time.split(":")[0]
-                                            ) === firstTimeOfDay
+                                        (item) => {
+                                            return (
+                                                parseInt(
+                                                    item.time.split(":")[0]
+                                                ) === firstTimeOfDay
+                                            )
+                                        }
                                     )
+
                                     if (currentItem) {
                                         rows.push(
                                             <div
@@ -79,6 +73,7 @@ function Schedule() {
                                                 </div>
                                             </div>
                                         )
+
                                         firstTimeOfDay++
                                     } else {
                                         rows.push(
@@ -87,6 +82,7 @@ function Schedule() {
                                                 key={uuidv4()}
                                             ></div>
                                         )
+
                                         firstTimeOfDay++
                                     }
                                 }
@@ -95,10 +91,29 @@ function Schedule() {
                                         {rows}
                                     </div>
                                 )
+                            } else {
+                                return ""
                             }
                         })}
                     </div>
                 </header>
+                <div className="block_background_dumbbell">
+                    <img
+                        src="./images/dumbbell.png"
+                        alt="dumbbell"
+                        className="first_dumbbell"
+                    />
+                    <img
+                        src="./images/dumbbell.png"
+                        alt="dumbbell"
+                        className="second_dumbbell"
+                    />
+                    <img
+                        src="./images/dumbbell.png"
+                        alt="dumbbell"
+                        className="third_dumbbell"
+                    />
+                </div>
             </article>
         </section>
     )

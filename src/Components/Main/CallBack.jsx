@@ -1,8 +1,10 @@
 import { Fab } from "@mui/material"
-import React from "react"
+import React, { useContext } from "react"
 import { FiPhone } from "react-icons/fi"
+import { DataContext } from "../Context/Context"
 
 function CallBack() {
+    const { changesModalState, setPathMessages } = useContext(DataContext)
     return (
         <section className="callback_button">
             <Fab
@@ -13,6 +15,10 @@ function CallBack() {
                     },
                 }}
                 size="large"
+                onClick={(e) => {
+                    changesModalState(e)
+                    setPathMessages("Кнопка зворотього зв'язку")
+                }}
             >
                 <FiPhone />
             </Fab>

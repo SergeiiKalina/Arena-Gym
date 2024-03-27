@@ -26,7 +26,7 @@ export default function FooterModal() {
                             style={{ display: "none" }}
                             className="PopUpForm_item"
                             name="hidden_field"
-                            value={pathMessages}
+                            defaultValue={pathMessages}
                         />
                         <div className="input_block">
                             <input
