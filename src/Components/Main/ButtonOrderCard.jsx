@@ -24,6 +24,7 @@ export default function ButtonOrderCard() {
                 sx={{
                     "&:hover": {
                         backgroundColor: "#e4b800",
+                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
                     },
                 }}
             >

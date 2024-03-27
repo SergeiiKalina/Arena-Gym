@@ -47,7 +47,6 @@ export const slideArr = [
     { id: 0, title: "", img: "./images/slider01.jpg", alt: "photo" },
     { id: 1, title: "", img: "./images/slider02.png", alt: "photo" },
     { id: 2, title: "", img: "./images/slider03.jpg", alt: "photo" },
-    { id: 3, title: "", img: "./images/slider04.jpg", alt: "photo" },
 ]
 
 export const coachArray = [
@@ -166,16 +165,15 @@ export const cardServicesArr = [
         linkOnForm: "Запис на персональні тренування",
     },
     {
-        id: 3,
-        header: "ФІТНЕС-БАР",
-        img: "./images/cardService05.jpg",
-        paragraph1:
-            "Запрошуємо до стильного та затишного фітнес бару. Збалансоване харчування - ключовий фактор успіху ",
+        id: 6,
+        header: "НАСТІЛЬНИЙ ТЕНІС",
+        img: "./images/ping_pong.jpg",
         list: [
-            "Смачні та корисні страви, протеїнові коктейлі та улюблені напої.",
-            "Насолоджуйтеся відпочинком та відновлюйте сили у фітнес барі ArenaGym.",
+            `Настільний теніс – це одна з ігор спортивної спрямованості, 
+        яка представляє собою перекидання м’яча через розділений навпіл сіткою стіл за допомогою спеціальних ракеток.`,
         ],
-        nameButton: "",
+        nameButton: "Записатись",
+        linkOnForm: "Запис на Кроссфіт",
     },
     {
         id: 4,
@@ -206,17 +204,6 @@ export const cardServicesArr = [
             "Спритність",
             "Баланс",
             "Точність",
-        ],
-        nameButton: "Записатись",
-        linkOnForm: "Запис на Кроссфіт",
-    },
-    {
-        id: 6,
-        header: "НАСТІЛЬНИЙ ТЕНІС",
-        img: "./images/pingPong.jpg",
-        list: [
-            `Настільний теніс – це одна з ігор спортивної спрямованості, 
-        яка представляє собою перекидання м’яча через розділений навпіл сіткою стіл за допомогою спеціальних ракеток.`,
         ],
         nameButton: "Записатись",
         linkOnForm: "Запис на Кроссфіт",

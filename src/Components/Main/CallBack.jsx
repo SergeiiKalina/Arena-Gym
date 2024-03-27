@@ -7,21 +7,19 @@ function CallBack() {
     const { changesModalState, setPathMessages } = useContext(DataContext)
     return (
         <section className="callback_button">
-            <Fab
-                sx={{
-                    backgroundColor: "#f2b800",
-                    "&:focus": {
+            <a href="tel:+380931000673">
+                <Fab
+                    sx={{
                         backgroundColor: "#f2b800",
-                    },
-                }}
-                size="large"
-                onClick={(e) => {
-                    changesModalState(e)
-                    setPathMessages("Кнопка зворотього зв'язку")
-                }}
-            >
-                <FiPhone />
-            </Fab>
+                        "&:focus": {
+                            backgroundColor: "#f2b800",
+                        },
+                    }}
+                    size="large"
+                >
+                    <FiPhone />
+                </Fab>
+            </a>
         </section>
     )
 }

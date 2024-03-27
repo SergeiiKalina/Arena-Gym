@@ -82,6 +82,7 @@ export default function Gallery() {
                         fontWeight: " 800",
                         "&:hover": {
                             backgroundColor: "#e4b800",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
                         },
                     }}
                     onClick={() => changesImagesOnPages()}
