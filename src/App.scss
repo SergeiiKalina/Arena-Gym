@@ -1777,7 +1777,7 @@ h2 {
         .map_block_img {
             display: flex;
             width: 50%;
-            justify-content: end;
+            justify-content: flex-end;
             img {
                 width: 90%;
                 height: 80%;
@@ -1886,7 +1886,7 @@ h2 {
         .map_block_img {
             display: flex;
             width: 50%;
-            justify-content: end;
+            justify-content: flex-end;
             align-items: center;
             img {
                 width: 95%;

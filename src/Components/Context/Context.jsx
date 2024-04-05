@@ -10,10 +10,10 @@ export default function Context({ children }) {
     function formSend(e) {
         e.preventDefault()
         emailjs.sendForm(
-            "service_ticrokl",
-            "template_ih1dzqr",
+            "service_kktgmhp",
+            "template_q2hee9j",
             e.target,
-            "P_Kl4vBTtPRSGekOp"
+            "VdV5xU8-ZJ-T7vPZb"
         )
         setToggleModal(false)
         document.body.style.overflow = "visible"
