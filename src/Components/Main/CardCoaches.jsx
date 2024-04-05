@@ -10,7 +10,15 @@ export default function CardCoaches() {
     const showPopUp = (e, index) => {
         const parent = e.target.closest(".pop_up_coach")
         if (parent && parent.id === "popUpCoach") return
-        setTogglePopUp((prev) => !prev)
+        setTogglePopUp((prev) => {
+            if (!prev) {
+                document.body.style.overflow = "hidden"
+                return true
+            } else {
+                document.body.style.overflow = "visible"
+                return false
+            }
+        })
         setCurrentIndex(index)
     }
 
